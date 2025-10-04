@@ -1,0 +1,54 @@
+.market__tokens-grid{
+    width: 838px;
+    overflow: hidden;
+    border: 1px solid var(--uniswap-market-border);
+    border-radius: 20px;
+    margin-top: 22px;
+}
+
+.tokens-grid__row {
+    display: grid;
+    grid-template-columns: [start] 157px [line2] 84px [line3] 65px [line4] 53px [line5] 43px [end];
+    height: 52px;
+    padding-left: 38px;
+    margin-bottom: 10px;
+    gap: 91px;
+}
+
+.tokens-grid__header {
+    font-weight: 600;
+    border-bottom: 1px solid var(--uniswap-market-border);
+    background-color: var(--uniswap-market-background);
+    height: 42px;
+    padding-left: 38px;
+    padding-top: 13px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.tokens-grid__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: var(--uniswap-grey);
+}
+
+.tokens-grid__position {
+    display: flex;
+    align-items: center;
+}
+
+.tokens-grid__coin {
+    font-weight: 400;
+    font-size: 15.88px;
+    line-height: 100%;
+    letter-spacing: -0.16px;
+    color: var(--clearly-white);
+}
+
+.tokens-grid__icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
