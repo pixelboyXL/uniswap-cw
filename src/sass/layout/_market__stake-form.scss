@@ -107,7 +107,7 @@
 
 .stake-form__checkbox {
     &:checked + .label-checkbox::before {
-        background-image: url(..//images/checkbox.svg);
+        background-image: url(..//images/icon_check.png);
         background-repeat: no-repeat;
         background-position: center;
         background-color: var(--uniswap-pink);
