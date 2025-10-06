@@ -4,20 +4,27 @@
     --clearly-white: white;
 	--just-grey: grey;
     --uniswap-pink: #FF37C7;
-	--uniswap-second-pink: #FC72FF;
+	--uniswap-light-pink: #FC72FF;
 	--uniswap-dark-pink: #311C31;
 	--uniswap-dark: #131313;
     --uniswap-light-dark: #1F1F1F;
 	--uniswap-error: #C84B63;
-	--uniswap-background-pink: #241721;
+	--uniswap-background-error: #241721;
 	--uniswap-success: #00A478;
-	--uniswap-background-green: #0F3027;
+	--uniswap-background-success: #0F3027;
 	--uniswap-grey: #9B9B9B;
 	--uniswap-tokens-active: #191B1F;
 	--uniswap-market-border: #212121;
 	--uniswap-market-background: #161616;
 	--uniswap-pair-option: #EAEAF4;
 	--uniswap-scrollbar: #5C5C5C;
+	--uniswap-my-profile-white: #FAFAFA;
+	--uniswap-my-profile-border: #262626;
+	--uniswap-my-profile-grey: #A1A1A1;
+	--uniswap-my-profile-green: #05DF72;
+	--uniswap-my-profile-dark: #171717;
+	--uniswap-my-profile-border-orange: #F0B10033;
+	--uniswap-my-profile-orange: #D08700;
 }
 
 p,
@@ -72,7 +79,7 @@ body {
 	&::-webkit-scrollbar-track {
 		margin: 20px 0;
 		opacity: 0;
-		background-color: tea;
+		background-color: transparent;
 	}
 	&::-webkit-scrollbar-thumb {
         border-radius: 4px;

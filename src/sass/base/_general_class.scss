@@ -1,8 +1,7 @@
 .container {
-	width: 100%;
-	padding-right: 20px;
-	padding-left: 20px;
-	margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 // 	@include mob {
 // 		width: 360px;
 // 	}
@@ -97,7 +96,7 @@
 		content: "";
 		width: 100%;
 		height: 2px;
-		background-color: var(--uniswap-second-pink);
+		background-color: var(--uniswap-light-pink);
 		border-radius: 2px;
 		position: absolute;
 		left: 0;
@@ -160,12 +159,12 @@
     border-radius: 12px;
 	&-pink {
 		border: 1px solid var(--uniswap-error);
-		background-color: var(--uniswap-background-pink);
+		background-color: var(--uniswap-background-error);
 	}
 	&-green {
 		text-align: center;
 		border: 1px solid var(--uniswap-success);
-		background-color: var(--uniswap-background-green);
+		background-color: var(--uniswap-background-success);
 	}
 }
 

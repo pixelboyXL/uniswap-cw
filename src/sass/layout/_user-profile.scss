@@ -1,0 +1,291 @@
+.user-profile {
+    padding-top: 35px;
+    padding-bottom: 77px;
+}
+
+.user-profile__container {
+    width: 100%;
+    max-width: 864px;
+    margin: 0 auto;
+}
+
+.user-profile__wrap {
+    @include flex_align;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-light-dark);
+}
+
+.user-profile__img-wrap {
+    width: 64px;
+    height: 64px;
+    padding: 20px 0;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: var(--uniswap-my-profile-white);
+}
+
+.user-profile__img {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    text-align: center;
+    color: var(--uniswap-my-profile-dark);
+}
+
+.user-profile__label {
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    padding: 3px 9px;
+    border-radius: 8px;
+    color: var(--uniswap-my-profile-white);
+    background-color: var(--uniswap-my-profile-border);
+}
+
+.label-user {
+    max-width: 77px;
+    margin-bottom: 4px;
+}
+
+.label-lvl {
+    max-width: 60px;
+}
+
+.user-profile__email {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(24 / 15.3);
+    color: var(--uniswap-my-profile-grey);
+}
+
+.balance-income__list {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.balance-income__item {
+    width: 424px;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-light-dark);
+}
+
+.balance-income__wrap {
+    @include flex_align;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.balance-income__title {
+    font-weight: 400;
+    font-size: 13.7px;
+    line-height: calc(20 / 13.7);
+    color: var(--uniswap-my-profile-white);
+}
+
+.balance-income__after-title {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(24 / 15.3);
+    color: var(--uniswap-my-profile-grey);
+}
+
+.balance-income__general-value {
+    font-weight: 400;
+    font-size: 22.9px;
+    line-height: calc(32 / 22.9);
+    color: var(--uniswap-my-profile-white);
+    display: block; 
+    margin-bottom: 8px;
+}
+
+.balance-income__referral-value {
+    font-weight: 400;
+    font-size: 18.9px;
+    line-height: calc(28 / 18.9);
+    color: var(--uniswap-my-profile-white);
+}
+
+.verification__wrap {
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    border: 1px solid var(--uniswap-my-profile-border-orange);
+    background-color: var(--uniswap-light-dark);
+}
+
+.verification__title-wrap {
+    @include flex_align;
+    margin-bottom: 32px;
+}
+
+.verification__title {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(16 / 15.3);
+    color: var(--uniswap-my-profile-orange);
+    margin-left: 8px;
+}
+
+.verification__first-text-wrap {
+    @include flex_align;
+    padding: 15px 17px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--uniswap-my-profile-border);
+}
+
+.verification__first-text {
+    font-weight: 400;
+    font-size: 13.6px;
+    line-height: calc(20 / 13.6);
+    color: var(--uniswap-my-profile-grey);
+    margin-left: 12px;
+}
+
+.verification__second-text {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(24 / 15.3);
+    color: var(--uniswap-my-profile-grey);
+    margin-bottom: 8px;
+}
+
+.verification__btn {
+    width: 100%;
+    max-width: 814px;
+    @include flex_justify_align;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: var(--uniswap-my-profile-white);
+    font-size: 13.8px;
+    line-height: calc(20 / 13.8);
+    color: var(--uniswap-my-profile-dark);
+}
+
+.verification__icon-email-black {
+    margin-right: 16px;
+}
+
+.verification-lvl__main-wrap {
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-light-dark);
+}
+
+.verification-lvl__title-wrap {
+    @include flex_align;
+    margin-bottom: 30px;
+}
+
+.verification-lvl__title {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(16 / 15.1);
+    color: var(--uniswap-my-profile-white);
+    margin-left: 8px;
+}
+
+.verification-lvl__wrap {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(24 / 15.1);
+    @include flex_align;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.verification-lvl__after-title {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(24 / 15.1);
+    color: var(--uniswap-my-profile-white);
+}
+
+.verification-lvl__progress-title-wrap {
+    @include flex_align;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.verification-lvl__progress-title {
+    font-weight: 400;
+    font-size: 13.7px;
+    line-height: calc(20 / 13.7);
+    color: var(--uniswap-my-profile-white);
+}
+
+.verification-lvl__progress-value {
+    font-weight: 400;
+    font-size: 13.3px;
+    line-height: calc(20 / 13.3);
+    color: var(--uniswap-my-profile-white);
+}
+
+.verification-lvl__progress-bar {
+    width: 814px;
+    margin-bottom: 16px;
+}
+
+.verification-lvl__features-title {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(24 / 15.3);
+    color: var(--uniswap-my-profile-white);
+    margin-bottom: 12px;
+}
+
+.verification-lvl__list {
+    margin-bottom: 16px;
+}
+
+.verification-lvl__item {
+    @include flex_align;
+}
+
+.verification-lvl__item + .verification-lvl__item {
+    margin-top: 8px;
+}
+
+.verification-lvl__features-name {
+    font-weight: 400;
+    font-size: 13.7px;
+    line-height: calc(20 / 13.7);
+    color: var(--uniswap-my-profile-white);
+    margin-left: 8px;
+}
+
+.verification-lvl__btn-wrap {
+    padding-top: 9px;
+    border-top: 1px solid var(--uniswap-my-profile-border);
+}
+
+.verification-lvl__btn-title {
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: calc(20 / 13.5);
+    color: var(--uniswap-my-profile-grey);
+    margin-bottom: 12px;
+}
+
+.verification-lvl__btn {
+    font-size: 13.8px;
+    line-height: calc(20 / 13.8);
+    color: var(--uniswap-my-profile-grey);
+    @include flex_justify_align;
+    width: 100%;
+    max-width: 814px;
+    padding: 8px 0;
+    border-radius: 8px;
+    background-color: var(--uniswap-dark-pink);
+}
+
+.verification-lvl__btn-icon {
+    width: 16px;
+    margin-right: 16px;
+}

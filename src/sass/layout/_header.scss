@@ -1,14 +1,12 @@
 .header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07)
-}
-
-.header__container {
     width: 100%;
-	padding-left: 27px;
+    max-width: 1440px;
+    padding-left: 27px;
     padding-top: 15.67px;
     padding-right: 33px;
     padding-bottom: 17.33px;
-	margin: 0 auto;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07)
 }
 
 .nav {
