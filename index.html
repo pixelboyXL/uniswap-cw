@@ -1,53 +1,93 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.dc8601ed.css><script type=module src=/uniswap-cw/uniswap-cw.826dc248.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.f0cd9aee.css><script type=module src=/uniswap-cw/uniswap-cw.826dc248.js></script><body>
         <header class=header>
-    <div class=header__container>
-        <nav class=nav>
-            <div class=nav-site-wrap>
-                <a href=/uniswap-cw/index.html class="logo primary-font">
-                <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
-                Uniswap
-                </a>
-                <ul class=nav-site-list>
-                    <li class=nav-site-list__item>
-                        <p class="link-active nav-site-list__link">White Paper</p>
-                    </li>
-                    <li class=nav-site-list__item>
-                        <p class="link-small nav-site-list__link">Roadmap</p>
-                    </li>
-                    <li class=nav-site-list__item>
-                        <p class=nav-site-list__link>About Us</p>
-                    </li>
-                </ul>
-            </div>
-            <div class=nav-user-wrap>
-                <ul class=nav-cash-list>
-                    <li class=nav-cash-list__item>
-                        <p class=nav-cash-list__link>Available</p>
-                        <span class=nav-cash-list__number>20399.80</span>
-                    </li>
-                    <li class=nav-cash-list__item>
-                        <p class=nav-cash-list__link>Locked</p>
-                        <span class=nav-cash-list__number>58099.98</span>
-                    </li>
-                </ul>
-                <ul class=nav-sum-list>
-                    <li class=nav-sum-list__item>
-                        <p class="link-small nav-sum-list__link">Deposit</p>
-                    </li>
-                    <li class=nav-sum-list__item>
-                        <p class=nav-sum-list__link>Withdraw</p>
-                    </li>
-                </ul>
-                <button type=button class=nav-user-icon-wrap>
-                    <img src=/uniswap-cw/icon_user.e4b969d7.png alt="User icon" class=nav-user-icon>
-                </button>
-            </div>
-        </nav>
-    </div>
+    <nav class=nav>
+        <div class=nav-site-wrap>
+            <a href=/uniswap-cw/index.html class="logo primary-font">
+            <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
+            Uniswap
+            </a>
+            <ul class=nav-site-list>
+                <li class=nav-site-list__item>
+                    <p class="link-active nav-site-list__link">White Paper</p>
+                </li>
+                <li class=nav-site-list__item>
+                    <p class="link-small nav-site-list__link">Roadmap</p>
+                </li>
+                <li class=nav-site-list__item>
+                    <p class=nav-site-list__link>About Us</p>
+                </li>
+            </ul>
+        </div>
+        <div class=nav-user-wrap>
+            <ul class=nav-cash-list>
+                <li class=nav-cash-list__item>
+                    <p class=nav-cash-list__link>Available</p>
+                    <span class=nav-cash-list__number>20399.80</span>
+                </li>
+                <li class=nav-cash-list__item>
+                    <p class=nav-cash-list__link>Locked</p>
+                    <span class=nav-cash-list__number>58099.98</span>
+                </li>
+            </ul>
+            <ul class=nav-sum-list>
+                <li class=nav-sum-list__item>
+                    <p class="link-small nav-sum-list__link">Deposit</p>
+                </li>
+                <li class=nav-sum-list__item>
+                    <p class=nav-sum-list__link>Withdraw</p>
+                </li>
+            </ul>
+            <button type=button class=nav-user-icon-wrap>
+                <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon" class=nav-user-icon>
+            </button>
+        </div>
+    </nav>
 </header>
-        
-        <main>
-        <section class=market>
+        <section class="authorization visually_hidden">
+    <div class=authorization__container>
+        <a href=/uniswap-cw/index.html class="logo primary-font">
+            <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
+            Uniswap
+        </a>
+        <div class=authorization-box>
+            <h1 class=authorization-box__title>Login anytime, anywhere.</h1>
+            <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
+                <span class="uniswap-message_text uniswap-message_text-pink">Invalid email or password</span>
+            </div>
+            <form class=authorization-box__form>
+                <label for=login-email class=authorization-box__label>Email</label>
+                <input type=email name=login-email class="authorization-box__input input-email" id=login-email required>
+                <label for=login-password class=authorization-box__label>Password</label>
+                <input type=password name=login-password class=authorization-box__input id=login-password required>
+                <button class="authorization-box__btn button">Login</button>
+                <div class=authorization-box__text-wrap>
+                    <p class=authorization-box__text>Don't have an account?</p>
+                    <span class=authorization-box__text_pink>Register here</span>
+                </div>
+            </form>
+        </div>
+        <div class="authorization-box__register visually_hidden">
+            <h1 class="authorization-box__register-title authorization-box__title">Create Your Account</h1>
+            <form>
+                <label for=register-email class=authorization-box__label>Email</label>
+                <input type=email name=register-email class="authorization-box__input input-email" id=register-email required>
+                <label for=register-password class=authorization-box__label>Password</label>
+                <input type=password name=register-password class=authorization-box__input id=register-password required>
+                    <label for=secret-code class=authorization-box__label data-secret-code>Secret Code</label>
+                <input name=secret-code class=authorization-box__input id=secret-code>
+                <label for=referral-code class=authorization-box__label data-referral-code>Referral Code (Optional)</label>
+                <input name=referral-code class=authorization-box__input id=referral-code>
+                <button class="authorization-box__btn button">Create Account</button>
+                <div class=authorization-box__text-wrap>
+                    <p class=authorization-box__text>Already have an account?</p>
+                    <span class=authorization-box__register-text_pink>Login here</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+        <main class=container>
+            <section class=market>
     <div class="uniswap-message uniswap-message_warning visually_hidden">
         <p class="uniswap-message_title uniswap-message_title-pink">Warning</p>
         <p class=uniswap-message_after-title>This pools are unavailable for your country!</p>
@@ -92,7 +132,7 @@
                 <p class=market-tokens-name>DAI</p>
             </li>
         </ul>
-        <div class=market-general-wrap>
+        <div>
             <ul class=market-general-list>
                 <li class=market-general-list__item>
                     <p class="current market-general-name">Market</p>
@@ -124,7 +164,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#hype /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#hype /></svg>
             <p class=tokens-grid__coin>HYPE-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -134,7 +174,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#bnb /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#bnb /></svg>
             <p class=tokens-grid__coin>BNB-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -154,7 +194,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#ada /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#ada /></svg>
             <p class=tokens-grid__coin>ADA-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -164,7 +204,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#xrp /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#xrp /></svg>
             <p class=tokens-grid__coin>XRP-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -174,7 +214,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#doge /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#doge /></svg>
             <p class=tokens-grid__coin>DOGE-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -184,7 +224,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#link /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#link /></svg>
             <p class=tokens-grid__coin>LINK-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -194,7 +234,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#atom /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#atom /></svg>
             <p class=tokens-grid__coin>ATOM-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -204,7 +244,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#sui /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#sui /></svg>
             <p class=tokens-grid__coin>SUI-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -214,7 +254,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#shiba /></svg>
+            <img src=/uniswap-cw/shiba_icon.86a5c730.png alt="SHIBA icon" class=tokens-grid__icon>
             <p class=tokens-grid__coin>SHIBA-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -224,7 +264,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#ltc /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#ltc /></svg>
             <p class=tokens-grid__coin>LTC-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -234,7 +274,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#pepe /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#pepe /></svg>
             <p class=tokens-grid__coin>PEPE-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -244,7 +284,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#dot /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#dot /></svg>
             <p class=tokens-grid__coin>DOT-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -254,7 +294,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#mkr /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#mkr /></svg>
             <p class=tokens-grid__coin>MKR-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -274,7 +314,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#uni /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#uni /></svg>
             <p class=tokens-grid__coin>UNI-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -284,7 +324,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#ton /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#ton /></svg>
             <p class=tokens-grid__coin>TON-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -294,7 +334,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#axs /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#axs /></svg>
             <p class=tokens-grid__coin>AXS-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -304,7 +344,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#deep /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#deep /></svg>
             <p class=tokens-grid__coin>DEEP-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -314,7 +354,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#aave /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#aave /></svg>
             <p class=tokens-grid__coin>AAVE-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -334,7 +374,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#ondo /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#ondo /></svg>
             <p class=tokens-grid__coin>ONDO-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -344,7 +384,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#arb /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#arb /></svg>
             <p class=tokens-grid__coin>ARB-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -364,7 +404,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#vet /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#vet /></svg>
             <p class=tokens-grid__coin>VET-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -374,7 +414,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#wld /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#wld /></svg>
             <p class=tokens-grid__coin>WLD-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -384,7 +424,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#bgb /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#bgb /></svg>
             <p class=tokens-grid__coin>BGB-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -404,7 +444,7 @@
     </div>
     <div class=tokens-grid__row>
         <div class=tokens-grid__position>
-            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e7ce6ac4.svg#xmr /></svg>
+            <svg width=28 height=28 class=tokens-grid__icon><use href=/uniswap-cw/icons.e3869cfb.svg#xmr /></svg>
             <p class=tokens-grid__coin>XMR-USDC</p>
         </div>
         <div class=tokens-grid__position>19.87</div>
@@ -678,6 +718,207 @@
         </div>
     </div>
 </section>
+            <section class="user-profile visually_hidden">
+    <div class=user-profile__container>
+        <div class=user-profile__wrap>
+            <div class=user-profile__img-wrap>
+                <p class=user-profile__img>J</p>
+            </div>
+            <div>
+                <p class="label-user user-profile__label">Unverified</p>
+                <p class=user-profile__email>john.doe@example.com</p>
+            </div>
+        </div>
+        <ul class=balance-income__list>
+            <li class=balance-income__item>
+                <div class=balance-income__wrap>
+                    <p class=balance-income__title>Balance</p>
+                    <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_balance /></svg>
+                </div>
+                <p class=balance-income__after-title>Available Balance</p>
+                <span class=balance-income__general-value>$2,500.75</span>
+                <p class=balance-income__after-title>Referral Balance</p>
+                <span class=balance-income__referral-value>$150.50</span>
+            </li>
+            <li class=balance-income__item>
+                <div class=balance-income__wrap>
+                    <p class=balance-income__title>Income</p>
+                    <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_income /></svg>
+                </div>
+                <p class=balance-income__after-title>Total Income</p>
+                <span class=balance-income__general-value>$8,750.00</span>
+                <p class=balance-income__after-title>Referral Income</p>
+                <span class=balance-income__referral-value>$1,250.25</span>
+            </li>
+        </ul>
+        <div class=verification__wrap>
+            <div class=verification__title-wrap>
+                <svg width=20 height=20><use href=/uniswap-cw/icons.e3869cfb.svg#icon_exmark /></svg>
+                <p class=verification__title>Email Verification Required</p>
+            </div>
+            <div class=verification__first-text-wrap>
+                <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_email_white /></svg>
+                <p class=verification__first-text>Verify your email to get verification level 1 and unlock additional features.</p>
+            </div>
+            <p class=verification__second-text>We need to verify your email address: john.doe@example.com</p>
+            <button type=button class=verification__btn>
+                <svg width=16 height=16 class=verification__icon-email-black><use href=/uniswap-cw/icons.e3869cfb.svg#icon_email_black /></svg>Send Verification Email
+            </button>
+        </div>
+        <div class=verification-lvl__main-wrap>
+            <div class=verification-lvl__title-wrap>
+                <svg width=20 height=20><use href=/uniswap-cw/icons.e3869cfb.svg#icon_shield /></svg>
+                <p class=verification-lvl__title>Verification Level</p>
+            </div>
+            <div class=verification-lvl__wrap>
+                <p class=verification-lvl__after-title>Your verification level is</p>
+                <p class="label-lvl user-profile__label">Level 0</p>
+            </div>
+            <div class=verification-lvl__progress-title-wrap>
+                <p class=verification-lvl__progress-title>Progress</p>
+                <p class=verification-lvl__progress-value>0/2</p>
+            </div>
+            <img src=/uniswap-cw/icon_progress_bar_long.bc76cdcd.png alt="Progress bar long line" class=verification-lvl__progress-bar>
+            <p class=verification-lvl__features-title>Available Features:</p>
+            <ul class=verification-lvl__list>
+                <li class=verification-lvl__item>
+                    <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_user_profile_check /></svg>
+                    <p class=verification-lvl__features-name>Deposit</p>
+                </li>
+                <li class=verification-lvl__item>
+                    <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_user_profile_check /></svg>
+                    <p class=verification-lvl__features-name>Stake</p>
+                </li>
+                <li class=verification-lvl__item>
+                    <svg width=16 height=16><use href=/uniswap-cw/icons.e3869cfb.svg#icon_user_profile_check /></svg>
+                    <p class=verification-lvl__features-name>Information Dashboard</p>
+                </li>
+            </ul>
+            <div class=verification-lvl__btn-wrap>
+                <p class=verification-lvl__btn-title>Upgrade to level 1 for withdraw / referral program</p>
+                <button type=button class=verification-lvl__btn>
+                    <img src=/uniswap-cw/icon_arrow_up.831bb581.png alt="Arrow up icon" class=verification-lvl__btn-icon>
+                    Verify Email First
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="referral-program visually_hidden">
+    <div class=referral-program__container>
+        <h2 class=referral-program__title>Referral Program</h2>
+        <div class=referral-balance__wrap>
+            <p class=referral-balance__title>Referral Balance</p>
+            <span class=referral-balance__value>175&nbsp;534,03<span class=referral-balance__value-small> / 175&nbsp;534,03</span></span>
+            <div class=referral-balance__code-wrap>
+                <div>
+                    <p class=referral-balance__code-title>Your Referral Code</p>
+                    <span class=referral-balance__code>vMbLA72z</span>
+                </div>
+                <button type=button class=referral-balance__btn>
+                    <svg width=15 height=15 class=referral-balance__btn-icon><use href=/uniswap-cw/icons.e3869cfb.svg#icon_rf_btn /></svg>Copy Code
+                </button>
+            </div>
+        </div>
+        <ul class=progress__list>
+            <li class=progress__item>
+                <div class=progress__lvl-wrap>
+                    <p class=progress__lvl>Level 1</p>
+                    <span class=progress__lvl-value>25%</span>
+                </div>
+                <div class=progress__text-value-wrap>
+                    <p class=progress__text-value>Progress</p>
+                    <span class=progress__text-value>274&nbsp;916,11 / 15&nbsp;000</span>
+                </div>
+                <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
+                <div class=progress__text-value-wrap>
+                    <span class="progress__text-value text-value-white">274&nbsp;916,11</span>
+                    <span class=progress__text-value>15&nbsp;000</span>
+                </div>
+                <div class=progress__main-value-wrap>
+                    <p class=progress__text-value>EARNING</p>
+                    <span class=progress__main-value>68&nbsp;729,03<span class="progress__text-value text-value-usdt">USDT</span></span>
+                </div>
+            </li>
+            <li class=progress__item>
+                <div class=progress__lvl-wrap>
+                    <p class=progress__lvl>Level 2</p>
+                    <span class=progress__lvl-value>10%</span>
+                </div>
+                <div class=progress__text-value-wrap>
+                    <p class=progress__text-value>Progress</p>
+                    <span class=progress__text-value>580&nbsp;385,1 /  35&nbsp;000</span>
+                </div>
+                <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
+                <div class=progress__text-value-wrap>
+                    <span class="progress__text-value text-value-white">580&nbsp;385,1</span>
+                    <span class=progress__text-value> 35&nbsp;000</span>
+                </div>
+                <div class=progress__main-value-wrap>
+                    <p class=progress__text-value>EARNING</p>
+                    <span class=progress__main-value>58&nbsp;038,51<span class="progress__text-value text-value-usdt">USDT</span></span>
+                </div>
+            </li>
+            <li class=progress__item>
+                <div class=progress__lvl-wrap>
+                    <p class=progress__lvl>Level 3</p>
+                    <span class=progress__lvl-value>5%</span>
+                </div>
+                <div class=progress__text-value-wrap>
+                    <p class=progress__text-value>Progress</p>
+                    <span class=progress__text-value>480&nbsp;797,1 / 70&nbsp;000</span>
+                </div>
+                <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
+                <div class=progress__text-value-wrap>
+                    <span class="progress__text-value text-value-white">480&nbsp;797,1</span>
+                    <span class=progress__text-value>70&nbsp;000</span>
+                </div>
+                <div class=progress__main-value-wrap>
+                    <p class=progress__text-value>EARNING</p>
+                    <span class=progress__main-value>24&nbsp;039,85<span class="progress__text-value text-value-usdt">USDT</span></span>
+                </div>
+            </li>
+            <li class=progress__item>
+                <div class=progress__lvl-wrap>
+                    <p class=progress__lvl>Level 4</p>
+                    <span class=progress__lvl-value>2.5%</span>
+                </div>
+                <div class=progress__text-value-wrap>
+                    <p class=progress__text-value>Progress</p>
+                    <span class=progress__text-value>979&nbsp;991,58 / 100&nbsp;000</span>
+                </div>
+                <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
+                <div class=progress__text-value-wrap>
+                    <span class="progress__text-value text-value-white">979&nbsp;991,58</span>
+                    <span class=progress__text-value>100&nbsp;000</span>
+                </div>
+                <div class=progress__main-value-wrap>
+                    <p class=progress__text-value>EARNING</p>
+                    <span class=progress__main-value>24&nbsp;499,79<span class="progress__text-value text-value-usdt">USDT</span></span>
+                </div>
+            </li>
+            <li class=progress__item>
+                <div class=progress__lvl-wrap>
+                    <p class=progress__lvl>Level 5</p>
+                    <span class=progress__lvl-value>0.1%</span>
+                </div>
+                <div class=progress__text-value-wrap>
+                    <p class=progress__text-value>Progress</p>
+                    <span class=progress__text-value>226&nbsp;852,08 / 200&nbsp;000</span>
+                </div>
+                <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
+                <div class=progress__text-value-wrap>
+                    <span class="progress__text-value text-value-white">226&nbsp;852,08</span>
+                    <span class=progress__text-value>200&nbsp;000</span>
+                </div>
+                <div class=progress__main-value-wrap>
+                    <p class=progress__text-value>EARNING</p>
+                    <span class=progress__main-value>226,85<span class="progress__text-value text-value-usdt">USDT</span></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
         </main>
         <footer>
     <div class=footer__container>
@@ -777,4 +1018,3 @@
     </div>
 </footer>
     
- 
