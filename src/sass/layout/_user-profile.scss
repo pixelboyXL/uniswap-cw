@@ -74,17 +74,29 @@
     background-color: var(--uniswap-light-dark);
 }
 
-.balance-income__wrap {
-    @include flex_align;
-    justify-content: space-between;
-    margin-bottom: 32px;
-}
-
-.balance-income__title {
+.balance-title,
+.income-title {
     font-weight: 400;
     font-size: 13.7px;
     line-height: calc(20 / 13.7);
     color: var(--uniswap-my-profile-white);
+    @include flex_align;
+    margin-bottom: 32px;
+    &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-left: auto;
+    }
+}
+
+.balance-title::after {
+    background-image: url(../images/icon_balance.svg);
+}
+
+.income-title::after {
+    background-image: url(../images/icon_income.svg);
 }
 
 .balance-income__after-title {
@@ -118,25 +130,21 @@
     background-color: var(--uniswap-light-dark);
 }
 
-.verification__title-wrap {
-    @include flex_align;
-    margin-bottom: 32px;
-}
-
 .verification__title {
     font-weight: 400;
     font-size: 15.3px;
     line-height: calc(16 / 15.3);
     color: var(--uniswap-my-profile-orange);
-    margin-left: 8px;
-}
-
-.verification__first-text-wrap {
     @include flex_align;
-    padding: 15px 17px;
-    margin-bottom: 16px;
-    border-radius: 10px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    margin-bottom: 32px;
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        background-image: url(../images/icon_exmark.svg);
+    }
 }
 
 .verification__first-text {
@@ -144,7 +152,19 @@
     font-size: 13.6px;
     line-height: calc(20 / 13.6);
     color: var(--uniswap-my-profile-grey);
-    margin-left: 12px;
+    @include flex_align;
+    padding: 15px 17px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--uniswap-my-profile-border);
+    &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 12px;
+        background-image: url(../images/icon_email_white.svg);
+    }
 }
 
 .verification__second-text {
@@ -165,10 +185,14 @@
     font-size: 13.8px;
     line-height: calc(20 / 13.8);
     color: var(--uniswap-my-profile-dark);
-}
-
-.verification__icon-email-black {
-    margin-right: 16px;
+    &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 16px;
+        background-image: url(../images/icon_email_black.svg);
+    }
 }
 
 .verification-lvl__main-wrap {
@@ -178,17 +202,21 @@
     background-color: var(--uniswap-light-dark);
 }
 
-.verification-lvl__title-wrap {
-    @include flex_align;
-    margin-bottom: 30px;
-}
-
 .verification-lvl__title {
     font-weight: 400;
     font-size: 15.1px;
     line-height: calc(16 / 15.1);
     color: var(--uniswap-my-profile-white);
-    margin-left: 8px;
+    @include flex_align;
+    margin-bottom: 30px;
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        background-image: url(../images/icon_shield.svg);
+    }
 }
 
 .verification-lvl__wrap {
@@ -244,10 +272,6 @@
     margin-bottom: 16px;
 }
 
-.verification-lvl__item {
-    @include flex_align;
-}
-
 .verification-lvl__item + .verification-lvl__item {
     margin-top: 8px;
 }
@@ -257,7 +281,15 @@
     font-size: 13.7px;
     line-height: calc(20 / 13.7);
     color: var(--uniswap-my-profile-white);
-    margin-left: 8px;
+    @include flex_align;
+    &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        background-image: url(../images/icon_user_profile_check.svg);
+    }
 }
 
 .verification-lvl__btn-wrap {
