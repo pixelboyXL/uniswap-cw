@@ -1,4 +1,5 @@
 const refs = {
+    authorizationContainer: document.querySelector('.authorization__container'),
     authorizationBox: document.querySelector('.authorization-box'),
     authorizationRegisterBox: document.querySelector('.authorization-box__register'),
     uniswapMessageTextWrap: document.querySelector('.uniswap-message_text-wrap'),
@@ -13,6 +14,7 @@ const refs = {
 };
 
 export const {
+    authorizationContainer,
     authorizationBox,
     authorizationRegisterBox,
     uniswapMessageTextWrap,

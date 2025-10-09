@@ -17,11 +17,14 @@
 }
 
 .logo {
-    font-size: 17px;
-    line-height: calc(24 / 17);
-    color: var(--uniswap-pink);
-    @include flex_align;
-    width: 94px;
+	display: none;
+    @include desk {
+		font-size: 17px;
+		line-height: calc(24 / 17);
+		color: var(--uniswap-pink);
+		@include flex_align;
+		width: 94px;
+	}
 }
 
 .logo-image {

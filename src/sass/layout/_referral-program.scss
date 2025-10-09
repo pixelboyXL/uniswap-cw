@@ -75,14 +75,18 @@
     font-weight: 700;
     font-size: 15.3px;
     line-height: calc(24 / 15.3);
-    @include flex_align;
     padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--uniswap-pink);
-}
-
-.referral-balance__btn-icon {
-    margin-right: 10px;
+    @include flex_align;
+    &::before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        background-image: url(../images/icon_rf_btn.svg);
+    }
 }
 
 .progress__list {

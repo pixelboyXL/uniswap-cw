@@ -1,32 +1,42 @@
 .authorization {
-    background-image: url(../images/uniswap_main_image.png);
+    width: 391px;
+    height: 810px;
+    margin: 0 auto;
+    background-image: url(../images/uniswap_main_image_mob.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include tab {
+        width: 1440px;
+        background-image: url(../images/uniswap_main_image.png);
+    }
 }
 
 .authorization__container {
     width: 100%;
     min-height: 100vh;
-    padding-left: 28px;
-    padding-top: 20px;
-    padding-right: 28px;
+    padding-left: 9px;
+    padding-top: 132px;
+    padding-right: 9px;
     padding-bottom: 0;
     margin: 0 auto;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(6px);
+    @include desk {
+        padding-left: 28px;
+        padding-top: 20px;
+        padding-right: 28px;
+        backdrop-filter: blur(12px);
+    }
 }
 
 .authorization-box,
 .authorization-box__register {
-    width: 560px;
-    padding-left: 40px;
+    width: 373px;
+    padding-left: 28px;
     padding-top: 50px;
-    padding-right: 40px;
+    padding-right: 28px;
     padding-bottom: 74px;
-    margin-left: auto;
-    margin-top: 52px;
-    margin-right: auto;
-    margin-bottom: 0;
+    margin: 0 auto;
     border: 1px solid #222;
     border-radius: 40px;
     background-color: var(--uniswap-dark);
@@ -34,14 +44,27 @@
     .uniswap-message_text-wrap {
         display: none;
     }
+    @include desk {
+        width: 560px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: auto;
+        margin-top: 52px;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
 }
 
 .authorization-box__title {
     font-weight: 500;
-    font-size: 62px;
-    line-height: calc(71 / 62);
+    font-size: 41.88px;
+    line-height: calc(51 / 41.88);
     text-align: center;
     margin-bottom: 30px;
+    @include desk {
+        font-size: 62px;
+        line-height: calc(71 / 62);
+    }
 }
 
 .authorization-box__register-title {
@@ -49,7 +72,7 @@
 }
 
 .authorization-box__label {
-    font-size: 15px;
+    font-size: 14.75px;
     letter-spacing: -0.12px;
     color: var(--clearly-white);
     display: block;
@@ -59,7 +82,7 @@
 .authorization-box__input {
     display: block;
     width: 100%;
-    max-width: 480px;
+    max-width: 317px;
     padding: 12.5px 16px;
     margin-bottom: 13px;
     outline: none;
@@ -67,14 +90,17 @@
     border-radius: 12px;
     color: var(--clearly-white);
     background-color: var(--uniswap-light-dark);
+    @include desk {
+        max-width: 480px;
+    }
 }
 
 .authorization-box__btn {
     font-weight: 700;
-    font-size: 20px;
-    line-height: calc(24 / 20);
+    font-size: 19.84px;
+    line-height: calc(24 / 19.84);
     display: block;
-    width: 464;
+    width: 293px;
     padding: 17px 0;
     margin: 30px auto;
     border-radius: 16px;
@@ -83,6 +109,12 @@
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
         background-color: rgba(255, 55, 199, 0.12);
+    }
+    &:focus {
+        transform: scale(0.95);
+    }
+    @include desk {
+        width: 464;
     }
 }
 
@@ -97,9 +129,8 @@
 }
 
 .authorization-box__text {
-    font-size: 17px;
-    font-weight: 500; 
-    line-height: calc(23 / 17);
+    font-size: 16.73px;
+    line-height: calc(23 / 16.73);
     color: rgba(255, 255, 255, 0.55);
 }
 
