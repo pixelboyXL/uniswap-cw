@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.9b437077.css><script type=module src=/uniswap-cw/uniswap-cw.9fb66e1b.js></script><body>
-        <header class="header visually_hidden">
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.2a8a1d5b.css><script type=module src=/uniswap-cw/uniswap-cw.c3b05897.js></script><body>
+        <header class=header>
     <nav class=nav>
         <div class=nav-site-wrap>
             <a href=/uniswap-cw/index.html class="logo primary-font">
-            <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
-            Uniswap
+                <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
+                Uniswap
             </a>
             <ul class=nav-site-list>
                 <li class=nav-site-list__item>
@@ -38,56 +38,72 @@
                 </li>
             </ul>
             <button type=button class=nav-user-icon-wrap>
-                <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon" class=nav-user-icon>
+                <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon">
             </button>
         </div>
     </nav>
 </header>
-        <section class=authorization>
+        <header class="header-mob visually_hidden">
+    <div class=header-mob__wrap>
+        <a href=/uniswap-cw/index.html class="logo-mob primary-font">
+            <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image-mob>
+        </a>
+        <button type=button class=header-mob__mob-menu></button>
+        <button type=button class=header-mob__user-button>
+            <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon">
+        </button>
+    </div>
+</header>
+
+        <section class="authorization visually_hidden">
     <div class=authorization__container>
         <a href=/uniswap-cw/index.html class="logo primary-font">
             <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
             Uniswap
         </a>
-        <div class=authorization-box>
-            <h1 class=authorization-box__title>Login anytime, anywhere.</h1>
-            <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-                <span class="uniswap-message_text uniswap-message_text-pink">Invalid email or password</span>
+        <div class=authorization-box__wrap>
+            <div class=authorization-box>
+                <h1 class=authorization-box__title>Login anytime, anywhere.</h1>
+                <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
+                    <span class="uniswap-message_text uniswap-message_text-pink">Invalid email or password</span>
+                </div>
+                <form class=authorization-box__form>
+                    <label for=login-email class=authorization-box__label>Email</label>
+                    <input type=email name=login-email class="authorization-box__input input-email" id=login-email required>
+                    <label for=login-password class=authorization-box__label>Password</label>
+                    <input type=password name=login-password class=authorization-box__input id=login-password required>
+                    <button class=authorization-box__btn>Login</button>
+                    <div class=authorization-box__text-wrap>
+                        <p class=authorization-box__text>Don't have an account?</p>
+                        <span class=authorization-box__text_pink>Register here</span>
+                    </div>
+                </form>
             </div>
-            <form class=authorization-box__form>
-                <label for=login-email class=authorization-box__label>Email</label>
-                <input type=email name=login-email class="authorization-box__input input-email" id=login-email required>
-                <label for=login-password class=authorization-box__label>Password</label>
-                <input type=password name=login-password class=authorization-box__input id=login-password required>
-                <button class=authorization-box__btn>Login</button>
-                <div class=authorization-box__text-wrap>
-                    <p class=authorization-box__text>Don't have an account?</p>
-                    <span class=authorization-box__text_pink>Register here</span>
-                </div>
-            </form>
         </div>
-        <div class="authorization-box__register visually_hidden">
-            <h1 class="authorization-box__register-title authorization-box__title">Create Your Account</h1>
-            <form>
-                <label for=register-email class=authorization-box__label>Email</label>
-                <input type=email name=register-email class="authorization-box__input input-email" id=register-email required>
-                <label for=register-password class=authorization-box__label>Password</label>
-                <input type=password name=register-password class=authorization-box__input id=register-password required>
-                    <label for=secret-code class=authorization-box__label data-secret-code>Secret Code</label>
-                <input name=secret-code class=authorization-box__input id=secret-code>
-                <label for=referral-code class=authorization-box__label data-referral-code>Referral Code (Optional)</label>
-                <input name=referral-code class=authorization-box__input id=referral-code>
-                <button class=authorization-box__btn>Create Account</button>
-                <div class=authorization-box__text-wrap>
-                    <p class=authorization-box__text>Already have an account?</p>
-                    <span class=authorization-box__register-text_pink>Login here</span>
-                </div>
-            </form>
+        <div class="authorization-box__register-wrap visually_hidden">
+            <div class=authorization-box__register>
+                <h1 class="authorization-box__register-title authorization-box__title">Create Your Account</h1>
+                <form>
+                    <label for=register-email class=authorization-box__label>Email</label>
+                    <input type=email name=register-email class="authorization-box__input input-email" id=register-email required>
+                    <label for=register-password class=authorization-box__label>Password</label>
+                    <input type=password name=register-password class=authorization-box__input id=register-password required>
+                        <label for=secret-code class=authorization-box__label data-secret-code>Secret Code</label>
+                    <input name=secret-code class=authorization-box__input id=secret-code>
+                    <label for=referral-code class=authorization-box__label data-referral-code>Referral Code (Optional)</label>
+                    <input name=referral-code class=authorization-box__input id=referral-code>
+                    <button class=authorization-box__btn>Create Account</button>
+                    <div class=authorization-box__text-wrap>
+                        <p class=authorization-box__text>Already have an account?</p>
+                        <span class=authorization-box__register-text_pink>Login here</span>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>
         <main class=container>
-            <section class="market visually_hidden">
+            <section class=market>
     <div class="uniswap-message uniswap-message_warning visually_hidden">
         <p class="uniswap-message_title uniswap-message_title-pink">Warning</p>
         <p class=uniswap-message_after-title>This pools are unavailable for your country!</p>
@@ -898,9 +914,70 @@
     </div>
 </section>
         </main>
-        <footer class=visually_hidden>
+        <footer>
     <div class=footer__container>
         <div class=footer-main-wrap>
+            <div class=footer-link-wrap>
+                <div class="footer-link-wrap-smalls wrap-smalls-mb">
+                    <h3 class=footer-link-title>Products</h3>
+                    <ul>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Wallet</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>UniswapX</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>API</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Unichain</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class=footer-link-wrap-smalls>
+                    <h3 class=footer-link-title>Protocol</h3>
+                    <ul>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Vote</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Governance</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Developers</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class=footer-link-wrap-smalls>
+                    <h3 class=footer-link-title>Company</h3>
+                    <ul>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>About</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Careers</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Blog</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Brand assets</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-link-wrap-smalls wrap-smalls-pl">
+                    <h3 class=footer-link-title>Need help?</h3>
+                    <ul>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Help center</p>
+                        </li>
+                        <li class=footer-link__item>
+                            <p class=footer-link__text>Contact us</p>
+                        </li>   
+                    </ul>
+                </div>
+            </div>
             <div class=footer-social-wrap>
                 <ul class=footer-social-list>
                     <li class=footer-social-list__item>
@@ -920,67 +997,6 @@
                     </li>
                 </ul>
             </div>
-            <div class=footer-link-wrap>
-                <div>
-                    <h3 class=footer-link-title>Products</h3>
-                    <ul>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Wallet</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>UniswapX</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>API</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Unichain</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class=footer-link-title>Protocol</h3>
-                    <ul>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Vote</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Governance</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Developers</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class=footer-link-title>Company</h3>
-                    <ul>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>About</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Careers</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Blog</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Brand assets</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class=footer-link-title>Need help?</h3>
-                    <ul>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Help center</p>
-                        </li>
-                        <li class=footer-link__item>
-                            <p class=footer-link__text>Contact us</p>
-                        </li>   
-                    </ul>
-                </div>
-            </div>
         </div>
         <div class=footer-copyright-wrap>
             <p class=footer-copyright>© 2025 - Uniswap Labs</p>
@@ -995,4 +1011,44 @@
         </div>
     </div>
 </footer>
+        <div class="mob-menu__backdrop visually_hidden">
+    <div class=mob-menu>
+        <ul class=mob-menu__cash-list>
+            <li class=cash-list__item>
+                <p class=cash-list__link>Available</p>
+                <span class=cash-list__number>20399.80</span>
+            </li>
+            <li class=cash-list__item>
+                <p class=cash-list__link>Locked</p>
+                <span class=cash-list__number>58099.98</span>
+            </li>
+        </ul>
+        <p class=mob-menu__title>Menu</p>
+        <ul class=mob-menu__pages-list>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_white_paper.9108bb81.svg /></svg>
+                <p class=pages-list__link>White Paper</p>
+            </li>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_stake.037c34bb.svg /></svg>
+                <p class=pages-list__link>Stake</p>
+            </li>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_my_positions.23a71a35.svg /></svg>
+                <p class=pages-list__link>My Positions</p>
+            </li>
+        </ul>
+        <p class=mob-menu__title>Ballance</p>
+        <ul class=mob-menu__balance-list>
+            <li class=balance-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_deposit.2d041d8d.svg /></svg>
+                <p class=balance-list__link>Deposit</p>
+            </li>
+            <li class=balance-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_withdraw.2f83aa04.svg /></svg>
+                <p class=balance-list__link>Withdraw</p>
+            </li>
+        </ul> 
+    </div>
+</div>
     
