@@ -15,10 +15,7 @@
 .authorization__container {
     width: 100%;
     min-height: 100vh;
-    padding-left: 9px;
-    padding-top: 132px;
-    padding-right: 9px;
-    padding-bottom: 0;
+    padding: 0 9px;
     margin: 0 auto;
     backdrop-filter: blur(6px);
     @include desk {
@@ -26,6 +23,20 @@
         padding-top: 20px;
         padding-right: 28px;
         backdrop-filter: blur(12px);
+    }
+}
+
+.authorization-box__wrap {
+    padding-top: 132px;
+    @include desk {
+        padding-top: 68px;
+    }
+}
+
+.authorization-box__register-wrap {
+    padding-top: 80px;
+    @include desk {
+        padding-top: 22px;
     }
 }
 
@@ -48,10 +59,6 @@
         width: 560px;
         padding-left: 40px;
         padding-right: 40px;
-        margin-left: auto;
-        margin-top: 52px;
-        margin-right: auto;
-        margin-bottom: 0;
     }
 }
 

@@ -1,7 +1,6 @@
 const refs = {
-    authorizationContainer: document.querySelector('.authorization__container'),
-    authorizationBox: document.querySelector('.authorization-box'),
-    authorizationRegisterBox: document.querySelector('.authorization-box__register'),
+    authorizationBoxWrap: document.querySelector('.authorization-box__wrap'),
+    authorizationBoxRegisterWrap: document.querySelector('.authorization-box__register-wrap'),
     uniswapMessageTextWrap: document.querySelector('.uniswap-message_text-wrap'),
     authorizationLogInForm: document.querySelector('.authorization-box__form'),
     authorizationLogInEmailInput: document.getElementById('login-email'),
@@ -14,9 +13,8 @@ const refs = {
 };
 
 export const {
-    authorizationContainer,
-    authorizationBox,
-    authorizationRegisterBox,
+    authorizationBoxWrap,
+    authorizationBoxRegisterWrap,
     uniswapMessageTextWrap,
     authorizationLogInForm,
     authorizationLogInEmailInput,

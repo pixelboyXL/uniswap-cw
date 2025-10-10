@@ -1,6 +1,5 @@
-import { authorizationContainer,
-    authorizationBox,
-    authorizationRegisterBox,
+import { authorizationBoxWrap,
+    authorizationBoxRegisterWrap,
     uniswapMessageTextWrap,
     authorizationLogInForm,
     authorizationLogInEmailInput,
@@ -12,58 +11,44 @@ import { toggleVisuallyHidden } from './simple';
 
 if (authorizationTextPink) {
     authorizationTextPink.addEventListener("click", () => {
-        toggleVisuallyHidden(authorizationBox, authorizationRegisterBox);
+        toggleVisuallyHidden(authorizationBoxWrap, authorizationBoxRegisterWrap);
         uniswapMessageTextWrap.style.display = "none";
         authorizationLogInForm.reset();
         resetAuthPadding();
-        resetAuthMargin();
     });
 };
 
 if (authorizationRegisterTextPink) {
     authorizationRegisterTextPink.addEventListener("click", () => {
-        toggleVisuallyHidden(authorizationRegisterBox, authorizationBox);
+        toggleVisuallyHidden(authorizationBoxRegisterWrap, authorizationBoxWrap);
     });
 };
 
-function getAuthPadding () {
-    const authContainerStyles = window.getComputedStyle(authorizationContainer);
-    return authContainerStyles.getPropertyValue('padding-top');
+function getAuthPadding () {    
+    const authBoxStyles = window.getComputedStyle(authorizationBoxWrap);
+    return authBoxStyles.getPropertyValue('padding-top');
 };
 
-function changeAuthPadding () {
-    const authContainerPaddingTop = getAuthPadding();
-    if (authContainerPaddingTop === "132px") {
-        authorizationContainer.style.paddingTop = "100px";
+function changeAuthPadding () {    
+    const authBoxPaddingTop = getAuthPadding();
+    if (authBoxPaddingTop === "132px") {
+        authorizationBoxWrap.style.paddingTop = "100px";
+        return;
+    };
+    if (authBoxPaddingTop === "68px") {
+        authorizationBoxWrap.style.paddingTop = "36px";
         return;
     };
 };
 
 function resetAuthPadding() {
-    const authContainerPaddingTop = getAuthPadding();
-    if (authContainerPaddingTop === "100px") {
-        authorizationContainer.style.paddingTop = "132px";
+    const authBoxPaddingTop = getAuthPadding();
+    if (authBoxPaddingTop === "36px") {
+        authorizationBoxWrap.style.paddingTop = "68px";
         return;
     };
-};
-
-function getAuthMargin () {    
-    const authBoxStyles = window.getComputedStyle(authorizationBox);
-    return authBoxStyles.getPropertyValue('margin-top');
-};
-
-function changeAuthMargin () {    
-    const authBoxMarginTop = getAuthMargin();
-    if (authBoxMarginTop === "52px") {
-        authorizationBox.style.marginTop = "20px";
-        return;
-    };
-};
-
-function resetAuthMargin() {
-    const authBoxMarginTop = getAuthMargin();
-    if (authBoxMarginTop === "20px") {
-        authorizationBox.style.marginTop = "52px";
+    if (authBoxPaddingTop === "100px") {
+        authorizationBoxWrap.style.paddingTop = "132px";
         return;
     };
 };
@@ -75,17 +60,14 @@ if (authorizationButton) {
         const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         if (!email || !password) {  
             changeAuthPadding();
-            changeAuthMargin();
             uniswapMessageTextWrap.style.display = "block";
             return;
         } else if (!email.match(emailPattern)) {
             changeAuthPadding();
-            changeAuthMargin();
             uniswapMessageTextWrap.style.display = "block";
             return;
         } else {
             resetAuthPadding();
-            resetAuthMargin();
             uniswapMessageTextWrap.style.display = "none";
         };
     });

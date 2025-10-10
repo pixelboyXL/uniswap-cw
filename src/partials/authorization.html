@@ -1,4 +1,4 @@
-<section class="authorization ">
+<section class="authorization visually_hidden">
     <div class="authorization__container">
         <a href="./index.html" class="logo primary-font">
             <img
@@ -7,62 +7,66 @@
                 class="logo-image">
             Uniswap
         </a>
-        <div class="authorization-box">
-            <h1 class="authorization-box__title">Login anytime, anywhere.</h1>
-            <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-                <span class="uniswap-message_text uniswap-message_text-pink">Invalid email or password</span>
+        <div class="authorization-box__wrap">
+            <div class="authorization-box">
+                <h1 class="authorization-box__title">Login anytime, anywhere.</h1>
+                <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
+                    <span class="uniswap-message_text uniswap-message_text-pink">Invalid email or password</span>
+                </div>
+                <form class="authorization-box__form">
+                    <label for="login-email" class="authorization-box__label">Email</label>
+                    <input type="email" 
+                        name="login-email" 
+                        class="authorization-box__input input-email" 
+                        id="login-email"
+                        required>
+                    <label for="login-password" class="authorization-box__label">Password</label>
+                    <input type="password" 
+                        name="login-password" 
+                        class="authorization-box__input" 
+                        id="login-password" 
+                        required>
+                    <button type="submit" class="authorization-box__btn">Login</button>
+                    <div class="authorization-box__text-wrap">
+                        <p class="authorization-box__text">Don't have an account?</p>
+                        <span class="authorization-box__text_pink">Register here</span>
+                    </div>
+                </form>
             </div>
-            <form class="authorization-box__form">
-                <label for="login-email" class="authorization-box__label">Email</label>
-                <input type="email" 
-                    name="login-email" 
-                    class="authorization-box__input input-email" 
-                    id="login-email"
-                    required>
-                <label for="login-password" class="authorization-box__label">Password</label>
-                <input type="password" 
-                    name="login-password" 
-                    class="authorization-box__input" 
-                    id="login-password" 
-                    required>
-                <button type="submit" class="authorization-box__btn">Login</button>
-                <div class="authorization-box__text-wrap">
-                    <p class="authorization-box__text">Don't have an account?</p>
-                    <span class="authorization-box__text_pink">Register here</span>
-                </div>
-            </form>
         </div>
-        <div class="authorization-box__register visually_hidden">
-            <h1 class="authorization-box__title authorization-box__register-title">Create Your Account</h1>
-            <form>
-                <label for="register-email" class="authorization-box__label">Email</label>
-                <input type="email" 
-                    name="register-email" 
-                    class="authorization-box__input input-email" 
-                    id="register-email" 
-                    required>
-                <label for="register-password" class="authorization-box__label">Password</label>
-                <input type="password" 
-                    name="register-password"
-                    class="authorization-box__input" 
-                    id="register-password" 
-                    required>
-                    <label for="secret-code" class="authorization-box__label" data-secret-code>Secret Code</label>
-                <input type="text" 
-                    name="secret-code" 
-                    class="authorization-box__input" 
-                    id="secret-code">
-                <label for="referral-code" class="authorization-box__label" data-referral-code>Referral Code (Optional)</label>
-                <input type="text" 
-                    name="referral-code"
-                    class="authorization-box__input"
-                    id="referral-code">
-                <button type="submit" class="authorization-box__btn">Create Account</button>
-                <div class="authorization-box__text-wrap">
-                    <p class="authorization-box__text">Already have an account?</p>
-                    <span class="authorization-box__register-text_pink">Login here</span>
-                </div>
-            </form>
+        <div class="authorization-box__register-wrap visually_hidden">
+            <div class="authorization-box__register">
+                <h1 class="authorization-box__title authorization-box__register-title">Create Your Account</h1>
+                <form>
+                    <label for="register-email" class="authorization-box__label">Email</label>
+                    <input type="email" 
+                        name="register-email" 
+                        class="authorization-box__input input-email" 
+                        id="register-email" 
+                        required>
+                    <label for="register-password" class="authorization-box__label">Password</label>
+                    <input type="password" 
+                        name="register-password"
+                        class="authorization-box__input" 
+                        id="register-password" 
+                        required>
+                        <label for="secret-code" class="authorization-box__label" data-secret-code>Secret Code</label>
+                    <input type="text" 
+                        name="secret-code" 
+                        class="authorization-box__input" 
+                        id="secret-code">
+                    <label for="referral-code" class="authorization-box__label" data-referral-code>Referral Code (Optional)</label>
+                    <input type="text" 
+                        name="referral-code"
+                        class="authorization-box__input"
+                        id="referral-code">
+                    <button type="submit" class="authorization-box__btn">Create Account</button>
+                    <div class="authorization-box__text-wrap">
+                        <p class="authorization-box__text">Already have an account?</p>
+                        <span class="authorization-box__register-text_pink">Login here</span>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>

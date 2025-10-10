@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 391px;
     margin: 0 auto;
 // 	@include mob {
 // 		width: 360px;
@@ -11,9 +11,9 @@
 // 	@include lap {
 // 		width: 991px;
 // 	}
-// 	@include desk {
-// 		width: 1240px;
-// 	}
+	@include desk {
+		max-width: 1440px;
+	}
 }
 
 .logo {
@@ -27,10 +27,19 @@
 	}
 }
 
+.logo-mob {
+	color: var(--uniswap-pink);
+}
+
 .logo-image {
 	width: 20px;
 	height: 22px;
 	margin-right: 4px;
+}
+
+.logo-image-mob {
+	width: 20px;
+	height: 22px;
 }
 
 // .primary_font {

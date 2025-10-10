@@ -1,22 +1,41 @@
 .footer__container {
     width: 100%;
-    max-width: 1440px;
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-bottom: 40px;
+    max-width: 391px;
+    padding-left: 40px;
+    padding-top: 32px;
+    padding-right: 40px;
+    padding-bottom: 8.55px;
     margin: 0 auto;
+    @include desk {
+        max-width: 1440px;
+        padding-left: 48px;
+        padding-top: 0;
+        padding-right: 48px;
+        padding-bottom: 40px;
+    }
 }
 
 .footer-main-wrap,
 .footer-social-wrap,
 .footer-link-wrap {
+    @include desk {
+        display: flex;
+    }
+}
+
+.footer-link-wrap {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-main-wrap {
-    justify-content: space-between;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #FFFFFF1F;
+    padding-bottom: 18.7px;
+    border-bottom: 1px solid var(--uniswap-rgba-mob-border);
+    @include desk {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding-bottom: 24px;
+    }
 }
 
 .footer-social-list {
@@ -34,9 +53,35 @@
 }
 
 .footer-link-wrap {
-    width: 552px;
-    justify-content: space-between;
-    padding-right: 51px;
+    width: 310px;
+    margin-bottom: 32px;
+    @include desk {
+        justify-content: space-between;
+        width: 552px;
+        padding-right: 51px;
+        margin-bottom: 0;
+    }
+}
+
+.footer-link-wrap-smalls {
+    width: 147px;
+    @include desk {
+        width: auto;
+    }
+}
+
+.wrap-smalls-mb {
+    margin-bottom: 16px;
+    @include desk {
+        margin-bottom: 0;
+    }
+}
+
+.wrap-smalls-pl {
+    padding-left: 16px;
+    @include desk {
+        padding-left: 0;
+    }
 }
 
 .footer-link__item + .footer-link__item {
@@ -55,9 +100,11 @@
 }
 
 .footer-copyright-wrap {
-    display: flex;
-    justify-content: space-between;
     padding-top: 24px;
+    @include desk {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .footer-copyright {
@@ -77,5 +124,5 @@
 .footer-policy-name {
     font-size: 12.7px;
     line-height: calc(18 / 12.7);
-    color: #FFFFFFA6;
+    color: var(--uniswap-footer-policy);
 }
