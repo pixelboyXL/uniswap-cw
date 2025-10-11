@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.2a8a1d5b.css><script type=module src=/uniswap-cw/uniswap-cw.c3b05897.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.ede0d722.css><script type=module src=/uniswap-cw/uniswap-cw.20ef7e7b.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav-site-wrap>
@@ -104,60 +104,74 @@
 </section>
         <main class=container>
             <section class=market>
-    <div class="uniswap-message uniswap-message_warning visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Warning</p>
-        <p class=uniswap-message_after-title>This pools are unavailable for your country!</p>
-        <button type=button class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+    <div class="uniswap-message uniswap-message__warning visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Warning</p>
+        <p class=uniswap-message__after-title>This pools are unavailable for your country!</p>
+        <button type=button class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_error-validate visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Error</p>
-        <p class=uniswap-message_after-title>Validation Error</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-            <span class="uniswap-message_text uniswap-message_text-pink">Please select a trading pair from the dropdown.</span>
+    <div class="uniswap-message uniswap-message__error-validate visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
+        <p class=uniswap-message__after-title>Validation Error</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
+            <span class="uniswap-message__text uniswap-message__text-pink">Please select a trading pair from the dropdown.</span>
         </div>
-        <button type=button class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+        <button type=button class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_error-create visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Error</p>
-        <p class=uniswap-message_after-title>Failed to Create Stake</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-            <span class="uniswap-message_text uniswap-message_text-pink">Insufficient balance</span>
+    <div class="uniswap-message uniswap-message__error-create visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
+        <p class=uniswap-message__after-title>Failed to Create Stake</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
+            <span class="uniswap-message__text uniswap-message__text-pink">Insufficient balance</span>
         </div>
-        <button type=button class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+        <button type=button class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_success visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-green">Success</p>
-        <p class=uniswap-message_after-title>Stake Created Successfully!</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-green">
-            <span class="uniswap-message_text uniswap-message_text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
+    <div class="uniswap-message uniswap-message__success visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-green">Success</p>
+        <p class=uniswap-message__after-title>Stake Created Successfully!</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-green">
+            <span class="uniswap-message__text uniswap-message__text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
         </div>
-        <button type=button class="uniswap-message_btn uniswap-message_btn-green">OK</button>
+        <button type=button class="uniswap-message__btn uniswap-message__btn-green">OK</button>
     </div>
     <div class=market__container>
-        <ul class=market-tokens-list>
-            <li class="market-tokens-list__item tokens-active">
-                <img src=/uniswap-cw/usdc_icon.9ea4aee1.png alt="USDC icon" class=market-tokens-icon>
-                <p class=market-tokens-name>USDC</p>
+        <ul class=market__tokens-list>
+            <li class="tokens-active tokens-list__item">
+                <img src=/uniswap-cw/usdc_icon.9ea4aee1.png alt="USDC icon" class=tokens-list__icon>
+                <p class=tokens-list__name>USDC</p>
             </li>
-            <li class=market-tokens-list__item>
-                <img src=/uniswap-cw/usdt_icon.0a225c26.png alt="USDT icon" class=market-tokens-icon>
-                <p class="market-tokens-name tokens-white">USDT</p>
+            <li class=tokens-list__item>
+                <img src=/uniswap-cw/usdt_icon.0a225c26.png alt="USDT icon" class=tokens-list__icon>
+                <p class="tokens-list__name tokens-white">USDT</p>
             </li>
-            <li class=market-tokens-list__item>
-                <img src=/uniswap-cw/dai_icon.ce3f6fb7.png alt="DAI icon" class=market-tokens-icon>
-                <p class=market-tokens-name>DAI</p>
+            <li class=tokens-list__item>
+                <img src=/uniswap-cw/dai_icon.ce3f6fb7.png alt="DAI icon" class=tokens-list__icon>
+                <p class=tokens-list__name>DAI</p>
             </li>
         </ul>
-        <div>
-            <ul class=market-general-list>
-                <li class=market-general-list__item>
-                    <p class="current market-general-name">Market</p>
+        <div class=general-list__wrap>
+            <ul class=market__general-list>
+                <li class=general-list__item>
+                    <p class="current general-list__name">Market</p>
                 </li>
-                <li class=market-general-list__item>
-                    <p class=market-general-name>Stake</p>
+                <li class=general-list__item>
+                    <p class=general-list__name>Stake</p>
                 </li>
-                <li class=market-general-list__item>
-                    <p class=market-general-name>My Positions</p>
+                <li class=general-list__item>
+                    <p class=general-list__name>My Positions</p>
+                </li>
+            </ul>
+            <ul class="market__tokens-list-mob visually_hidden">
+                <li class="tokens-active tokens-list__item-mob">
+                    <img src=/uniswap-cw/usdc_icon.9ea4aee1.png alt="USDC icon" class=tokens-list__icon>
+                    <p class=tokens-list__name>USDC</p>
+                </li>
+                <li class=tokens-list__item-mob>
+                    <img src=/uniswap-cw/usdt_icon.0a225c26.png alt="USDT icon" class=tokens-list__icon>
+                    <p class="tokens-list__name tokens-white">USDT</p>
+                </li>
+                <li class=tokens-list__item-mob>
+                    <img src=/uniswap-cw/dai_icon.ce3f6fb7.png alt="DAI icon" class=tokens-list__icon>
+                    <p class=tokens-list__name>DAI</p>
                 </li>
             </ul>
             <div class=market__tokens-grid>
@@ -469,6 +483,95 @@
         <div class=tokens-grid__position>1.09</div>
     </div>
 </div>
+            <div class="market__tokens-grid-mob visually_hidden">
+    <div class="tokens-grid__header tokens-grid__row-mob">
+        <div class=tokens-grid__name>PAIR</div>
+        <div class=tokens-grid__name>PI</div>
+        <div class=tokens-grid__name>BL</div>
+        <div class=tokens-grid__name>UT</div>
+        <div class=tokens-grid__name>ROL</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+    <div class=tokens-grid__row-mob>
+        <div class=tokens-grid__position>
+            <img src=/uniswap-cw/trx_icon.2ad60df8.png alt="TRX icon" class=tokens-grid__icon>
+            <p class=tokens-grid__coin>TRX</p>
+        </div>
+        <div class=tokens-grid__position>19.87</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+        <div class=tokens-grid__position>1.09</div>
+    </div>
+</div>
             <form class="market__stake-form visually_hidden">
     <label for=select-pair class=stake-form__label>Pair</label>
     <input id=select-pair name=select-pair placeholder="Select pair" class=stake-form__select>
@@ -530,8 +633,8 @@
             </li>
         </ul>
     </div>
-    <div class="uniswap-market-btn-wrap uniswap-market-btn-wrap-stake">
-        <button type=button class=uniswap-market-btn>Create Stake</button>
+    <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-stake">
+        <button type=button class=uniswap-market__btn>Create Stake</button>
     </div>
 </form>
             <div class="market__my-positions visually_hidden">
@@ -721,12 +824,12 @@
             </div>
         </li>
     </ul>
-    <div class="uniswap-market-btn-wrap uniswap-market-btn-wrap-my-positions">
-        <button type=button class=uniswap-market-btn>Claim all</button>
-        <button type=button class=uniswap-market-exmark>
+    <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-my-positions">
+        <button type=button class=uniswap-market__btn>Claim all</button>
+        <button type=button class=uniswap-market__exmark>
             !
-            <div class="is_hidden uniswap-market-info-wrap">
-                <p class=uniswap-market-info>Every stake is available to claim from 10$ income</p>
+            <div class="is_hidden uniswap-market__info-wrap">
+                <p class=uniswap-market__info>Every stake is available to claim from 10$ income</p>
             </div>
         </button>
     </div>
@@ -777,7 +880,6 @@
                 <p class=verification-lvl__progress-title>Progress</p>
                 <p class=verification-lvl__progress-value>0/2</p>
             </div>
-            <img src=/uniswap-cw/icon_progress_bar_long.bc76cdcd.png alt="Progress bar long line" class=verification-lvl__progress-bar>
             <p class=verification-lvl__features-title>Available Features:</p>
             <ul class=verification-lvl__list>
                 <li class=verification-lvl__item>
