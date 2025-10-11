@@ -119,28 +119,32 @@
 .uniswap-message {
     border-radius: 20px;
     background-color: var(--uniswap-market-background);
-	&_warning {
-		max-width: 364px;
-		padding-left: 24px;
-		padding-top: 26px;
-		padding-right: 24px;
-		padding-bottom: 18px;
+	&__warning {
+		max-width: 304px;
+		padding: 25px 21px;
+		@include desk {
+			max-width: 364px;
+			padding-left: 24px;
+			padding-top: 26px;
+			padding-right: 24px;
+			padding-bottom: 18px;
+		}
 	}
-	&_error-validate {
+	&__error-validate {
 		max-width: 425px;
 		padding: 26px 31px;
 	}
-	&_error-create {
+	&__error-create {
 		max-width: 316px;
 		padding: 26px 73px;
 	}
-	&_success {
+	&__success {
 		max-width: 398px;
 		padding: 26px 37px;
 	}
 }
 
-.uniswap-message_title {
+.uniswap-message__title {
     font-weight: 700;
     font-size: 21px;
     line-height: calc(20 / 21);
@@ -155,17 +159,21 @@
 	}
 }
 
-.uniswap-message_after-title {
+.uniswap-message__after-title {
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(20 / 14);
+    font-size: 12px;
+    line-height: calc(20 / 12);
     text-align: center;
     color: var(--uniswap-grey);
     padding-top: 19px;
     margin-bottom: 22px;
+	@include desk {
+		font-size: 14px;
+		line-height: calc(20 / 14);
+	}
 }
 
-.uniswap-message_text-wrap {
+.uniswap-message__text-wrap {
 	padding: 12.5px 16px;
 	margin-bottom: 18px;
     border-radius: 12px;
@@ -180,7 +188,7 @@
 	}
 }
 
-.uniswap-message_text {
+.uniswap-message__text {
     font-size: 14.75px;
     line-height: calc(28.8 / 14.75);
     letter-spacing: -0.12px;
@@ -192,7 +200,7 @@
 	}
 }
 
-.uniswap-message_btn {
+.uniswap-message__btn {
     font-weight: 700;
     font-size: 15.84px;
     line-height: calc(24 / 15.84);
@@ -208,19 +216,23 @@
 	}
 }
 
-.uniswap-market-btn-wrap {
+.uniswap-market__btn-wrap {
     text-align: right;
 	&-stake {
 		margin-top: 22px;
 	}
 	&-my-positions {
 		@include flex_align;
-		justify-content: flex-end;
-		margin-top: 20px;
+		justify-content: center;
+		margin-top: 22px;
+		@include desk {
+			justify-content: flex-end;
+			margin-top: 20px;
+		}
 	}
 }
 
-.uniswap-market-btn {
+.uniswap-market__btn {
     font-size: 14.84px;
     line-height: calc(24 / 14.84);
     width: 262px;
@@ -228,7 +240,7 @@
     border-radius: 12px;
 }
 
-.uniswap-market-exmark {
+.uniswap-market__exmark {
 	width: 40px;
 	height: 40px;
 	padding: 8px 16.5px;
@@ -237,8 +249,8 @@
 	position: relative;
 }
 
-.uniswap-market-btn,
-.uniswap-market-exmark {
+.uniswap-market__btn,
+.uniswap-market__exmark {
 	background-color: var(--uniswap-dark-pink);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
@@ -246,19 +258,24 @@
     }
 }
 
-.uniswap-market-info-wrap {
+.uniswap-market__info-wrap {
 	width: 192px;
 	padding: 15px 17px;
 	border-radius: 8px;
-	border: 1px solid var(--uniswap-market-border);
+	border: 1px solid var(--uniswap-rgba-mob-border);
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	transform: translate(0, -85%);
+	background-color: var(--uniswap-light-dark);
 	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	@include desk {
+		border: 1px solid var(--uniswap-market-border);
+		background-color: transparent;
+	}
 }
 
-.uniswap-market-info {
+.uniswap-market__info {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 100%;

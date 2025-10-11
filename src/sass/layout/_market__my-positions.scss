@@ -1,16 +1,35 @@
 .my-positions__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 936px;
-    margin-top: 20px;
+    margin-left: 31px;
+    @include desk {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 936px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
 
 .my-positions__item {
-    width: 302px;
-    padding: 19px 15px;
+    width: 328px;
+    padding-left: 19px;
+    padding-top: 19.5px;
+    padding-right: 19px;
+    padding-bottom: 19px;
     border-radius: 20px;
     background-color: var(--uniswap-light-dark);
+    @include desk {
+        width: 302px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.my-positions__item + .my-positions__item {
+    margin-top: 22px;
+    @include desk {
+        margin-top: 0px;
+    }
 }
 
 .my-positions__main-tokens-wrap {

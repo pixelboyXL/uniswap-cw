@@ -1,21 +1,32 @@
 .user-profile {
-    padding-top: 35px;
-    padding-bottom: 77px;
+    padding: 20px 0;
+    @include desk {
+        padding-top: 35px;
+        padding-bottom: 77px;
+    }
 }
 
 .user-profile__container {
     width: 100%;
     max-width: 864px;
+    padding: 0 16px;
     margin: 0 auto;
+    @include desk {
+        padding: 0;
+    }
 }
 
 .user-profile__wrap {
     @include flex_align;
+    max-width: 358px;
     padding: 24px;
     margin-bottom: 25px;
     border-radius: 10px;
     border: 1px solid var(--uniswap-my-profile-border);
     background-color: var(--uniswap-light-dark);
+    @include desk {
+        max-width: 864px;
+    }
 }
 
 .user-profile__img-wrap {
@@ -61,17 +72,29 @@
 }
 
 .balance-income__list {
-    display: flex;
-    gap: 16px;
     margin-bottom: 24px;
+    @include desk {
+        display: flex;
+        gap: 16px;
+    }
 }
 
 .balance-income__item {
-    width: 424px;
+    max-width: 358px;
     padding: 24px;
     border-radius: 14px;
     border: 1px solid var(--uniswap-my-profile-border);
     background-color: var(--uniswap-light-dark);
+    &:not(:first-child) {
+        margin-top: 16px;
+        @include desk {
+            margin-top: 0;
+        }
+    }
+    @include desk {
+        max-width: 100%;
+        width: 424px;
+    }
 }
 
 .balance-title,
@@ -123,11 +146,15 @@
 }
 
 .verification__wrap {
+    max-width: 358px;
     padding: 24px;
     margin-bottom: 24px;
     border-radius: 14px;
     border: 1px solid var(--uniswap-my-profile-border-orange);
     background-color: var(--uniswap-light-dark);
+    @include desk {
+        max-width: 864px;
+    }
 }
 
 .verification__title {
@@ -152,11 +179,15 @@
     font-size: 13.6px;
     line-height: calc(20 / 13.6);
     color: var(--uniswap-my-profile-grey);
-    @include flex_align;
+    display: flex;
+    align-items: flex-start;
     padding: 15px 17px;
     margin-bottom: 16px;
     border-radius: 10px;
     border: 1px solid var(--uniswap-my-profile-border);
+    @include desk {
+        @include flex_align;
+    }
     &::before {
         content: "";
         display: block;
@@ -164,6 +195,7 @@
         height: 16px;
         margin-right: 12px;
         background-image: url(../images/icon_email_white.svg);
+        flex-shrink: 0;
     }
 }
 
@@ -178,7 +210,9 @@
 .verification__btn {
     width: 100%;
     max-width: 814px;
-    @include flex_justify_align;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     padding: 10px 0;
     border-radius: 8px;
     background-color: var(--uniswap-my-profile-white);
@@ -236,9 +270,23 @@
 }
 
 .verification-lvl__progress-title-wrap {
+    position: relative;
     @include flex_align;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 32px;
+    &::after {
+		content: "";
+        display: block;
+        width: 308px;
+        height: 8px;
+        position: absolute;
+        bottom: -16px;
+        background-image: url(../images/icon_progress_bar_long_mob.png);
+        @include desk {
+            width: 814px;
+            background-image: url(../images/icon_progress_bar_long.png);
+        }
+    }
 }
 
 .verification-lvl__progress-title {
@@ -253,11 +301,6 @@
     font-size: 13.3px;
     line-height: calc(20 / 13.3);
     color: var(--uniswap-my-profile-white);
-}
-
-.verification-lvl__progress-bar {
-    width: 814px;
-    margin-bottom: 16px;
 }
 
 .verification-lvl__features-title {

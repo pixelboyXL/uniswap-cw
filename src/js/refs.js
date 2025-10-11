@@ -8,8 +8,14 @@ const refs = {
     authorizationButton: document.querySelector('.authorization-box__btn'),
     authorizationTextPink: document.querySelector('.authorization-box__text_pink'),
     authorizationRegisterTextPink: document.querySelector('.authorization-box__register-text_pink'),
-    uniswapMarketExmark: document.querySelector('.uniswap-market-exmark'),
-    uniswapMarketInfoWrap: document.querySelector('.uniswap-market-info-wrap'),
+    uniswapMarketExmark: document.querySelector('.uniswap-market__exmark'),
+    uniswapMarketInfoWrap: document.querySelector('.uniswap-market__info-wrap'),
+    header: document.querySelector('.header'),
+    headerMob: document.querySelector('.header-mob'),
+    marketTokensList: document.querySelector('.market__tokens-list'),
+    marketTokensListMob: document.querySelector('.market__tokens-list-mob'),
+    marketTokensGrid: document.querySelector('.market__tokens-grid'),
+    marketTokensGridMob: document.querySelector('.market__tokens-grid-mob'),
 };
 
 export const {
@@ -24,4 +30,10 @@ export const {
     authorizationRegisterTextPink,
     uniswapMarketExmark,
     uniswapMarketInfoWrap,
+    header,
+    headerMob,
+    marketTokensList,
+    marketTokensListMob,
+    marketTokensGrid,
+    marketTokensGridMob,
 } = refs;

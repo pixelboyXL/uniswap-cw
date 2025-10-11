@@ -6,6 +6,14 @@
     margin-top: 22px;
 }
 
+.market__tokens-grid-mob {
+    width: 382px;
+    overflow: hidden;
+    border: 1px solid var(--uniswap-market-border);
+    border-radius: 20px;
+    margin-top: 22px;
+}
+
 .tokens-grid__row {
     display: grid;
     grid-template-columns: [start] 157px [line2] 84px [line3] 65px [line4] 53px [line5] 43px [end];
@@ -13,6 +21,15 @@
     padding-left: 38px;
     margin-bottom: 10px;
     gap: 91px;
+}
+
+.tokens-grid__row-mob {
+    display: grid;
+    grid-template-columns: [start] 70px [line2] 39px [line3] 41px [line4] 31px [line5] 31px [end];
+    height: 52px;
+    padding-left: 38px;
+    margin-bottom: 10px;
+    gap: 26px;
 }
 
 .tokens-grid__header {

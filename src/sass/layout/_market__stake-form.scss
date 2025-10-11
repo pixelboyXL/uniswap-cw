@@ -1,6 +1,11 @@
 .market__stake-form {
-    width: 480px;
-    margin-top: 27px;
+    width: 328px;
+    margin-left: 31px;
+    @include desk {
+        width: 480px;
+        margin-left: 0;
+        margin-top: 27px;
+    }
 }
 
 .stake-form__label {

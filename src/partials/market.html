@@ -1,70 +1,94 @@
-<section class="market ">
-    <div class="uniswap-message uniswap-message_warning visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Warning</p>
-        <p class="uniswap-message_after-title">This pools are unavailable for your country!</p>
-        <button type="button" class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+<section class="market">
+    <div class="uniswap-message uniswap-message__warning visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Warning</p>
+        <p class="uniswap-message__after-title">This pools are unavailable for your country!</p>
+        <button type="button" class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_error-validate visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Error</p>
-        <p class="uniswap-message_after-title">Validation Error</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-            <span class="uniswap-message_text uniswap-message_text-pink">Please select a trading pair from the dropdown.</span>
+    <div class="uniswap-message uniswap-message__error-validate visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
+        <p class="uniswap-message__after-title">Validation Error</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
+            <span class="uniswap-message__text uniswap-message__text-pink">Please select a trading pair from the dropdown.</span>
         </div>
-        <button type="button" class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+        <button type="button" class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_error-create visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-pink">Error</p>
-        <p class="uniswap-message_after-title">Failed to Create Stake</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-pink">
-            <span class="uniswap-message_text uniswap-message_text-pink">Insufficient balance</span>
+    <div class="uniswap-message uniswap-message__error-create visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
+        <p class="uniswap-message__after-title">Failed to Create Stake</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
+            <span class="uniswap-message__text uniswap-message__text-pink">Insufficient balance</span>
         </div>
-        <button type="button" class="uniswap-message_btn uniswap-message_btn-pink">OK</button>
+        <button type="button" class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
     </div>
-    <div class="uniswap-message uniswap-message_success visually_hidden">
-        <p class="uniswap-message_title uniswap-message_title-green">Success</p>
-        <p class="uniswap-message_after-title">Stake Created Successfully!</p>
-        <div class="uniswap-message_text-wrap uniswap-message_text-wrap-green">
-            <span class="uniswap-message_text uniswap-message_text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
+    <div class="uniswap-message uniswap-message__success visually_hidden">
+        <p class="uniswap-message__title uniswap-message__title-green">Success</p>
+        <p class="uniswap-message__after-title">Stake Created Successfully!</p>
+        <div class="uniswap-message__text-wrap uniswap-message__text-wrap-green">
+            <span class="uniswap-message__text uniswap-message__text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
         </div>
-        <button type="button" class="uniswap-message_btn uniswap-message_btn-green">OK</button>
+        <button type="button" class="uniswap-message__btn uniswap-message__btn-green">OK</button>
     </div>
     <div class="market__container">
-        <ul class="market-tokens-list">
-            <li class="market-tokens-list__item tokens-active">
+        <ul class="market__tokens-list">
+            <li class="tokens-list__item tokens-active">
                 <img
                     src="./images/usdc_icon.png"
                     alt="USDC icon"
-                    class="market-tokens-icon">
-                <p class="market-tokens-name">USDC</p>
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">USDC</p>
             </li>
-            <li class="market-tokens-list__item">
+            <li class="tokens-list__item">
                 <img
                     src="./images/usdt_icon.png"
                     alt="USDT icon"
-                    class="market-tokens-icon">
-                <p class="market-tokens-name tokens-white">USDT</p>
+                    class="tokens-list__icon">
+                <p class="tokens-list__name tokens-white">USDT</p>
             </li>
-            <li class="market-tokens-list__item">
+            <li class="tokens-list__item">
                 <img
                     src="./images/dai_icon.png"
                     alt="DAI icon"
-                    class="market-tokens-icon">
-                <p class="market-tokens-name">DAI</p>
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">DAI</p>
             </li>
         </ul>
-        <div>
-            <ul class="market-general-list">
-                <li class="market-general-list__item">
-                    <p class="market-general-name current">Market</p>
+        <div class="general-list__wrap">
+            <ul class="market__general-list">
+                <li class="general-list__item">
+                    <p class="general-list__name current">Market</p>
                 </li>
-                <li class="market-general-list__item">
-                    <p class="market-general-name">Stake</p>
+                <li class="general-list__item">
+                    <p class="general-list__name">Stake</p>
                 </li>
-                <li class="market-general-list__item">
-                    <p class="market-general-name">My Positions</p>
+                <li class="general-list__item">
+                    <p class="general-list__name">My Positions</p>
+                </li>
+            </ul>
+            <ul class="market__tokens-list-mob visually_hidden">
+                <li class="tokens-list__item-mob tokens-active">
+                    <img
+                        src="./images/usdc_icon.png"
+                        alt="USDC icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">USDC</p>
+                </li>
+                <li class="tokens-list__item-mob">
+                    <img
+                        src="./images/usdt_icon.png"
+                        alt="USDT icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name tokens-white">USDT</p>
+                </li>
+                <li class="tokens-list__item-mob">
+                    <img
+                        src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">DAI</p>
                 </li>
             </ul>
             <include src="./partials/market__tokens-grid.html"></include>
+            <include src="./partials/market__tokens-grid-mob.html"></include>
             <include src="./partials/market__stake-form.html"></include>
             <include src="./partials/market__my-positions.html"></include>
         </div>

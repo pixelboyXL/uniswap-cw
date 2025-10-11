@@ -1,7 +1,13 @@
 .market {
-    padding-left: 180px;
-    padding-top: 33px;
-    padding-bottom: 80px;
+    padding-left: 4px;
+    padding-top: 56.75px;
+    padding-right: 4px;
+    padding-bottom: 26px;
+    @include desk {
+        padding-left: 180px;
+        padding-top: 33px;
+        padding-bottom: 80px;
+    }
 }
 
 .market__container {
@@ -10,8 +16,8 @@
     display: flex;
 }
 
-.market-tokens-list {
-    border: 1px solid rgba(25, 27, 31, 1);
+.market__tokens-list {
+    border: 1px solid var(--uniswap-another-dark);
     border-radius: 16px;
     width: 186px;
     height: 136px;
@@ -19,20 +25,38 @@
     margin-right: 56px;
 }
 
-.market-tokens-list__item {
+.market__tokens-list-mob {
+    border: 1px solid var(--uniswap-another-dark);
+    border-radius: 16px;
+    display: flex;
+    width: 338px;
+    padding: 5px;
+    margin-left: 26px;
+    margin-bottom: 41px;
+}
+
+.tokens-list__item {
     @include flex_align;
     padding-left: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-.market-tokens-icon {
+.tokens-list__item-mob {
+    @include flex_align;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 18.33px;
+    padding-bottom: 8px;
+}
+
+.tokens-list__icon {
     width: 26px;
     height: 26px;
     margin-right: 10px;
 }
 
-.market-tokens-name {
+.tokens-list__name {
     font-weight: 400;
     font-size: 16px;
     line-height: calc(20 / 16);
@@ -49,19 +73,28 @@
     color: var(--clearly-white);
 }
 
-.market-general-list {
+.market__general-list {
     display: flex;
     padding-left: 12px;
-    padding-top: 7px;
-}
-
-.market-general-list__item {
-    &:not(:first-child) {
-        margin-left: 36px;
+    margin-left: 26px;
+    margin-bottom: 15.25px;
+    @include desk {
+        padding-top: 7px;
+        margin-left: 0;
+        margin-bottom: 0;
     }
 }
 
-.market-general-name {
+.general-list__item {
+    &:not(:first-child) {
+        margin-left: 16px;
+        @include desk {
+            margin-left: 36px;
+        }
+    }
+}
+
+.general-list__name {
     font-weight: 400;
     font-size: 19.8px;
     line-height: 100%;

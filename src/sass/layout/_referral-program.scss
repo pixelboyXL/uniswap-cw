@@ -1,12 +1,20 @@
 .referral-program {
-    padding-top: 42.67px;
-    padding-bottom: 96px;
+    padding-top: 20px;
+    padding-bottom: 33px;
+    @include desk {
+        padding-top: 42.67px;
+        padding-bottom: 96px;
+    }
 }
 
 .referral-program__container {
     width: 100%;
     max-width: 1232px;
     margin: 0 auto;
+    padding: 0 24px;
+    @include desk {
+        padding: 0;
+    }
 }
 
 .referral-program__title {
@@ -139,7 +147,8 @@
 }
 
 .progress__bar {
-    width: 366px;
+    max-width: 366px;
+    min-height: 4px;
     margin: 8px 0;
 }
 

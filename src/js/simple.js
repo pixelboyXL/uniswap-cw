@@ -9,3 +9,11 @@ export function toggleVisuallyHidden (elemShow, elemHide) {
 export function toggleIsHidden (elem) {
     elem.classList.toggle(isHidden);
 };
+
+export function addVisuallyHidden (elem) {
+    elem.classList.add(visuallyHidden);
+};
+
+export function removeVisuallyHidden (elem) {
+    elem.classList.remove(visuallyHidden);
+};
