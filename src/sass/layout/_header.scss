@@ -1,12 +1,16 @@
 .header {
-    width: 100%;
-    max-width: 1440px;
-    padding-left: 27px;
-    padding-top: 15.67px;
-    padding-right: 33px;
-    padding-bottom: 17.33px;
-    margin: 0 auto;
-    border-bottom: 1px solid var(--uniswap-rgba-border);
+    display: none;
+    @include desk {
+        display: block;
+        width: 100%;
+        max-width: 1440px;
+        padding-left: 27px;
+        padding-top: 15.67px;
+        padding-right: 33px;
+        padding-bottom: 17.33px;
+        margin: 0 auto;
+        border-bottom: 1px solid var(--uniswap-rgba-border);
+    }
 }
 
 .nav {
@@ -29,7 +33,7 @@
 }
 
 .nav-site-list {
-    margin-left: 58px;
+    margin-left: 23px;
 }
 
 .nav-sum-list {
@@ -40,11 +44,62 @@
 .nav-cash-list__item,
 .nav-sum-list__item {
     &:not(:first-child) {
-        margin-left: 25px;
+        margin-left: 32px;
     }
 }
 
-.nav-site-list__link,
+.nav-site-list__link {
+    font-size: 13.8px;
+    line-height: calc(20 / 13.8);
+    color: var(--uniswap-grey);
+    @include flex_align;
+    &::before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+}
+
+.nav-site-list__link-dashboard {
+    &::before {
+        background-image: url(../images/icon_dashboard.svg);
+    }
+}
+
+.nav-site-list__link-white-paper {
+    &::before {
+        background-image: url(../images/icon_white_paper.svg);
+    }
+}
+
+.nav-site-list__link-roadmap {
+    &::before {
+        background-image: url(../images/icon_roadmap.svg);
+    }
+}
+
+.nav-site-list__link-faq {
+    &::before {
+        background-image: url(../images/icon_faq.svg);
+    }
+}
+
+.link-active {
+    color: var(--uniswap-my-profile-white);
+}
+
+.link-small {
+    font-size: 13.7px;
+    line-height: calc(20 / 13.7);
+}
+
+.link-bigger {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+}
+
 .nav-sum-list__link {
     font-weight: 400;
     font-size: 15.88px;
@@ -64,15 +119,6 @@
     font-weight: 400;
     font-size: 15.88px;
     line-height: calc(16 / 15.88);
-}
-
-.link-active {
-    color: var(--clearly-white);
-}
-
-.link-small {
-    font-size: 15.38px;
-    line-height: calc(22 / 15.38);
 }
 
 .nav-user-icon-wrap {
