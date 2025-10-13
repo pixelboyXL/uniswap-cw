@@ -36,15 +36,18 @@
     margin-left: 23px;
 }
 
+.nav-site-list__item + .nav-site-list__item {
+    margin-left: 32px;
+}
+
 .nav-sum-list {
     margin-left: 25px;
 }
 
-.nav-site-list__item,
 .nav-cash-list__item,
 .nav-sum-list__item {
     &:not(:first-child) {
-        margin-left: 32px;
+        margin-left: 25px;
     }
 }
 
