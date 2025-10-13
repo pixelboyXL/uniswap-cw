@@ -1,3 +1,10 @@
+.market__my-positions {
+    display: none;
+    @include desk {
+        display: block;
+    }
+}
+
 .my-positions__list {
     margin-left: 31px;
     @include desk {

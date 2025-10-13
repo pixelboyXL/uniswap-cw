@@ -1,17 +1,25 @@
 .market__tokens-grid {
-    width: 838px;
-    overflow: hidden;
-    border: 1px solid var(--uniswap-market-border);
-    border-radius: 20px;
-    margin-top: 22px;
+    display: none;
+    @include desk {
+        display: block;
+        width: 838px;
+        overflow: hidden;
+        border: 1px solid var(--uniswap-market-border);
+        border-radius: 20px;
+        margin-top: 22px;
+    }
 }
 
 .market__tokens-grid-mob {
+    display: block;
     width: 382px;
     overflow: hidden;
     border: 1px solid var(--uniswap-market-border);
     border-radius: 20px;
     margin-top: 22px;
+    @include desk {
+        display: none;
+    }
 }
 
 .tokens-grid__row {

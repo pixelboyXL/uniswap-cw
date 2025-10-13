@@ -1,52 +1,54 @@
-<form class="market__stake-form visually_hidden">
-    <label for="select-pair" class="stake-form__label">Pair</label>
+<form class="market__stake-form" style="display: none;">
+    <label for="select-pair" class="stake-form__label">
+        <div class="stake-form__pair-wrap is_hidden">
+            <ul class="stake-form__pair-list">
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text current">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-list_item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+            </ul>
+        </div>
+        Pair
+    </label>
     <input id="select-pair" name="select-pair" placeholder="Select pair" class="stake-form__select"/>
-    <div class="stake-form__pair-wrap visually_hidden">
-        <ul class="stake-form__pair-list">
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text current">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-            <li class="stake-form__pair-list_item">
-                <img src="./images/dai_icon.png"
-                    alt="DAI icon"
-                    class="stake-form__pair-icon">
-                <p class="stake-form__pair-text">ADA-USDT</p>
-            </li>
-        </ul>
-    </div>
     <div class="stake-form__wrap_checkbox">
         <input type="checkbox"
             name="market-checkbox" 
@@ -58,24 +60,26 @@
     </div>
     <label for="market-amount" class="stake-form__label">Amount</label>
     <input type="text" id="market-amount" name="market-amount" class="stake-form__input"/>
-    <label for="market-lock-period" class="stake-form__label">Lock period</label>
+    <label for="market-lock-period" class="stake-form__label">
+        <div class="stake-form__lp-wrap is_hidden">
+            <ul class="stake-form__lp-list">
+                <li class="stake-form__lp-list_item">
+                    <span class="stake-form__lp-text current">1 month</span>
+                </li>
+                <li class="stake-form__lp-list_item">
+                    <span class="stake-form__lp-text">3 month</span>
+                </li>
+                <li class="stake-form__lp-list_item">
+                    <span class="stake-form__lp-text">6 month</span>
+                </li>
+                <li class="stake-form__lp-list_item">
+                    <span class="stake-form__lp-text">12 month</span>
+                </li>
+            </ul>
+        </div>
+        Lock period
+    </label>
     <input id="market-lock-period" name="market-lock-period" placeholder="1 month" class="stake-form__select"/>
-    <div class="stake-form__lp-wrap visually_hidden">
-        <ul class="stake-form__lp-list">
-            <li class="stake-form__lp-list_item">
-                <span class="stake-form__lp-text current">1 month</span>
-            </li>
-            <li class="stake-form__lp-list_item">
-                <span class="stake-form__lp-text">3 month</span>
-            </li>
-            <li class="stake-form__lp-list_item">
-                <span class="stake-form__lp-text">6 month</span>
-            </li>
-            <li class="stake-form__lp-list_item">
-                <span class="stake-form__lp-text">12 month</span>
-            </li>
-        </ul>
-    </div>
     <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-stake">
         <button type="button" class="uniswap-market__btn">Create Stake</button>
     </div>

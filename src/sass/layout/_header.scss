@@ -67,19 +67,37 @@
 
 .nav-site-list__link-dashboard {
     &::before {
-        background-image: url(../images/icon_dashboard.svg);
+        background-image: url(../images/icon_dashboard_white.svg);
+    }
+    &:hover {
+        @include change_to_white_with_pointer;
+        &::before {
+            background-image: url(../images/icon_dashboard_white.svg);
+        }
     }
 }
 
 .nav-site-list__link-white-paper {
     &::before {
-        background-image: url(../images/icon_white_paper.svg);
+        background-image: url(../images/icon_white_paper_grey.svg);
+    }
+    &:hover {
+        @include change_to_white_with_pointer;
+        &::before {
+            background-image: url(../images/icon_referral_program_btn.svg);
+        }
     }
 }
 
 .nav-site-list__link-roadmap {
     &::before {
-        background-image: url(../images/icon_roadmap.svg);
+        background-image: url(../images/icon_roadmap_grey.svg);
+    }
+    &:hover {
+        @include change_to_white_with_pointer;
+        &::before {
+            background-image: url(../images/icon_roadmap_white.svg);
+        }
     }
 }
 
@@ -108,6 +126,7 @@
     font-size: 15.88px;
     line-height: calc(22 / 15.88);
     color: var(--uniswap-grey);
+    @include change_to_white_with_pointer;
 }
 
 .nav-cash-list__link {
@@ -128,4 +147,5 @@
     width: 40px;
     height: 40px;
     margin-left: 58px;
+    @include scale_with_pointer;
 }
