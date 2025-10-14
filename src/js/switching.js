@@ -11,20 +11,33 @@ import { authorizationSection,
     stakeFormLpWrap,
     marketMyPositions,
     navUserIcon,
-    headerSection,
-    headerMobSection,
+    navUserSections,
     marketSection,
     userProfileSection,
     referralProgramSection,
     dashboardSection,
     roadmapSection,
     footerSection,
-    dashboard,
-    whitePaper,
-    roadmap,
-    deposit,
-    withdraw,  } from './refs';
-import { toggleIsHidden, showSection, hideSection, addCurrentClass, removeCurrentClass, getViewWidth } from './simple';
+    dashboardLink,
+    whitePaperLink,
+    whitePaperMobLink,
+    stakeMobLink,
+    myPositionsMobLink,
+    roadmapLink,
+    myProfileLink,
+    referralProgramLink,
+    headerMobMenu,
+    mobMenuBackdrop,
+    mobMenu } from './refs';
+import { toggleIsHidden, 
+    showSection, 
+    hideSection, 
+    addCurrentClass, 
+    removeCurrentClass, 
+    toggleCustomClass,
+    addLinkActive,
+    removeLinkActive,
+    getViewWidth } from './simple';
 
 if (linkToMarket) {
     linkToMarket.addEventListener("click", () => {
@@ -80,32 +93,31 @@ if (linkToMyPositions) {
     });
 };
 
+// if (navUserIcon) {
+//     navUserIcon.addEventListener("click", () => {
+//         showSection(authorizationSection);
+//         hideSection(headerSection);
+//         hideSection(headerMobSection);
+//         hideSection(marketSection);
+//         hideSection(userProfileSection);
+//         hideSection(referralProgramSection);
+//         hideSection(dashboardSection);
+//         hideSection(roadmapSection);
+//         hideSection(footerSection);
+//     });
+// };
+
 if (navUserIcon) {
     navUserIcon.addEventListener("click", () => {
-        showSection(authorizationSection);
-        hideSection(headerSection);
-        hideSection(headerMobSection);
-        hideSection(marketSection);
-        hideSection(userProfileSection);
-        hideSection(referralProgramSection);
-        hideSection(dashboardSection);
-        hideSection(roadmapSection);
-        hideSection(footerSection);
+        toggleIsHidden(navUserSections);
     });
 };
 
-if (dashboard) {
-    dashboard.addEventListener("click", () => {
-        showSection(dashboardSection);
-        hideSection(marketSection);
-        hideSection(userProfileSection);
-        hideSection(referralProgramSection);
-        hideSection(roadmapSection);
-    });
-};
-
-if (whitePaper) {
-    whitePaper.addEventListener("click", () => {
+if (dashboardLink) {
+    dashboardLink.addEventListener("click", () => {
+        addLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
         showSection(marketSection);
         hideSection(dashboardSection);
         hideSection(userProfileSection);
@@ -114,8 +126,24 @@ if (whitePaper) {
     });
 };
 
-if (roadmap) {
-    roadmap.addEventListener("click", () => {
+if (whitePaperLink) {
+    whitePaperLink.addEventListener("click", () => {
+        addLinkActive(whitePaperLink);
+        removeLinkActive(dashboardLink);
+        removeLinkActive(roadmapLink);
+        showSection(dashboardSection);
+        hideSection(marketSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
+        hideSection(roadmapSection);
+    });
+};
+
+if (roadmapLink) {
+    roadmapLink.addEventListener("click", () => {
+        addLinkActive(roadmapLink);
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
         showSection(roadmapSection);
         hideSection(marketSection);
         hideSection(userProfileSection);
@@ -124,8 +152,12 @@ if (roadmap) {
     });
 };
 
-if (deposit) {
-    deposit.addEventListener("click", () => {
+if (myProfileLink) {
+    myProfileLink.addEventListener("click", () => {
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
+        toggleIsHidden(navUserSections);
         showSection(userProfileSection);
         hideSection(marketSection);
         hideSection(dashboardSection);
@@ -134,12 +166,80 @@ if (deposit) {
     });
 };
 
-if (withdraw) {
-    withdraw.addEventListener("click", () => {
+if (referralProgramLink) {
+    referralProgramLink.addEventListener("click", () => {
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
+        toggleIsHidden(navUserSections);
         showSection(referralProgramSection);
         hideSection(marketSection);
         hideSection(userProfileSection);
         hideSection(dashboardSection);
+        hideSection(roadmapSection);
+    });
+};
+
+function toggleMobMenu () {
+    const mobMenuVisible = "mob-menu-visible";
+    toggleIsHidden(mobMenuBackdrop);
+    toggleCustomClass(mobMenu, mobMenuVisible);
+};
+
+if (headerMobMenu) {
+    headerMobMenu.addEventListener("click", toggleMobMenu);
+};
+
+if (whitePaperMobLink) {
+    whitePaperMobLink.addEventListener("click", () => {        
+        toggleMobMenu();
+        showSection(marketSection);
+        addCurrentClass(linkToMarket);
+        showSection(marketTokensGridMob);
+        removeCurrentClass(linkToStake);
+        hideSection(marketStakeForm);
+        removeCurrentClass(linkToMyPositions);
+        hideSection(marketMyPositions);
+        
+        hideSection(dashboardSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
+        hideSection(roadmapSection);
+    });
+};
+
+if (stakeMobLink) {
+    stakeMobLink.addEventListener("click", () => {        
+        toggleMobMenu();
+        showSection(marketSection);
+        addCurrentClass(linkToStake);
+        showSection(marketStakeForm);
+        removeCurrentClass(linkToMarket)
+        hideSection(marketTokensGridMob);
+        removeCurrentClass(linkToMyPositions);
+        hideSection(marketMyPositions);
+
+        hideSection(dashboardSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
+        hideSection(roadmapSection);
+    });
+};
+
+if (myPositionsMobLink) {
+    myPositionsMobLink.addEventListener("click", () => {        
+        toggleMobMenu();
+        showSection(marketSection);
+        addCurrentClass(linkToMyPositions);
+        showSection(marketMyPositions);
+        removeCurrentClass(linkToMarket)
+        hideSection(marketTokensGridMob);
+        removeCurrentClass(linkToStake);
+        hideSection(marketStakeForm);
+        
+        hideSection(dashboardSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
         hideSection(roadmapSection);
     });
 };

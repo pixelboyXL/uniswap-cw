@@ -87,6 +87,11 @@
     border-radius: 4px;
     background-color: var(--uniswap-pink);
     @include flex_align;
+    @include focus_decline_with_pointer;
+    &:hover,
+    &:focus {
+        background-color: var(--uniswap-dark-pink);
+    }
     &::before {
         content: "";
         display: block;
@@ -109,6 +114,7 @@
     padding-top: 17px;
     padding-right: 17px;
     padding-bottom: 29px;
+    @include scale_with_pointer;
 }
 
 .progress__lvl {

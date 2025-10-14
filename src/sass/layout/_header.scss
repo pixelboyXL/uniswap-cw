@@ -1,14 +1,14 @@
 .header {
-    display: none;
+    width: 100%;
+    max-width: 391px;
+    padding-left: 20px;
+    padding-right: 12px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--uniswap-rgba-mob-border);
     @include desk {
-        display: block;
-        width: 100%;
         max-width: 1440px;
         padding-left: 27px;
-        padding-top: 15.67px;
         padding-right: 33px;
-        padding-bottom: 17.33px;
-        margin: 0 auto;
         border-bottom: 1px solid var(--uniswap-rgba-border);
     }
 }
@@ -17,19 +17,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 0;
+    @include desk {
+        padding-top: 15.67px;
+        padding-bottom: 17.33px;
+    }
 }
 
-.nav-site-wrap,
-.nav-user-wrap,
-.nav-site-list,
-.nav-cash-list,
-.nav-sum-list {
-    display: flex;
+.header__mob-menu {
+    display: block;
+    margin-left: 20px;
+    @include scale_with_pointer;
+    &::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-image: url(../images/icon_mob_menu.svg);
+    }
+    @include desk {
+        display: none;
+    }
 }
 
 .nav-site-wrap,
 .nav-user-wrap {
-    align-items: center;
+    @include flex_align;
+}
+
+.nav-user-wrap {
+    position: relative;
+}
+
+.nav-site-list,
+.nav-cash-list,
+.nav-sum-list {
+    display: none;
+    @include desk {
+        display: flex;
+    }
 }
 
 .nav-site-list {
@@ -65,10 +91,11 @@
     }
 }
 
-.nav-site-list__link-dashboard {
+.nav-site-list__dashboard-link {
     &::before {
-        background-image: url(../images/icon_dashboard_white.svg);
+        background-image: url(../images/icon_dashboard_grey.svg);
     }
+    &.link-active,
     &:hover {
         @include change_to_white_with_pointer;
         &::before {
@@ -77,10 +104,11 @@
     }
 }
 
-.nav-site-list__link-white-paper {
+.nav-site-list__white-paper-link {
     &::before {
         background-image: url(../images/icon_white_paper_grey.svg);
     }
+    &.link-active,
     &:hover {
         @include change_to_white_with_pointer;
         &::before {
@@ -89,10 +117,11 @@
     }
 }
 
-.nav-site-list__link-roadmap {
+.nav-site-list__roadmap-link {
     &::before {
         background-image: url(../images/icon_roadmap_grey.svg);
     }
+    &.link-active,
     &:hover {
         @include change_to_white_with_pointer;
         &::before {
@@ -101,7 +130,7 @@
     }
 }
 
-.nav-site-list__link-faq {
+.nav-site-list__faq-link {
     &::before {
         background-image: url(../images/icon_faq.svg);
     }
@@ -146,6 +175,39 @@
 .nav-user-icon-wrap {
     width: 40px;
     height: 40px;
-    margin-left: 58px;
     @include scale_with_pointer;
+    @include desk {
+        margin-left: 58px;
+    }
+}
+
+.nav-user-sections {
+    width: 174px;
+    padding: 15px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--uniswap-another-dark);
+    background-color: var(--uniswap-light-dark);
+    position: absolute;
+    top: 42px;
+    right: 8px;
+    z-index: 1;
+}
+
+.nav-user-sections-item {
+    @include flex_align;
+    @include scale_with_pointer;
+}
+
+.nav-user-sections-item + .nav-user-sections-item {
+    margin-top: 15px;
+}
+
+.nav-user-sections-title {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--uniswap-pair-option);
+    margin-left: 10px;
+    &-pink {
+        color: var(--uniswap-error);
+    }
 }

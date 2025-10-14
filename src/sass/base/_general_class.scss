@@ -1,38 +1,22 @@
-svg {
-	fill: currentColor;
-}
-
 .container {
     width: 100%;
     max-width: 391px;
     margin: 0 auto;
-// 	@include mob {
-// 		width: 360px;
-// 	}
-// 	@include tab {
-// 		width: 768px;
-// 	}
-// 	@include lap {
-// 		width: 991px;
-// 	}
 	@include desk {
 		max-width: 1440px;
 	}
 }
 
 .logo {
-	display: none;
+	font-size: 17px;
+	line-height: calc(24 / 17);
+	color: var(--uniswap-pink);
+	width: 22px;
+	overflow: hidden;
+	@include flex_align;
     @include desk {
-		font-size: 17px;
-		line-height: calc(24 / 17);
-		color: var(--uniswap-pink);
-		@include flex_align;
 		width: 94px;
 	}
-}
-
-.logo-mob {
-	color: var(--uniswap-pink);
 }
 
 .logo-image {
@@ -40,71 +24,6 @@ svg {
 	height: 22px;
 	margin-right: 4px;
 }
-
-.logo-image-mob {
-	width: 20px;
-	height: 22px;
-}
-
-// .primary_font {
-// 	@include font();
-// }
-
-// .primary_font,
-// .text_font_1,
-// .text_font_2 {
-// 	color: var(--panda-grey);
-// }
-
-// .secondary_font {
-// 	@include font($fw: 600);
-// }
-
-// .text_font_1 {
-// 	@include font($fw: 400);
-// }
-
-// .text_font_2 {
-// 	@include font($fs: 14px, $fw: 400, $lh: 24px);
-// }
-
-// .title_font {
-// 	@include font($fs: 48px, $fw: 700, $lh: 64px);
-// }
-
-// .minor_title_font {
-// 	@include font($fs: 24px, $fw: 700, $lh: 32px);
-// }
-
-// .price_font_1 {
-// 	@include font($fw: 700, $lh: 24px);
-// }
-
-// .price_font_2 {
-// 	@include font($fw: 500, $lh: 24px);
-// }
-
-// .product_small_font_1 {
-// 	@include font($fs: 12px, $fw: 400, $lh: 24px);
-// 	color: var(--panda-product-grey);
-// }
-
-// .product_small_font_2 {
-// 	@include font($fs: 12px, $fw: 600, $lh: 24px);
-// 	color: var(--panda-input-grey);
-// }
-
-// .title_wrap {
-// 	text-align: center;
-// 	margin-bottom: 28px;
-// 	@include tab {
-// 		margin-bottom: 56px;
-// 	}
-// 	@include lap {
-// 		display: flex;
-// 		justify-content: space-between;
-// 	}
-// }
 
 .current {
 	color: var(--clearly-white);
@@ -232,9 +151,11 @@ svg {
 	&-my-positions {
 		@include flex_align;
 		justify-content: center;
+		margin-left: 31px;
 		margin-top: 22px;
 		@include desk {
 			justify-content: flex-end;
+			margin-left: 0;
 			margin-top: 20px;
 		}
 	}
@@ -246,6 +167,7 @@ svg {
     width: 262px;
     padding: 8px 0;
     border-radius: 12px;
+	@include focus_decline_with_pointer;
 }
 
 .uniswap-market__exmark {
@@ -261,7 +183,8 @@ svg {
 .uniswap-market__exmark {
 	background-color: var(--uniswap-dark-pink);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
+    &:hover,
+	&:focus {
         background-color: var(--uniswap-pink);
     }
 }
@@ -289,113 +212,6 @@ svg {
 	line-height: 100%;
 	text-align: left;
 }
-
-// .current_mob {
-// 	color: var(--panda-light-blue);
-// }
-
-// .button {
-// 	position: relative;
-// 	display: inline-flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	text-align: center;
-// 	width: auto;
-// 	transition: all .2s;
-// 	cursor: pointer;
-// }
-
-// .primary_button {
-// 	min-width: 175px;
-// 	padding-top: 12px;
-// 	padding-right: 16px;
-// 	padding-bottom: 12px;
-// 	padding-left: 16px;
-// 	border-radius: 16px;
-// 	border: 1px solid var(--panda-light-blue);
-// 	color: var(--clearly-white);
-// }
-
-// .secondary_button {
-// 	min-width: 139px;
-// 	padding: 16px;
-// 	color: var(--clearly-white);
-// 	border-radius: 8px;
-// 	background-color: var(--panda-first-btn-rgba);
-// 	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// 	&:hover {
-// 		background-color: var(--panda-light-blue);
-// 		box-shadow: var(--panda-second-btn-shadow);
-// 	}
-// 	@include tab {
-// 		min-width: 179px;
-// 	}
-// 	@include lap {
-// 		min-width: 119px;
-// 	}
-// 	&--active {
-// 		background-color: var(--panda-light-blue);
-// 		box-shadow: var(--panda-second-btn-shadow);
-// 	}
-// }
-
-// .section {
-// 	padding-bottom: 80px;
-// 	@include lap {
-// 		padding-bottom: 160px;
-// 	}
-// }
-
-// .logo {
-// 	font-family: Poppins, sans-serif;
-// 	@include align_list;
-// 	color: var(--clearly-white);
-// }
-
-// .logo,
-// .primary_button,
-// .button_to_top {
-// 	@include lap {
-// 		@include scale_with_pointer;
-// 	}
-// }
-
-// .logo-image {
-// 	width: 20px;
-// 	height: 22px;
-// 	margin-right: 4px;
-// }
-
-// .ornament {
-// 	position: absolute;
-// 	z-index: -1;
-// 	width: 638px;
-// 	height: 587px;
-// 	background: var(--panda-ornament);
-// 	overflow: hidden;
-// 	filter: blur(350px);
-// }
-
-// .button_to_top {
-// 	position: fixed;
-// 	bottom: 3vh;
-// 	right: calc(-10%);
-// 	z-index: 1;
-// 	width: 50px;
-// 	height: 50px;
-// 	@include align_list_justify_center;
-// 	border-radius: 20%;
-// 	opacity: 0;
-// 	visibility: hidden;
-// 	border: 1px solid var(--panda-light-blue);
-// 	background-color: var(--panda-first-medium-blue);
-// 	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// 	&--visible {
-// 		right: calc(2.5%);
-// 		opacity: 1;
-// 		visibility: visible;
-// 	}
-// }
 
 .visually_hidden {
 	position: absolute;

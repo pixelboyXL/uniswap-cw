@@ -3,6 +3,7 @@ const isHidden = "is_hidden";
 const displayBlock = "block";
 const displayNone = "none";
 const currentClass = "current";
+const linkActive = "link-active";
 
 export function toggleVisuallyHidden (elemShow, elemHide) {
     elemShow.classList.toggle(visuallyHidden);
@@ -36,6 +37,18 @@ export function addCurrentClass (elem) {
 export function removeCurrentClass (elem) {
     elem.classList.remove(currentClass);
 }
+
+export function toggleCustomClass (elem, customClass) {
+    elem.classList.toggle(customClass);
+}
+
+export function addLinkActive (elem) {
+    elem.classList.add(linkActive);
+};
+
+export function removeLinkActive (elem) {
+    elem.classList.remove(linkActive);
+};
 
 export function getViewWidth () {
     return window.innerWidth;

@@ -8,18 +8,19 @@
                     class="logo-image">
                 Uniswap
             </a>
+            <button type="button" class="header__mob-menu"></button>
             <ul class="nav-site-list">
                 <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__link-dashboard link-active">Dashboard</p>
+                    <p class="nav-site-list__link nav-site-list__dashboard-link link-active">Dashboard</p>
                 </li>
                 <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__link-white-paper">White Paper</p>
+                    <p class="nav-site-list__link nav-site-list__white-paper-link">White Paper</p>
                 </li>
                 <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__link-roadmap link-small">Roadmap</p>
+                    <p class="nav-site-list__link nav-site-list__roadmap-link link-small">Roadmap</p>
                 </li>
                 <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__link-faq link-bigger">FAQ</p>
+                    <p class="nav-site-list__link nav-site-list__faq-link link-bigger">FAQ</p>
                 </li>
             </ul>
         </div>
@@ -36,10 +37,10 @@
             </ul>
             <ul class="nav-sum-list">
                 <li class="nav-sum-list__item">
-                    <p class="nav-sum-list__link nav-sum-list__link-deposit link-small">Deposit</p>
+                    <p class="nav-sum-list__link link-small">Deposit</p>
                 </li>
                 <li class="nav-sum-list__item">
-                    <p class="nav-sum-list__link nav-sum-list__link-withdraw">Withdraw</p>
+                    <p class="nav-sum-list__link">Withdraw</p>
                 </li>
             </ul>
             <button type="button" class="nav-user-icon-wrap">
@@ -47,6 +48,34 @@
                     src="./images/icon_user.png"
                     alt="User icon">
             </button>
+            <div class="nav-user-sections is_hidden">
+                <ul>
+                    <li class="nav-user-sections-item">
+                        <svg width="15" height="15">
+                            <use href="./images/icon_my_profile.svg"></use>
+                        </svg>
+                        <p class="nav-user-sections-title" id="my-profile-link">My profile</p>
+                    </li>
+                    <li class="nav-user-sections-item">
+                        <svg width="15" height="15">
+                            <use href="./images/icon_referral_program.svg"></use>
+                        </svg>
+                        <p class="nav-user-sections-title" id="referral-program-link">Referral Program</p>
+                    </li>
+                    <li class="nav-user-sections-item">
+                        <svg width="15" height="15">
+                            <use href="./images/icon_support.svg"></use>
+                        </svg>
+                        <p class="nav-user-sections-title" id="support-link">Support</p>
+                    </li>
+                    <li class="nav-user-sections-item">
+                        <svg width="15" height="15">
+                            <use href="./images/icon_logout.svg"></use>
+                        </svg>
+                        <p class="nav-user-sections-title nav-user-sections-title-pink" id="logout-link">Logout</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
