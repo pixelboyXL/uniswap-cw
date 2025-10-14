@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.08f12a8d.css><script type=module src=/uniswap-cw/uniswap-cw.e9f9a881.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.527a49b0.css><script type=module src=/uniswap-cw/uniswap-cw.b3569b93.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav-site-wrap>
@@ -6,18 +6,19 @@
                 <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
                 Uniswap
             </a>
+            <button type=button class=header__mob-menu></button>
             <ul class=nav-site-list>
                 <li class=nav-site-list__item>
-                    <p class="link-active nav-site-list__link nav-site-list__link-dashboard">Dashboard</p>
+                    <p class="link-active nav-site-list__dashboard-link nav-site-list__link">Dashboard</p>
                 </li>
                 <li class=nav-site-list__item>
-                    <p class="nav-site-list__link nav-site-list__link-white-paper">White Paper</p>
+                    <p class="nav-site-list__link nav-site-list__white-paper-link">White Paper</p>
                 </li>
                 <li class=nav-site-list__item>
-                    <p class="link-small nav-site-list__link nav-site-list__link-roadmap">Roadmap</p>
+                    <p class="link-small nav-site-list__link nav-site-list__roadmap-link">Roadmap</p>
                 </li>
                 <li class=nav-site-list__item>
-                    <p class="link-bigger nav-site-list__link nav-site-list__link-faq">FAQ</p>
+                    <p class="link-bigger nav-site-list__faq-link nav-site-list__link">FAQ</p>
                 </li>
             </ul>
         </div>
@@ -34,30 +35,38 @@
             </ul>
             <ul class=nav-sum-list>
                 <li class=nav-sum-list__item>
-                    <p class="link-small nav-sum-list__link nav-sum-list__link-deposit">Deposit</p>
+                    <p class="link-small nav-sum-list__link">Deposit</p>
                 </li>
                 <li class=nav-sum-list__item>
-                    <p class="nav-sum-list__link nav-sum-list__link-withdraw">Withdraw</p>
+                    <p class=nav-sum-list__link>Withdraw</p>
                 </li>
             </ul>
             <button type=button class=nav-user-icon-wrap>
                 <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon">
             </button>
+            <div class="is_hidden nav-user-sections">
+                <ul>
+                    <li class=nav-user-sections-item>
+                        <svg width=15 height=15><use href=/uniswap-cw/icon_my_profile.416cd537.svg /></svg>
+                        <p class=nav-user-sections-title id=my-profile-link>My profile</p>
+                    </li>
+                    <li class=nav-user-sections-item>
+                        <svg width=15 height=15><use href=/uniswap-cw/icon_referral_program.e67a866a.svg /></svg>
+                        <p class=nav-user-sections-title id=referral-program-link>Referral Program</p>
+                    </li>
+                    <li class=nav-user-sections-item>
+                        <svg width=15 height=15><use href=/uniswap-cw/icon_support.9532ccd6.svg /></svg>
+                        <p class=nav-user-sections-title id=support-link>Support</p>
+                    </li>
+                    <li class=nav-user-sections-item>
+                        <svg width=15 height=15><use href=/uniswap-cw/icon_logout.4fd6bde8.svg /></svg>
+                        <p class="nav-user-sections-title nav-user-sections-title-pink" id=logout-link>Logout</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
-        <header class=header-mob>
-    <div class=header-mob__wrap>
-        <a href=/uniswap-cw/index.html class="logo-mob primary-font">
-            <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image-mob>
-        </a>
-        <button type=button class=header-mob__mob-menu></button>
-        <button type=button class=header-mob__user-button>
-            <img src=/uniswap-cw/icon_user.38ae9f99.png alt="User icon">
-        </button>
-    </div>
-</header>
-
         <section class=authorization>
     <div class=authorization__container>
         <a href=/uniswap-cw/index.html class="logo primary-font">
@@ -1333,7 +1342,7 @@
         </div>
     </div>
 </footer>
-        <div class="mob-menu__backdrop visually_hidden">
+        <div class="is_hidden mob-menu__backdrop">
     <div class=mob-menu>
         <ul class=mob-menu__cash-list>
             <li class=cash-list__item>
@@ -1349,15 +1358,15 @@
         <ul class=mob-menu__pages-list>
             <li class=pages-list__item>
                 <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_white_paper.9108bb81.svg /></svg>
-                <p class=pages-list__link>White Paper</p>
+                <p class=pages-list__link id=white-paper-mob-link>White Paper</p>
             </li>
             <li class=pages-list__item>
                 <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_stake.037c34bb.svg /></svg>
-                <p class=pages-list__link>Stake</p>
+                <p class=pages-list__link id=stake-mob-link>Stake</p>
             </li>
             <li class=pages-list__item>
                 <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_my_positions.23a71a35.svg /></svg>
-                <p class=pages-list__link>My Positions</p>
+                <p class=pages-list__link id=my-positions-mob-link>My Positions</p>
             </li>
         </ul>
         <p class=mob-menu__title>Ballance</p>
