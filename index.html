@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.527a49b0.css><script type=module src=/uniswap-cw/uniswap-cw.b3569b93.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.77e27ed5.css><script type=module src=/uniswap-cw/uniswap-cw.20d4cdda.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav-site-wrap>
@@ -66,6 +66,46 @@
             </div>
         </div>
     </nav>
+    <div class="is_hidden mob-menu__backdrop">
+    <div class=mob-menu>
+        <ul class=mob-menu__cash-list>
+            <li class=cash-list__item>
+                <p class=cash-list__link>Available</p>
+                <span class=cash-list__number>20399.80</span>
+            </li>
+            <li class=cash-list__item>
+                <p class=cash-list__link>Locked</p>
+                <span class=cash-list__number>58099.98</span>
+            </li>
+        </ul>
+        <p class=mob-menu__title>Menu</p>
+        <ul class=mob-menu__pages-list>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_white_paper.9108bb81.svg /></svg>
+                <p class=pages-list__link id=white-paper-mob-link>White Paper</p>
+            </li>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_stake.037c34bb.svg /></svg>
+                <p class=pages-list__link id=stake-mob-link>Stake</p>
+            </li>
+            <li class=pages-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_my_positions.23a71a35.svg /></svg>
+                <p class=pages-list__link id=my-positions-mob-link>My Positions</p>
+            </li>
+        </ul>
+        <p class=mob-menu__title>Ballance</p>
+        <ul class=mob-menu__balance-list>
+            <li class=balance-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_deposit.2d041d8d.svg /></svg>
+                <p class=balance-list__link>Deposit</p>
+            </li>
+            <li class=balance-list__item>
+                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_withdraw.2f83aa04.svg /></svg>
+                <p class=balance-list__link>Withdraw</p>
+            </li>
+        </ul> 
+    </div>
+</div>
 </header>
         <section class=authorization>
     <div class=authorization__container>
@@ -115,7 +155,7 @@
     </div>
 </section>
         <main class=container>
-            <section class=market>
+            <section class=market style=display:none>
     <div class="uniswap-message uniswap-message__warning visually_hidden">
         <p class="uniswap-message__title uniswap-message__title-pink">Warning</p>
         <p class=uniswap-message__after-title>This pools are unavailable for your country!</p>
@@ -1244,6 +1284,105 @@
         </ul>
     </div>
 </section>
+            <section class=support>
+    <div class=support__container>
+        <div class=support__title-main-wrap>
+            <div>
+                <p class=support__title>My Tickets</p>
+                <p class=support__after-title>All your support requests</p>
+            </div>
+            <button type=button class=support__btn>New Ticket</button>
+        </div>
+        <ul class=ticket-list>
+            <li class=ticket-list__item>
+                <div class=ticket-list__title-wrap>
+                    <p class=ticket-list__title>Payment Issue</p>
+                    <p class=ticket-list__label>In Progress</p>
+                </div>
+                <p class=ticket-list__last-message>Thanks, we will check and get back to you</p>
+                <div class=ticket-list__time-wrap>
+                    <span class=ticket-list__message-number>4</span>
+                    <span class=ticket-list__time>3d ago</span>
+                </div>
+            </li>
+            <li class=ticket-list__item>
+                <div class=ticket-list__title-wrap>
+                    <p class=ticket-list__title>Question About Functionality</p>
+                    <p class=ticket-list__label>Open</p>
+                </div>
+                <p class=ticket-list__last-message>How can I export data to Excel?</p>
+                <div class=ticket-list__time-wrap>
+                    <span class=ticket-list__message-number>1</span>
+                    <span class=ticket-list__time>Yesterday</span>
+                </div>
+            </li>
+            <li class=ticket-list__item>
+                <div class=ticket-list__title-wrap>
+                    <p class=ticket-list__title>Confirmation Email Not Received</p>
+                    <p class="label-closed ticket-list__label">Closed</p>
+                </div>
+                <p class=ticket-list__last-message>Great, thanks!</p>
+                <div class=ticket-list__time-wrap>
+                    <span class=ticket-list__message-number>3</span>
+                    <span class=ticket-list__time>5d ago</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="create-ticket__backdrop is_hidden">
+        <div class=create-ticket>
+            <svg width=16 height=16 class=create-ticket__cross><use href=/uniswap-cw/icon_cross.076e0435.svg /></svg>
+            <p class=create-ticket__title>Create New Ticket</p>
+            <form>
+                <label for=new-ticket-subject class=create-ticket__label>Subject</label>
+                <input name=new-ticket-subject class=create-ticket__input id=new-ticket-subject placeholder="Briefly describe the issue" required>
+                <label for=new-ticket-description class=create-ticket__label>Description</label>
+                <textarea type=text name=new-ticket-description class="create-ticket__input input-decription" id=new-ticket-description placeholder="Describe your issue or question in detail..." required></textarea>
+                <div class=create-ticket__btn-wrap>
+                    <button type=button class=create-ticket__btn-cancel>Cancel</button>
+                    <button type=button class=create-ticket__btn-create>Create Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+            <section class=ticket style=display:none>
+    <div class=ticket__container>
+        <div class=ticket__title-main-wrap>
+            <svg width=16 height=16 class=ticket__arrow><use href=/uniswap-cw/icon_ticket_arrow.5ba29455.svg /></svg>
+            <div class=ticket__title-wrap>
+                <p class=ticket__title>Payment Issue</p>
+                <p class=ticket__label>In Progress</p>
+            </div>
+            <span class=ticket__data>Created Oct 10, 03:00 AM</span>
+        </div>
+        <div class=user-message__wrap>
+            <p class=user-message__text>Hello! My card payment is not going through. I've tried several times but keep getting an error.</p>
+            <span class=user-message__data>You · Oct 10, 10:00 AM</span>
+        </div>
+        <div class="support-message__not-last-wrap support-message__wrap">
+            <p class=support-message__text>Good day! Thank you for reaching out. What error code is being displayed?</p>
+            <span class=support-message__data>Support · Oct 10, 10:15 AM</span>
+        </div>
+        <div class=user-message__wrap>
+            <p class=user-message__text>Error code: ERR_PAYMENT_503</p>
+            <span class=user-message__data>You · Oct 10, 10:20 AM</span>
+        </div>
+        <div class="support-message__last-wrap support-message__wrap">
+            <p class=support-message__text>Thanks, we will check and get back to you</p>
+            <span class=support-message__data>Support · Oct 10, 10:25 AM</span>
+        </div>
+        <div class=write-message__wrap>
+            <form class=write-message__form>
+                <textarea name=write-message id=write-message class=write-message__field placeholder="Write a message..."></textarea>
+                <button type=button class=write-message__btn>
+                    <svg width=16 height=16><use href=/uniswap-cw/icon_write_message.774d99d8.svg /></svg>
+                </button>
+            </form>
+            <span class=write-message__description>Press Enter to send, Shift+Enter for new line</span>
+        </div>
+    </div>
+</section>
         </main>
         <footer class=footer>
     <div class=footer__container>
@@ -1342,44 +1481,4 @@
         </div>
     </div>
 </footer>
-        <div class="is_hidden mob-menu__backdrop">
-    <div class=mob-menu>
-        <ul class=mob-menu__cash-list>
-            <li class=cash-list__item>
-                <p class=cash-list__link>Available</p>
-                <span class=cash-list__number>20399.80</span>
-            </li>
-            <li class=cash-list__item>
-                <p class=cash-list__link>Locked</p>
-                <span class=cash-list__number>58099.98</span>
-            </li>
-        </ul>
-        <p class=mob-menu__title>Menu</p>
-        <ul class=mob-menu__pages-list>
-            <li class=pages-list__item>
-                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_white_paper.9108bb81.svg /></svg>
-                <p class=pages-list__link id=white-paper-mob-link>White Paper</p>
-            </li>
-            <li class=pages-list__item>
-                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_stake.037c34bb.svg /></svg>
-                <p class=pages-list__link id=stake-mob-link>Stake</p>
-            </li>
-            <li class=pages-list__item>
-                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_my_positions.23a71a35.svg /></svg>
-                <p class=pages-list__link id=my-positions-mob-link>My Positions</p>
-            </li>
-        </ul>
-        <p class=mob-menu__title>Ballance</p>
-        <ul class=mob-menu__balance-list>
-            <li class=balance-list__item>
-                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_deposit.2d041d8d.svg /></svg>
-                <p class=balance-list__link>Deposit</p>
-            </li>
-            <li class=balance-list__item>
-                <svg width=20 height=20><use href=/uniswap-cw/icon_mob_menu_withdraw.2f83aa04.svg /></svg>
-                <p class=balance-list__link>Withdraw</p>
-            </li>
-        </ul> 
-    </div>
-</div>
     
