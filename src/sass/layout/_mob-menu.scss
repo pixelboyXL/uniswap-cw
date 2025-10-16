@@ -1,7 +1,7 @@
 .mob-menu__backdrop {
     position: fixed;
-	top: 50%;
 	left: 50%;
+	top: 50%;
     z-index: 1;
 	width: 100%;
     max-width: 391px;
@@ -16,7 +16,6 @@
     bottom: calc(-30%);
     opacity: 0;
     width: 100%;
-    max-width: 391px;
     height: 298px;
     padding-left: 24px;
     padding-top: 8px;

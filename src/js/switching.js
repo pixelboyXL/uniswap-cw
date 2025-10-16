@@ -26,9 +26,18 @@ import { authorizationSection,
     roadmapLink,
     myProfileLink,
     referralProgramLink,
+    supportLink,
     headerMobMenu,
     mobMenuBackdrop,
-    mobMenu } from './refs';
+    mobMenu,
+    supportBtn,
+    createTicketCloseBtn,
+    createTicketBackdrop,
+    createTicket, 
+    supportSection,
+    ticketSection,
+    ticketItem,
+    ticketArrow } from './refs';
 import { toggleIsHidden, 
     showSection, 
     hideSection, 
@@ -116,6 +125,12 @@ if (navUserIcon) {
 if (dashboardLink) {
     dashboardLink.addEventListener("click", () => {
         addLinkActive(dashboardLink);
+        addCurrentClass(linkToMarket);
+        showSection(marketTokensGrid);
+        removeCurrentClass(linkToStake);
+        hideSection(marketStakeForm);
+        removeCurrentClass(linkToMyPositions);
+        hideSection(marketMyPositions);
         removeLinkActive(whitePaperLink);
         removeLinkActive(roadmapLink);
         showSection(marketSection);
@@ -123,6 +138,8 @@ if (dashboardLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -136,6 +153,8 @@ if (whitePaperLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -149,6 +168,8 @@ if (roadmapLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(dashboardSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -163,6 +184,8 @@ if (myProfileLink) {
         hideSection(dashboardSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -177,6 +200,8 @@ if (referralProgramLink) {
         hideSection(userProfileSection);
         hideSection(dashboardSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -205,6 +230,8 @@ if (whitePaperMobLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -223,6 +250,8 @@ if (stakeMobLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
     });
 };
 
@@ -241,5 +270,50 @@ if (myPositionsMobLink) {
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(roadmapSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
+    });
+};
+
+if (supportLink) {
+    supportLink.addEventListener("click", () => {        
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
+        toggleIsHidden(navUserSections);
+        showSection(supportSection);
+        hideSection(marketSection);
+        hideSection(userProfileSection);
+        hideSection(dashboardSection);
+        hideSection(roadmapSection);
+        hideSection(ticketSection);
+    });
+};
+
+function toggleCreateTicket () {
+    const createTicketVisible = "create-ticket-visible";
+    toggleIsHidden(createTicketBackdrop);
+    toggleCustomClass(createTicket, createTicketVisible);
+};
+
+if (supportBtn) {
+    supportBtn.addEventListener("click", toggleCreateTicket);
+};
+
+if (createTicketCloseBtn) {
+    createTicketCloseBtn.addEventListener("click", toggleCreateTicket);
+};
+
+if (ticketItem) {
+    ticketItem.addEventListener("click", () => {
+        showSection(ticketSection);
+        hideSection(supportSection);
+    });
+};
+
+if (ticketArrow) {
+    ticketArrow.addEventListener("click", () => {
+        showSection(supportSection);
+        hideSection(ticketSection);
     });
 };

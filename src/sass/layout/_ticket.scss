@@ -1,0 +1,165 @@
+.ticket {
+    padding-top: 37px;
+    padding-bottom: 16px;
+    @include desk {
+        padding-top: 29px;
+        padding-bottom: 86px;
+    }
+}
+
+.ticket__container {
+    max-width: 342px;
+    margin: 0 auto;
+    @include desk {
+        max-width: 976px;
+    }
+}
+
+.ticket__title-main-wrap {
+    margin-left: 52px;
+    margin-bottom: 41px;
+    position: relative;
+    @include desk {
+        margin-left: 0;
+        margin-bottom: 55px;
+    }
+}
+
+.ticket__arrow {
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.ticket__title-wrap {
+    @include flex_align;
+    margin-bottom: 5px;
+}
+
+.ticket__title {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(24 / 15.1);
+    color: var(--uniswap-my-profile-white);
+}
+
+.ticket__label {
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    color: var(--clearly-white);
+    padding: 3px 9px;
+    margin-left: 12px;
+    border-radius: 8px;
+    background-color: var(--uniswap-pink);
+}
+
+.ticket__data {
+    font-weight: 400;
+    font-size: 15.3px;
+    line-height: calc(24 / 15.3);
+    color: var(--uniswap-my-profile-grey);
+}
+
+.user-message__wrap {
+    width: max-content;
+    max-width: 240px;
+    margin-left: auto;
+    margin-bottom: 16px;
+    @include desk {
+        max-width: 683px;
+    }
+}
+
+.user-message__text,
+.support-message__text {
+    font-weight: 400;
+    font-size: 15.4px;
+    line-height: calc(24 / 15.4);
+    color: var(--clearly-white);
+    padding: 17px;
+    border-radius: 14px;
+    border: 1px solid var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-light-dark);
+    margin-bottom: 4px;
+}
+
+.user-message__data,
+.support-message__data {
+    font-weight: 400;
+    font-size: 15.4px;
+    line-height: calc(24 / 15.4);
+    color: var(--uniswap-my-profile-grey);
+    display: block;
+    text-align: right;
+}
+
+.support-message__wrap {
+    max-width: max-content;
+}
+
+.support-message__not-last-wrap {
+    margin-bottom: 16px;
+}
+
+.support-message__last-wrap {
+    margin-bottom: 17px;
+    @include desk {
+        margin-bottom: 71px;
+    }
+}
+
+.support-message__data {
+    text-align: left;
+}
+
+.write-message__form {
+    @include flex_align;
+    margin-bottom: 8px;
+}
+
+.write-message__field {
+    resize: none;
+    outline: none;
+    border: none;
+    width: 884px;
+    min-height: 80px;
+    padding: 9px 13px;
+    border-radius: 8px;
+    color: var(--clearly-white);
+    background-color: var(--uniswap-light-dark);
+    &::placeholder {
+        font-weight: 400;
+        font-size: 13.7px;
+        line-height: calc(20 / 13.7);
+        color: var(--uniswap-my-profile-grey);
+    }
+    @include desk {
+        border-radius: 14px;
+    }
+}
+
+.write-message__btn {
+    max-width: 80px;
+    max-height: 80px;
+    padding: 32px;
+    margin-left: 12px;
+    border-radius: 8px;
+    background-color: var(--uniswap-pink);
+    @include focus_decline_with_pointer;
+    &:hover,
+    &:focus {
+        background-color: var(--uniswap-dark-pink);
+    }
+    @include desk {
+        border-radius: 14px;
+    }
+}
+
+.write-message__description {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(24 / 15.1);
+    color: var(--uniswap-my-profile-grey);
+}

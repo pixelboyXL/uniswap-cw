@@ -1,0 +1,74 @@
+<section class="support">
+    <div class="support__container">
+        <div class="support__title-main-wrap">
+            <div>
+                <p class="support__title">My Tickets</p>
+                <p class="support__after-title">All your support requests</p>
+            </div>
+            <button type="button" class="support__btn">New Ticket</button>
+        </div>
+        <ul class="ticket-list">
+            <li class="ticket-list__item">
+                <div class="ticket-list__title-wrap">
+                    <p class="ticket-list__title">Payment Issue</p>
+                    <p class="ticket-list__label">In Progress</p>
+                </div>
+                <p class="ticket-list__last-message">Thanks, we will check and get back to you</p>
+                <div class="ticket-list__time-wrap">
+                    <span class="ticket-list__message-number">4</span>
+                    <span class="ticket-list__time">3d ago</span>
+                </div>
+            </li>
+            <li class="ticket-list__item">
+                <div class="ticket-list__title-wrap">
+                    <p class="ticket-list__title">Question About Functionality</p>
+                    <p class="ticket-list__label">Open</p>
+                </div>
+                <p class="ticket-list__last-message">How can I export data to Excel?</p>
+                <div class="ticket-list__time-wrap">
+                    <span class="ticket-list__message-number">1</span>
+                    <span class="ticket-list__time">Yesterday</span>
+                </div>
+            </li>
+            <li class="ticket-list__item">
+                <div class="ticket-list__title-wrap">
+                    <p class="ticket-list__title">Confirmation Email Not Received</p>
+                    <p class="ticket-list__label label-closed">Closed</p>
+                </div>
+                <p class="ticket-list__last-message">Great, thanks!</p>
+                <div class="ticket-list__time-wrap">
+                    <span class="ticket-list__message-number">3</span>
+                    <span class="ticket-list__time">5d ago</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="create-ticket__backdrop is_hidden">
+        <div class="create-ticket">
+            <svg width="16" height="16" class="create-ticket__cross">
+                <use href="./images/icon_cross.svg"></use>
+            </svg>
+            <p class="create-ticket__title">Create New Ticket</p>
+            <form>
+                <label for="new-ticket-subject" class="create-ticket__label">Subject</label>
+                <input type="text" 
+                    name="new-ticket-subject" 
+                    class="create-ticket__input" 
+                    id="new-ticket-subject"
+                    placeholder="Briefly describe the issue"
+                    required>
+                <label for="new-ticket-description" class="create-ticket__label">Description</label>
+                <textarea type="text" 
+                    name="new-ticket-description" 
+                    class="create-ticket__input input-decription" 
+                    id="new-ticket-description"
+                    placeholder="Describe your issue or question in detail..."
+                    required></textarea>
+                <div class="create-ticket__btn-wrap">
+                    <button type="button" class="create-ticket__btn-cancel">Cancel</button>
+                    <button type="button" class="create-ticket__btn-create">Create Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
