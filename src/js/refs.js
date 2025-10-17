@@ -36,6 +36,7 @@ const refs = {
     stakeMobLink: document.getElementById('stake-mob-link'),
     myPositionsMobLink: document.getElementById('my-positions-mob-link'),
     roadmapLink: document.querySelector('.nav-site-list__roadmap-link'),
+    faqLink: document.querySelector('.nav-site-list__faq-link'),
     myProfileLink: document.getElementById('my-profile-link'),
     referralProgramLink: document.getElementById('referral-program-link'),
     supportLink: document.getElementById('support-link'),
@@ -50,6 +51,9 @@ const refs = {
     ticketSection: document.querySelector('.ticket'),
     ticketItem: document.querySelector('.ticket-list__item'),
     ticketArrow: document.querySelector('.ticket__arrow'),
+    faqSection: document.querySelector('.faq'),
+    faqItem: document.querySelector('.faq__item'),
+    faqArrow: document.querySelector('.faq__item-arrow'),
 };
 
 export const {
@@ -90,6 +94,7 @@ export const {
     stakeMobLink,
     myPositionsMobLink,
     roadmapLink,
+    faqLink,
     myProfileLink,
     referralProgramLink,
     supportLink,
@@ -104,4 +109,7 @@ export const {
     ticketSection,
     ticketItem,
     ticketArrow,
+    faqSection,
+    faqItem,
+    faqArrow,
 } = refs;

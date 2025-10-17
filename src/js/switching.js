@@ -24,6 +24,7 @@ import { authorizationSection,
     stakeMobLink,
     myPositionsMobLink,
     roadmapLink,
+    faqLink,
     myProfileLink,
     referralProgramLink,
     supportLink,
@@ -37,7 +38,8 @@ import { authorizationSection,
     supportSection,
     ticketSection,
     ticketItem,
-    ticketArrow } from './refs';
+    ticketArrow,
+    faqSection } from './refs';
 import { toggleIsHidden, 
     showSection, 
     hideSection, 
@@ -133,6 +135,7 @@ if (dashboardLink) {
         hideSection(marketMyPositions);
         removeLinkActive(whitePaperLink);
         removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
         showSection(marketSection);
         hideSection(dashboardSection);
         hideSection(userProfileSection);
@@ -140,6 +143,7 @@ if (dashboardLink) {
         hideSection(roadmapSection);
         hideSection(supportSection);
         hideSection(ticketSection);
+        hideSection(faqSection);
     });
 };
 
@@ -148,6 +152,7 @@ if (whitePaperLink) {
         addLinkActive(whitePaperLink);
         removeLinkActive(dashboardLink);
         removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
         showSection(dashboardSection);
         hideSection(marketSection);
         hideSection(userProfileSection);
@@ -155,6 +160,7 @@ if (whitePaperLink) {
         hideSection(roadmapSection);
         hideSection(supportSection);
         hideSection(ticketSection);
+        hideSection(faqSection);
     });
 };
 
@@ -163,11 +169,30 @@ if (roadmapLink) {
         addLinkActive(roadmapLink);
         removeLinkActive(dashboardLink);
         removeLinkActive(whitePaperLink);
+        removeLinkActive(faqLink);
         showSection(roadmapSection);
         hideSection(marketSection);
         hideSection(userProfileSection);
         hideSection(referralProgramSection);
         hideSection(dashboardSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
+        hideSection(faqSection);
+    });
+};
+
+if (faqLink) {
+    faqLink.addEventListener("click", () => {
+        addLinkActive(faqLink);
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
+        showSection(faqSection);
+        hideSection(marketSection);
+        hideSection(dashboardSection);
+        hideSection(roadmapSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
         hideSection(supportSection);
         hideSection(ticketSection);
     });
@@ -178,6 +203,7 @@ if (myProfileLink) {
         removeLinkActive(dashboardLink);
         removeLinkActive(whitePaperLink);
         removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
         toggleIsHidden(navUserSections);
         showSection(userProfileSection);
         hideSection(marketSection);
@@ -186,6 +212,7 @@ if (myProfileLink) {
         hideSection(roadmapSection);
         hideSection(supportSection);
         hideSection(ticketSection);
+        hideSection(faqSection);
     });
 };
 
@@ -194,6 +221,7 @@ if (referralProgramLink) {
         removeLinkActive(dashboardLink);
         removeLinkActive(whitePaperLink);
         removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
         toggleIsHidden(navUserSections);
         showSection(referralProgramSection);
         hideSection(marketSection);
@@ -202,6 +230,7 @@ if (referralProgramLink) {
         hideSection(roadmapSection);
         hideSection(supportSection);
         hideSection(ticketSection);
+        hideSection(faqSection);
     });
 };
 
@@ -280,13 +309,16 @@ if (supportLink) {
         removeLinkActive(dashboardLink);
         removeLinkActive(whitePaperLink);
         removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
         toggleIsHidden(navUserSections);
         showSection(supportSection);
         hideSection(marketSection);
         hideSection(userProfileSection);
+        hideSection(referralProgramSection);
         hideSection(dashboardSection);
         hideSection(roadmapSection);
         hideSection(ticketSection);
+        hideSection(faqSection);
     });
 };
 

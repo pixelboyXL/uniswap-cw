@@ -134,6 +134,9 @@
     &::before {
         background-image: url(../images/icon_faq.svg);
     }
+    &:hover {
+        @include change_to_white_with_pointer;
+    }
 }
 
 .link-active {
