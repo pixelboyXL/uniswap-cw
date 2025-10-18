@@ -71,3 +71,9 @@
         transform: scale(0.95);;
     }
 }
+@mixin hover_focus_background_dark_pink {
+    &:hover,
+    &:focus {
+        background-color: var(--uniswap-dark-pink);
+    }
+}

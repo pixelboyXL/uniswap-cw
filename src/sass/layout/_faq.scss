@@ -145,8 +145,5 @@
     border-radius: 10px;
     background-color: var(--uniswap-pink);
     @include focus_decline_with_pointer;
-    &:hover,
-    &:focus {
-        background-color: var(--uniswap-dark-pink);
-    }
+    @include hover_focus_background_dark_pink;
 }

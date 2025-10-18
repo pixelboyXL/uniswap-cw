@@ -88,10 +88,7 @@
     background-color: var(--uniswap-pink);
     @include flex_align;
     @include focus_decline_with_pointer;
-    &:hover,
-    &:focus {
-        background-color: var(--uniswap-dark-pink);
-    }
+    @include hover_focus_background_dark_pink;
     &::before {
         content: "";
         display: block;

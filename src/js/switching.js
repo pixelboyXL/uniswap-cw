@@ -17,6 +17,7 @@ import { authorizationSection,
     referralProgramSection,
     dashboardSection,
     roadmapSection,
+    headerSection,
     footerSection,
     dashboardLink,
     whitePaperLink,
@@ -28,6 +29,11 @@ import { authorizationSection,
     myProfileLink,
     referralProgramLink,
     supportLink,
+    logoutLink,
+    uniswapBackdrop,
+    uniswapBackdropWrap,
+    uniswapMessageBtnLogout,
+    uniswapMessageBtnNoLogout,
     headerMobMenu,
     mobMenuBackdrop,
     mobMenu,
@@ -103,20 +109,6 @@ if (linkToMyPositions) {
         removeCurrentClass(linkToStake);
     });
 };
-
-// if (navUserIcon) {
-//     navUserIcon.addEventListener("click", () => {
-//         showSection(authorizationSection);
-//         hideSection(headerSection);
-//         hideSection(headerMobSection);
-//         hideSection(marketSection);
-//         hideSection(userProfileSection);
-//         hideSection(referralProgramSection);
-//         hideSection(dashboardSection);
-//         hideSection(roadmapSection);
-//         hideSection(footerSection);
-//     });
-// };
 
 if (navUserIcon) {
     navUserIcon.addEventListener("click", () => {
@@ -348,4 +340,42 @@ if (ticketArrow) {
         showSection(supportSection);
         hideSection(ticketSection);
     });
+};
+
+if (logoutLink) {
+    logoutLink.addEventListener("click", () => {
+        toggleIsHidden(navUserSections);
+        toggleUniswapMessage();
+    });
+};
+
+function toggleUniswapMessage () {
+    const uniswapMessageVisible = "uniswap-backdrop__wrap-visible";
+    toggleIsHidden(uniswapBackdrop);
+    toggleCustomClass(uniswapBackdropWrap, uniswapMessageVisible);
+};
+
+if (uniswapMessageBtnLogout) {
+    uniswapMessageBtnLogout.addEventListener("click", () => { 
+        toggleUniswapMessage();
+        removeLinkActive(dashboardLink);
+        removeLinkActive(whitePaperLink);
+        removeLinkActive(roadmapLink);
+        removeLinkActive(faqLink);
+        showSection(authorizationSection);
+        hideSection(headerSection);
+        hideSection(marketSection);
+        hideSection(dashboardSection);
+        hideSection(roadmapSection);
+        hideSection(faqSection);
+        hideSection(userProfileSection);
+        hideSection(referralProgramSection);
+        hideSection(supportSection);
+        hideSection(ticketSection);
+        hideSection(footerSection);
+    });
+};
+
+if (uniswapMessageBtnNoLogout) {
+    uniswapMessageBtnNoLogout.addEventListener("click", toggleUniswapMessage);
 };

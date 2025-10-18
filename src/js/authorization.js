@@ -6,8 +6,12 @@ import { authorizationBoxWrap,
     authorizationLogInPasswordInput,
     authorizationButton,
     authorizationTextPink,
-    authorizationRegisterTextPink } from './refs';
-import { toggleVisuallyHidden } from './simple';
+    authorizationRegisterTextPink, 
+    authorizationSection,
+    headerSection,
+    marketSection,
+    footerSection } from './refs';
+import { toggleVisuallyHidden, showSection, hideSection } from './simple';
 
 if (authorizationTextPink) {
     authorizationTextPink.addEventListener("click", () => {
@@ -68,7 +72,12 @@ if (authorizationButton) {
             return;
         } else {
             resetAuthPadding();
+            authorizationLogInForm.reset();
             uniswapMessageTextWrap.style.display = "none";
+            hideSection(authorizationSection);
+            showSection(headerSection);
+            showSection(marketSection);
+            showSection(footerSection);
         };
     });
 };

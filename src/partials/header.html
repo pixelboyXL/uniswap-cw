@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" style="display: none;">
     <nav class="nav">
         <div class="nav-site-wrap">
             <a href="./index.html" class="logo primary-font">
@@ -78,5 +78,15 @@
             </div>
         </div>
     </nav>
+    <div class="uniswap-backdrop is_hidden">
+        <div class="uniswap-message uniswap-message__logout uniswap-backdrop__wrap">
+            <p class="uniswap-message__title uniswap-message__title-pink">Logout</p>
+            <p class="uniswap-message__after-title">Are you sure ?</p>
+            <div class="uniswap-message__btn-wrap">
+                <button type="button" class="uniswap-message__btn uniswap-message__btn-logout">Yes</button>
+                <button type="button" class="uniswap-message__btn uniswap-message__btn-logout-pink">No</button>
+            </div>
+        </div>
+    </div>
     <include src="./partials/mob-menu.html"></include>
 </header>
