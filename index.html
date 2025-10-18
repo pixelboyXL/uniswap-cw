@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.d11128ce.css><script type=module src=/uniswap-cw/uniswap-cw.3d093e9e.js></script><body>
-        <header class=header>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.374cedec.png><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.561fd76b.css><script type=module src=/uniswap-cw/uniswap-cw.98acb594.js></script><body>
+        <header class=header style=display:none>
     <nav class=nav>
         <div class=nav-site-wrap>
             <a href=/uniswap-cw/index.html class="logo primary-font">
@@ -66,6 +66,16 @@
             </div>
         </div>
     </nav>
+    <div class="is_hidden uniswap-backdrop">
+        <div class="uniswap-backdrop__wrap uniswap-message uniswap-message__logout">
+            <p class="uniswap-message__title uniswap-message__title-pink">Logout</p>
+            <p class=uniswap-message__after-title>Are you sure ?</p>
+            <div class=uniswap-message__btn-wrap>
+                <button type=button class="uniswap-message__btn uniswap-message__btn-logout">Yes</button>
+                <button type=button class="uniswap-message__btn uniswap-message__btn-logout-pink">No</button>
+            </div>
+        </div>
+    </div>
     <div class="is_hidden mob-menu__backdrop">
     <div class=mob-menu>
         <ul class=mob-menu__cash-list>
@@ -109,7 +119,7 @@
 </header>
         <section class=authorization>
     <div class=authorization__container>
-        <a href=/uniswap-cw/index.html class="logo primary-font">
+        <a href=/uniswap-cw/index.html class="logo logo-auth primary-font">
             <img src=/uniswap-cw/uniswap_logo.374cedec.png alt="Unicorn head" class=logo-image>
             Uniswap
         </a>
@@ -124,7 +134,7 @@
                     <input type=email name=login-email class="authorization-box__input input-email" id=login-email required>
                     <label for=login-password class=authorization-box__label>Password</label>
                     <input type=password name=login-password class=authorization-box__input id=login-password required>
-                    <button class=authorization-box__btn>Login</button>
+                    <button type=button class=authorization-box__btn>Login</button>
                     <div class=authorization-box__text-wrap>
                         <p class=authorization-box__text>Don't have an account?</p>
                         <span class=authorization-box__text_pink>Register here</span>
@@ -1383,7 +1393,7 @@
         </div>
     </div>
 </section>
-            <section class=faq>
+            <section class=faq style=display:none>
     <div class=faq__container>
         <p class=faq__title>Frequently Asked Questions</p>
         <p class=faq__after-title>Everything you need to know about cryptocurrency</p>
@@ -1450,7 +1460,7 @@
     </div>
 </section>
         </main>
-        <footer class=footer>
+        <footer class=footer style=display:none>
     <div class=footer__container>
         <div class=footer-main-wrap>
             <div class=footer-link-wrap>
