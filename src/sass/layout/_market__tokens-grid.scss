@@ -1,43 +1,25 @@
 .market__tokens-grid {
-    display: none;
-    @include desk {
-        display: block;
-        width: 838px;
-        overflow: hidden;
-        border: 1px solid var(--uniswap-market-border);
-        border-radius: 20px;
-        margin-top: 22px;
-    }
-}
-
-.market__tokens-grid-mob {
-    display: block;
     width: 382px;
     overflow: hidden;
     border: 1px solid var(--uniswap-market-border);
     border-radius: 20px;
     margin-top: 22px;
     @include desk {
-        display: none;
+        width: 838px;
     }
 }
 
 .tokens-grid__row {
-    display: grid;
-    grid-template-columns: [start] 157px [line2] 84px [line3] 65px [line4] 53px [line5] 43px [end];
-    height: 52px;
-    padding-left: 38px;
-    margin-bottom: 10px;
-    gap: 91px;
-}
-
-.tokens-grid__row-mob {
     display: grid;
     grid-template-columns: [start] 70px [line2] 39px [line3] 41px [line4] 31px [line5] 31px [end];
     height: 52px;
     padding-left: 38px;
     margin-bottom: 10px;
     gap: 26px;
+    @include desk {
+        grid-template-columns: [start] 157px [line2] 84px [line3] 65px [line4] 53px [line5] 43px [end];
+        gap: 91px;
+    }
 }
 
 .tokens-grid__header {
@@ -64,12 +46,28 @@
     align-items: center;
 }
 
-.tokens-grid__coin {
+.tokens-grid__coin,
+.tokens-grid__coin-mob {
     font-weight: 400;
     font-size: 15.88px;
     line-height: 100%;
     letter-spacing: -0.16px;
     color: var(--clearly-white);
+    padding-top: 2px;
+}
+
+.tokens-grid__coin {
+    display: none;
+    @include desk {
+        display: block;
+    }
+}
+
+.tokens-grid__coin-mob {
+    display: block;
+    @include desk {
+        display: none;
+    }
 }
 
 .tokens-grid__icon {

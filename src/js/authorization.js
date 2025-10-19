@@ -1,4 +1,5 @@
-import { authorizationBoxWrap,
+import { authorizationSection,
+    authorizationBoxWrap,
     authorizationBoxRegisterWrap,
     uniswapMessageTextWrap,
     authorizationLogInForm,
@@ -7,11 +8,21 @@ import { authorizationBoxWrap,
     authorizationButton,
     authorizationTextPink,
     authorizationRegisterTextPink, 
-    authorizationSection,
     headerSection,
-    marketSection,
-    footerSection } from './refs';
-import { toggleVisuallyHidden, showSection, hideSection } from './simple';
+    navUserSections,
+    footerSection,
+    logoutLink,
+    uniswapBackdrop,
+    uniswapBackdropWrap,
+    uniswapMessageBtnLogout,
+    uniswapMessageBtnNoLogout, } from './refs';
+import { toggleVisuallyHidden, 
+    toggleIsHidden, 
+    showSection, 
+    hideSection, 
+    toggleCustomClass } from './simple';
+import { showDashboardPiece, hideDashboardPiece } from './market';
+import { hideMainSections, hidePersonalSections } from './switching';
 
 if (authorizationTextPink) {
     authorizationTextPink.addEventListener("click", () => {
@@ -76,8 +87,37 @@ if (authorizationButton) {
             uniswapMessageTextWrap.style.display = "none";
             hideSection(authorizationSection);
             showSection(headerSection);
-            showSection(marketSection);
             showSection(footerSection);
+            showDashboardPiece();
         };
     });
+};
+
+function toggleUniswapMessage () {
+    const uniswapMessageVisible = "uniswap-backdrop__wrap-visible";
+    toggleIsHidden(uniswapBackdrop);
+    toggleCustomClass(uniswapBackdropWrap, uniswapMessageVisible);
+};
+
+if (logoutLink) {
+    logoutLink.addEventListener("click", () => {
+        toggleIsHidden(navUserSections);
+        toggleUniswapMessage();
+    });
+};
+
+if (uniswapMessageBtnLogout) {
+    uniswapMessageBtnLogout.addEventListener("click", () => { 
+        toggleUniswapMessage();
+        hideDashboardPiece();
+        hideMainSections();
+        hidePersonalSections();
+        hideSection(headerSection);
+        hideSection(footerSection);
+        showSection(authorizationSection);
+    });
+};
+
+if (uniswapMessageBtnNoLogout) {
+    uniswapMessageBtnNoLogout.addEventListener("click", toggleUniswapMessage);
 };

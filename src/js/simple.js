@@ -32,15 +32,15 @@ export function hideSection (elem) {
 
 export function addCurrentClass (elem) {
     elem.classList.add(currentClass);
-}
+};
 
 export function removeCurrentClass (elem) {
     elem.classList.remove(currentClass);
-}
+};
 
 export function toggleCustomClass (elem, customClass) {
     elem.classList.toggle(customClass);
-}
+};
 
 export function addLinkActive (elem) {
     elem.classList.add(linkActive);
