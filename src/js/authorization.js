@@ -13,7 +13,7 @@ import { authorizationSection,
     footerSection,
     logoutLink,
     uniswapBackdrop,
-    uniswapBackdropWrap,
+    uniswapMessageLogout,
     uniswapMessageBtnLogout,
     uniswapMessageBtnNoLogout, } from './refs';
 import { toggleVisuallyHidden, 
@@ -93,22 +93,23 @@ if (authorizationButton) {
     });
 };
 
-function toggleUniswapMessage () {
-    const uniswapMessageVisible = "uniswap-backdrop__wrap-visible";
+export function toggleUniswapMessage (uniswapMessage, uniswapMessageVisible) {
     toggleIsHidden(uniswapBackdrop);
-    toggleCustomClass(uniswapBackdropWrap, uniswapMessageVisible);
+    toggleCustomClass(uniswapMessage, uniswapMessageVisible);
 };
+
+const logoutVisible = "uniswap-message__logout-visible";
 
 if (logoutLink) {
     logoutLink.addEventListener("click", () => {
         toggleIsHidden(navUserSections);
-        toggleUniswapMessage();
+        toggleUniswapMessage(uniswapMessageLogout, logoutVisible);
     });
 };
 
 if (uniswapMessageBtnLogout) {
     uniswapMessageBtnLogout.addEventListener("click", () => { 
-        toggleUniswapMessage();
+        toggleUniswapMessage(uniswapMessageLogout, logoutVisible);
         hideDashboardPiece();
         hideMainSections();
         hidePersonalSections();
@@ -119,5 +120,7 @@ if (uniswapMessageBtnLogout) {
 };
 
 if (uniswapMessageBtnNoLogout) {
-    uniswapMessageBtnNoLogout.addEventListener("click", toggleUniswapMessage);
+    uniswapMessageBtnNoLogout.addEventListener("click", () => { 
+        toggleUniswapMessage(uniswapMessageLogout, logoutVisible);
+    });
 };

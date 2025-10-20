@@ -1,3 +1,7 @@
+document.querySelector('a').addEventListener('click', function(e) {
+    e.preventDefault();
+});
+
 const visuallyHidden = "visually_hidden";
 const isHidden = "is_hidden";
 const displayBlock = "block";

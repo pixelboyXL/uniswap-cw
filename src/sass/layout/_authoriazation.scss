@@ -112,7 +112,7 @@
     border-radius: 16px;
     color: var(--uniswap-light-pink);
     background-color: var(--uniswap-dark-pink);
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     &:hover {
         background-color: var(--uniswap-rgba-pink);
     }

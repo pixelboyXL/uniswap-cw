@@ -144,6 +144,6 @@
     margin: 0 auto;
     border-radius: 10px;
     background-color: var(--uniswap-pink);
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     @include hover_focus_background_dark_pink;
 }

@@ -44,7 +44,7 @@
     border-radius: 8px;
     background-color: var(--uniswap-pink);
     @include flex_align;
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     @include hover_focus_background_dark_pink;
     &::before {
         content: "";
@@ -244,7 +244,7 @@
     border-radius: 8px;
     border: 1px solid var(--uniswap-rgba-pink-border);
     background-color: var(--uniswap-light-dark);
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     @include hover_focus_background_dark_pink;
 }
 

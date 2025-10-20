@@ -219,7 +219,7 @@
     font-size: 13.8px;
     line-height: calc(20 / 13.8);
     color: var(--uniswap-my-profile-dark);
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     &:hover,
     &:focus {
         background-color: var(--uniswap-footer-policy);
@@ -363,7 +363,7 @@
     padding: 8px 0;
     border-radius: 8px;
     background-color: var(--uniswap-dark-pink);
-    @include focus_decline_with_pointer;
+    @include focus_scale_with_pointer;
     &:hover,
     &:focus {
         background-color: var(--uniswap-rgba-pink);
