@@ -186,8 +186,10 @@
     display: block;
 	border-radius: 6px;
     margin: 0 auto;
+	cursor: pointer;
 	&-pink {
         background-color: var(--uniswap-pink);
+		@include hover_focus_background_dark_pink;
 	}
 	&-green {
 		background-color: var(--uniswap-success);

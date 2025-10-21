@@ -1,4 +1,7 @@
-import { linkToMarket,
+import { uniswapBackdropWarning,
+    uniswapMessageWarning,
+    uniswapMessageBtnWarning,
+    linkToMarket,
     linkToStake,
     linkToMyPositions,
     marketTokensGrid,
@@ -6,9 +9,11 @@ import { linkToMarket,
     stakeFormSelectPair,
     stakeFormPairWrap,
     stakeFormLockPeriod,
-    stakeFormLpWrap,
+    stakeFormLockPeriodWrap,
     marketMyPositions,
     marketSection,
+    marketTokensListItemWarning,
+    marketTokensListItemMobWarning,
     dashboardLink,
     uniswapMarketExmark,
     uniswapMarketInfoWrap,
@@ -33,6 +38,7 @@ import { toggleIsHidden,
     addLinkActive,
     removeLinkActive } from './simple';
 import { hideMainSections, hidePersonalSections } from './switching';
+import { toggleUniswapMessage } from './authorization';
 
 export function showDashboardPiece (pieceToShow = marketTokensGrid, linkToCurrent = linkToMarket) {
     hideDashboardPiece();
@@ -74,7 +80,7 @@ if (stakeFormSelectPair) {
 
 if (stakeFormLockPeriod) {
     stakeFormLockPeriod.addEventListener("click", () => {
-        toggleIsHidden(stakeFormLpWrap);
+        toggleIsHidden(stakeFormLockPeriodWrap);
     });
 };
 
@@ -127,5 +133,29 @@ if (myPositionsMobLink) {
         showDashboardPiece(marketMyPositions, linkToMyPositions);
         hideMainSections();
         hidePersonalSections();
+    });
+};
+
+const warningVisible = "uniswap-message__warning-visible";
+    
+if (marketTokensListItemWarning) {
+    marketTokensListItemWarning.forEach(itemWarning => {
+        itemWarning.addEventListener("click", () => {
+            toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
+        });
+    });
+};
+
+if (marketTokensListItemMobWarning) {
+    marketTokensListItemMobWarning.forEach(itemMobWarning => {
+        itemMobWarning.addEventListener("click", () => {
+            toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
+        });
+    });
+};
+
+if (uniswapMessageBtnWarning) {
+    uniswapMessageBtnWarning.addEventListener("click", () => { 
+        toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
     });
 };
