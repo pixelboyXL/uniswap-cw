@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.9cdba994.css><script type=module src=/uniswap-cw/uniswap-cw.f7b1fab2.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.0be426d5.css><script type=module src=/uniswap-cw/uniswap-cw.b59a8491.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav-site-wrap>
@@ -174,7 +174,7 @@
             </li>
             <li class="tokens-list__item tokens-list__item-warning">
                 <img src=/uniswap-cw/usdt_icon.0a225c26.png alt="USDT icon" class=tokens-list__icon>
-                <p class="tokens-list__name tokens-white">USDT</p>
+                <p class=tokens-list__name>USDT</p>
             </li>
             <li class="tokens-list__item tokens-list__item-warning">
                 <img src=/uniswap-cw/dai_icon.ce3f6fb7.png alt="DAI icon" class=tokens-list__icon>
@@ -200,7 +200,7 @@
                 </li>
                 <li class="tokens-list__item-mob tokens-list__item-mob-warning">
                     <img src=/uniswap-cw/usdt_icon.0a225c26.png alt="USDT icon" class=tokens-list__icon>
-                    <p class="tokens-list__name tokens-white">USDT</p>
+                    <p class=tokens-list__name>USDT</p>
                 </li>
                 <li class="tokens-list__item-mob tokens-list__item-mob-warning">
                     <img src=/uniswap-cw/dai_icon.ce3f6fb7.png alt="DAI icon" class=tokens-list__icon>
@@ -590,7 +590,7 @@
         </label>
     </div>
     <label for=market-amount class=stake-form__label>Amount</label>
-    <input id=market-amount name=market-amount class=stake-form__input>
+    <input type=number id=market-amount name=market-amount class=stake-form__input>
     <label for=market-lock-period class=stake-form__label>
         <div class="is_hidden stake-form__lp-wrap">
             <ul class=stake-form__lp-list>
@@ -612,7 +612,7 @@
     </label>
     <input id=market-lock-period name=market-lock-period placeholder="1 month" class=stake-form__select>
     <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-stake">
-        <button type=button class=uniswap-market__btn>Create Stake</button>
+        <button type=button class="uniswap-market__btn uniswap-market__btn-create-stake">Create Stake</button>
     </div>
 </form>
             <div class=market__my-positions style=display:none>
@@ -821,33 +821,34 @@
             <button type=button class="uniswap-message__btn uniswap-message__btn-pink uniswap-message__btn-warning">OK</button>
         </div>
     </div>
-    <div class="is_hidden uniswap-backdrop">
+    <div class="is_hidden uniswap-backdrop uniswap-backdrop-error-validate">
         <div class="uniswap-message uniswap-message__error-validate">
             <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
             <p class=uniswap-message__after-title>Validation Error</p>
             <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
                 <span class="uniswap-message__text uniswap-message__text-pink">Please select a trading pair from the dropdown.</span>
             </div>
-            <button type=button class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
+            <button type=button class="uniswap-message__btn uniswap-message__btn-error-validate uniswap-message__btn-pink">OK</button>
         </div>
     </div>
-    <div class="is_hidden uniswap-backdrop">
+    <div class="is_hidden uniswap-backdrop uniswap-backdrop-error-create">
         <div class="uniswap-message uniswap-message__error-create">
             <p class="uniswap-message__title uniswap-message__title-pink">Error</p>
             <p class=uniswap-message__after-title>Failed to Create Stake</p>
             <div class="uniswap-message__text-wrap uniswap-message__text-wrap-pink">
                 <span class="uniswap-message__text uniswap-message__text-pink">Insufficient balance</span>
             </div>
-            <button type=button class="uniswap-message__btn uniswap-message__btn-pink">OK</button>
+            <button type=button class="uniswap-message__btn uniswap-message__btn-error-create uniswap-message__btn-pink">OK</button>
         </div>
     </div>
-    <div class="is_hidden uniswap-backdrop">
+    <div class="is_hidden uniswap-backdrop uniswap-backdrop-success">
         <div class="uniswap-message uniswap-message__success">
+            <p class="uniswap-message__title uniswap-message__title-green">Success</p>
             <p class=uniswap-message__after-title>Stake Created Successfully!</p>
             <div class="uniswap-message__text-wrap uniswap-message__text-wrap-green">
                 <span class="uniswap-message__text uniswap-message__text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
             </div>
-            <button type=button class="uniswap-message__btn uniswap-message__btn-green">OK</button>
+            <button type=button class="uniswap-message__btn uniswap-message__btn-green uniswap-message__btn-success">OK</button>
         </div>
     </div>
 </section>
