@@ -53,10 +53,10 @@
     border: 1px solid var(--uniswap-my-profile-border);
     background-color: var(--uniswap-market-background);
 	&__warning {
-		max-width: 304px;
+		width: 304px;
 		padding: 25px 21px;
 		@include desk {
-			max-width: 364px;
+			width: 364px;
 			padding-left: 24px;
 			padding-top: 26px;
 			padding-right: 24px;
@@ -64,16 +64,25 @@
 		}
 	}
 	&__error-validate {
-		max-width: 425px;
-		padding: 26px 31px;
+		width: 391px;
+		padding: 26px 30px;
+		@include desk {
+			width: 425px;
+		}
 	}
 	&__error-create {
-		max-width: 316px;
-		padding: 26px 73px;
+		width: 391px;
+		padding: 26px 72px;
+		@include desk {
+			width: 316px;
+		}
 	}
 	&__success {
-		max-width: 398px;
+		width: 391px;
 		padding: 26px 37px;
+		@include desk {
+			width: 398px;
+		}
 	}
 	&__logout {
 		width: 316px;
@@ -165,6 +174,10 @@
     font-size: 14.75px;
     line-height: calc(28.8 / 14.75);
     letter-spacing: -0.12px;
+	display: block;
+    text-align: center;
+	@include desk {
+	}
 	&-pink {
 		color: var(--uniswap-error);
 	}

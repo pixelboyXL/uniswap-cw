@@ -79,10 +79,9 @@
 .tokens-active {
     border-radius: 12px;
     background-color: var(--uniswap-tokens-active);
-}
-
-.tokens-white {
-    color: var(--clearly-white);
+    & .tokens-list__name {
+        color: var(--clearly-white);
+    }
 }
 
 .market__general-list {

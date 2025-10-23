@@ -1,6 +1,16 @@
-import { uniswapBackdropWarning,
+import { uniswapMarketBtnCreateStake,
+    uniswapBackdropWarning,
     uniswapMessageWarning,
     uniswapMessageBtnWarning,
+    uniswapBackdropErrorValidate,
+    uniswapMessageErrorValidate,
+    uniswapMessageBtnErrorValidate,
+    uniswapBackdropErrorCreate,
+    uniswapMessageErrorCreate,
+    uniswapMessageBtnErrorCreate,
+    uniswapBackdropSuccess,
+    uniswapMessageSuccess,
+    uniswapMessageBtnSuccess,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
@@ -8,8 +18,11 @@ import { uniswapBackdropWarning,
     marketStakeForm,
     stakeFormSelectPair,
     stakeFormPairWrap,
+    stakeFormPairText,
+    stakeFormAmount,
     stakeFormLockPeriod,
     stakeFormLockPeriodWrap,
+    stakeFormLockPeriodText,
     marketMyPositions,
     marketSection,
     marketTokensListItemWarning,
@@ -72,15 +85,26 @@ if (linkToStake) {
     });
 };
 
+function getStakeFormValue (objectOptionsText, elemToOverrite) {
+    objectOptionsText.forEach(objectText => {
+        objectText.addEventListener("click", () => {
+            const neddedValue = objectText.innerHTML;
+            elemToOverrite.value = neddedValue;
+        });
+    });
+};
+
 if (stakeFormSelectPair) {
     stakeFormSelectPair.addEventListener("click", () => {
         toggleIsHidden(stakeFormPairWrap);
+        getStakeFormValue(stakeFormPairText, stakeFormSelectPair);
     });
 };
 
 if (stakeFormLockPeriod) {
     stakeFormLockPeriod.addEventListener("click", () => {
         toggleIsHidden(stakeFormLockPeriodWrap);
+        getStakeFormValue(stakeFormLockPeriodText, stakeFormLockPeriod);
     });
 };
 
@@ -137,7 +161,10 @@ if (myPositionsMobLink) {
 };
 
 const warningVisible = "uniswap-message__warning-visible";
-    
+const errorValidateVisible = "uniswap-message__error-validate-visible";
+const errorCreateVisible = "uniswap-message__error-create-visible";
+const successVisible = "uniswap-message__success-visible";
+
 if (marketTokensListItemWarning) {
     marketTokensListItemWarning.forEach(itemWarning => {
         itemWarning.addEventListener("click", () => {
@@ -157,5 +184,38 @@ if (marketTokensListItemMobWarning) {
 if (uniswapMessageBtnWarning) {
     uniswapMessageBtnWarning.addEventListener("click", () => { 
         toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
+    });
+};
+
+if (uniswapMarketBtnCreateStake) {
+    uniswapMarketBtnCreateStake.addEventListener("click", () => {
+        if (stakeFormSelectPair.value === "") {
+            toggleUniswapMessage(uniswapBackdropErrorValidate, uniswapMessageErrorValidate, errorValidateVisible);
+            return;
+        } else if (stakeFormLockPeriod.value === "" || stakeFormAmount.value === "") {
+            toggleUniswapMessage(uniswapBackdropErrorCreate, uniswapMessageErrorCreate, errorCreateVisible);
+            return;
+        } else {
+            toggleUniswapMessage(uniswapBackdropSuccess, uniswapMessageSuccess, successVisible);
+        };
+    });
+};
+
+if (uniswapMessageBtnErrorValidate) {
+    uniswapMessageBtnErrorValidate.addEventListener("click", () => {
+        toggleUniswapMessage(uniswapBackdropErrorValidate, uniswapMessageErrorValidate, errorValidateVisible);
+    });
+};
+
+if (uniswapMessageBtnErrorCreate) {
+    uniswapMessageBtnErrorCreate.addEventListener("click", () => {
+        toggleUniswapMessage(uniswapBackdropErrorCreate, uniswapMessageErrorCreate, errorCreateVisible);
+    });
+};
+
+if (uniswapMessageBtnSuccess) {
+    uniswapMessageBtnSuccess.addEventListener("click", () => {
+        toggleUniswapMessage(uniswapBackdropSuccess, uniswapMessageSuccess, successVisible);
+        marketStakeForm.reset();
     });
 };
