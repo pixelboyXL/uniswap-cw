@@ -7,7 +7,7 @@
     max-width: 391px;
 	height: 100vh;
     transform: translate(-50%, -50%);
-	transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	@include transition_with_cubic;
 	background-color: var(--uniswap-rgba-mob-background);
 }
 
@@ -25,7 +25,7 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     background-color: var(--uniswap-dark);
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition_with_cubic($time:500ms);
     &::before {
         content: "";
         display: block;

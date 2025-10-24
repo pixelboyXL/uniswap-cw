@@ -1,7 +1,7 @@
-@mixin font($fs:16px, $fw:700, $lh:32px, $ls:0.01em) {
-    font-size: $fs;
+@mixin font($fs, $fw, $lh, $ls:null) {
     font-weight: $fw;
-    line-height: $lh;
+    font-size: $fs;
+    line-height: ($lh / $fs);
     letter-spacing: $ls;
 }
 
@@ -41,7 +41,7 @@
 }
 
 @mixin change_to_white_with_pointer {
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition_with_cubic;
     &:hover {
         cursor: pointer;
         color: var(--clearly-white);
@@ -49,7 +49,7 @@
 }
 
 @mixin change_to_grey_with_pointer {
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition_with_cubic;
     &:hover {
         cursor: pointer;
         color: var(--uniswap-grey);
@@ -57,7 +57,7 @@
 }
 
 @mixin scale_with_pointer {
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition_with_cubic;
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
@@ -65,15 +65,21 @@
 }
 
 @mixin focus_scale_with_pointer {
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition_with_cubic;
     &:focus {
         cursor: pointer;
         transform: scale(1.03);;
     }
 }
+
 @mixin hover_focus_background_dark_pink {
+    @include transition_with_cubic;
     &:hover,
     &:focus {
         background-color: var(--uniswap-dark-pink);
     }
+}
+
+@mixin transition_with_cubic($time:250ms) {
+    transition: all $time cubic-bezier(0.4, 0, 0.2, 1);
 }
