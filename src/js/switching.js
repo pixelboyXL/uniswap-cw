@@ -3,6 +3,7 @@ import { navUserIcon,
     userProfileSection,
     referralProgramSection,
     dashboardSection,
+    whitePaperSection,
     roadmapSection,
     dashboardLink,
     whitePaperLink,
@@ -18,7 +19,7 @@ import { toggleIsHidden,
     hideSection,
     addLinkActive,
     removeLinkActive } from './simple';
-import { showDashboardPiece, hideDashboardPiece } from './market';
+import { showDashboardPiece, hideDashboardPiece } from './dashboard';
 
 if (navUserIcon) {
     navUserIcon.addEventListener("click", () => {
@@ -35,7 +36,7 @@ export function showMainSections (sectionToShow, linkToActive) {
 
 export function hideMainSections () {
     removeLinkActive(whitePaperLink);
-    hideSection(dashboardSection);
+    hideSection(whitePaperSection);
     removeLinkActive(roadmapLink);
     hideSection(roadmapSection);
     removeLinkActive(faqLink);
@@ -52,7 +53,7 @@ if (dashboardLink) {
 
 if (whitePaperLink) {
     whitePaperLink.addEventListener("click", () => {
-        showMainSections(dashboardSection, whitePaperLink);
+        showMainSections(whitePaperSection, whitePaperLink);
         hideDashboardPiece();
         hidePersonalSections();
     });

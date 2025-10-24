@@ -12,7 +12,7 @@ import { toggleIsHidden,
     showSection, 
     hideSection, 
     toggleCustomClass } from './simple';
-import { hideDashboardPiece } from './market';
+import { hideDashboardPiece } from './dashboard';
 import { hideMainSections, showPersonalSections } from './switching';
 
 if (supportLink) {

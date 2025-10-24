@@ -40,44 +40,44 @@
     }
 }
 
-.nav-site-wrap,
-.nav-user-wrap {
+.nav__wrap,
+.nav__user-wrap {
     @include flex_align;
 }
 
-.nav-user-wrap {
+.nav__user-wrap {
     position: relative;
 }
 
-.nav-site-list,
-.nav-cash-list,
-.nav-sum-list {
+.nav__list,
+.nav__cash-list,
+.nav__sum-list {
     display: none;
     @include desk {
         display: flex;
     }
 }
 
-.nav-site-list {
+.nav__list {
     margin-left: 23px;
 }
 
-.nav-site-list__item + .nav-site-list__item {
+.nav__item + .nav__item {
     margin-left: 32px;
 }
 
-.nav-sum-list {
+.nav__sum-list {
     margin-left: 25px;
 }
 
-.nav-cash-list__item,
-.nav-sum-list__item {
+.cash-list__item,
+.sum-list__item {
     &:not(:first-child) {
         margin-left: 25px;
     }
 }
 
-.nav-site-list__link {
+.nav__link {
     font-size: 13.8px;
     line-height: calc(20 / 13.8);
     color: var(--uniswap-grey);
@@ -91,7 +91,7 @@
     }
 }
 
-.nav-site-list__dashboard-link {
+.nav__list-dashboard-link {
     &::before {
         background-image: url(../images/icon_dashboard_grey.svg);
     }
@@ -104,7 +104,7 @@
     }
 }
 
-.nav-site-list__white-paper-link {
+.nav__list-white-paper-link {
     &::before {
         background-image: url(../images/icon_white_paper_grey.svg);
     }
@@ -112,12 +112,12 @@
     &:hover {
         @include change_to_white_with_pointer;
         &::before {
-            background-image: url(../images/icon_referral_program_btn.svg);
+            background-image: url(../images/icon_white_paper_white.svg);
         }
     }
 }
 
-.nav-site-list__roadmap-link {
+.nav__list-roadmap-link {
     &::before {
         background-image: url(../images/icon_roadmap_grey.svg);
     }
@@ -130,12 +130,16 @@
     }
 }
 
-.nav-site-list__faq-link {
+.nav__list-faq-link {
     &::before {
         background-image: url(../images/icon_faq.svg);
     }
+    &.link-active,
     &:hover {
         @include change_to_white_with_pointer;
+        &::before {
+            background-image: url(../images/icon_faq_white.svg);
+        }
     }
 }
 
@@ -153,7 +157,7 @@
     line-height: calc(20 / 14);
 }
 
-.nav-sum-list__link {
+.sum-list__link {
     font-weight: 400;
     font-size: 15.88px;
     line-height: calc(22 / 15.88);
@@ -161,7 +165,7 @@
     @include change_to_white_with_pointer;
 }
 
-.nav-cash-list__link {
+.cash-list__link {
     font-weight: 400;
     font-size: 10.88px;
     line-height: calc(17 / 10.88);
@@ -169,22 +173,28 @@
     text-align: center;
 }
 
-.nav-cash-list__number {
+.cash-list__number {
     font-weight: 400;
     font-size: 15.88px;
     line-height: calc(16 / 15.88);
 }
 
-.nav-user-icon-wrap {
+.nav__user-icon {
     width: 40px;
     height: 40px;
-    @include scale_with_pointer;
+    border-radius: 50%;
+    background-color: var(--uniswap-dark-pink);
+    @include flex_justify_align;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--uniswap-rgba-pink);
+    }
     @include desk {
         margin-left: 58px;
     }
 }
 
-.nav-user-sections {
+.nav__user-sections {
     width: 174px;
     padding: 15px 18px;
     border-radius: 8px;
@@ -196,16 +206,16 @@
     z-index: 1;
 }
 
-.nav-user-sections-item {
+.user-sections__item {
     @include flex_align;
     @include scale_with_pointer;
 }
 
-.nav-user-sections-item + .nav-user-sections-item {
+.user-sections__item + .user-sections__item {
     margin-top: 15px;
 }
 
-.nav-user-sections-title {
+.user-sections__title {
     font-weight: 400;
     font-size: 13px;
     color: var(--uniswap-pair-option);

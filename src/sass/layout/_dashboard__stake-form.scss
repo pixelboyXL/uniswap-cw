@@ -1,4 +1,4 @@
-.market__stake-form {
+.dashboard__stake-form {
     display: none;
     width: 328px;
     margin-left: 31px;
@@ -48,7 +48,7 @@
 }
 
 .stake-form__pair-wrap,
-.stake-form__lp-wrap {
+.stake-form__lock-period-wrap {
     width: 100%;
     max-width: 480px;
     padding: 15px 18px;
@@ -62,7 +62,7 @@
 }
 
 .stake-form__pair-list,
-.stake-form__lp-list {
+.stake-form__lock-period-list {
     max-height: 120px;
     overflow-x: hidden;
     scrollbar-gutter: stable both-edges;
@@ -75,12 +75,12 @@
 	}
 }
 
-.stake-form__pair-list_item {
+.stake-form__pair-item {
     @include flex_align;
 }
 
-.stake-form__pair-list_item + .stake-form__pair-list_item,
-.stake-form__lp-list_item + .stake-form__lp-list_item {
+.stake-form__pair-item + .stake-form__pair-item,
+.stake-form__lock-period-item + .stake-form__lock-period-item {
     margin-top: 10px;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .stake-form__pair-text,
-.stake-form__lp-text {
+.stake-form__lock-period-text {
     font-weight: 400;
     font-size: 13px;
     line-height: 100%;
@@ -118,7 +118,7 @@
     }
 }
 
-.stake-form__wrap_checkbox {
+.stake-form__checkbox-wrap {
 	margin-bottom: 13px;
 }
 

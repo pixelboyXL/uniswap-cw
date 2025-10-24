@@ -14,8 +14,8 @@ import { uniswapMarketBtnCreateStake,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
-    marketTokensGrid,
-    marketStakeForm,
+    dashboardTokensGrid,
+    dashboardStakeForm,
     stakeFormSelectPair,
     stakeFormPairWrap,
     stakeFormPairText,
@@ -23,20 +23,22 @@ import { uniswapMarketBtnCreateStake,
     stakeFormLockPeriod,
     stakeFormLockPeriodWrap,
     stakeFormLockPeriodText,
-    marketMyPositions,
-    marketSection,
-    marketTokensListItemWarning,
-    marketTokensListItemMobWarning,
+    dashboardMyPositions,
+    dashboardSection,
+    TokensListItemWarning,
+    TokensListItemMobWarning,
     dashboardLink,
     uniswapMarketExmark,
     uniswapMarketInfoWrap,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
-    marketTokensGrid,
-    marketStakeForm,
-    marketMyPositions,
+    dashboardTokensGrid,
+    dashboardStakeForm,
+    dashboardMyPositions,
     whitePaperMobLink,
+    whitePaperSection,
+    whitePaperLink,
     stakeMobLink,
     myPositionsMobLink,
     headerMobMenu,
@@ -50,27 +52,28 @@ import { toggleIsHidden,
     removeCurrentClass,
     addLinkActive,
     removeLinkActive } from './simple';
-import { hideMainSections, hidePersonalSections } from './switching';
+import { showMainSections, hideMainSections, hidePersonalSections } from './switching';
 import { toggleUniswapMessage } from './authorization';
 
-export function showDashboardPiece (pieceToShow = marketTokensGrid, linkToCurrent = linkToMarket) {
+export function showDashboardPiece (pieceToShow = dashboardTokensGrid, linkToCurrent = linkToMarket) {
     hideDashboardPiece();
 
     addLinkActive(dashboardLink);
-    showSection(marketSection);
+    showSection(dashboardSection);
     addCurrentClass(linkToCurrent);
     showSection(pieceToShow);
 };
 
 export function hideDashboardPiece () {
     removeLinkActive(dashboardLink);
-    hideSection(marketSection);
+    hideSection(dashboardSection);
     removeCurrentClass(linkToMarket);
-    hideSection(marketTokensGrid);
+    hideSection(dashboardTokensGrid);
     removeCurrentClass(linkToStake);
-    hideSection(marketStakeForm);
+    hideSection(dashboardStakeForm);
+    dashboardStakeForm.reset();
     removeCurrentClass(linkToMyPositions);
-    hideSection(marketMyPositions);
+    hideSection(dashboardMyPositions);
 };
 
 if (linkToMarket) {
@@ -81,7 +84,7 @@ if (linkToMarket) {
 
 if (linkToStake) {
     linkToStake.addEventListener("click", () => {
-        showDashboardPiece(marketStakeForm, linkToStake);
+        showDashboardPiece(dashboardStakeForm, linkToStake);
     });
 };
 
@@ -110,7 +113,7 @@ if (stakeFormLockPeriod) {
 
 if (linkToMyPositions) {
     linkToMyPositions.addEventListener("click", () => {
-        showDashboardPiece(marketMyPositions, linkToMyPositions);
+        showDashboardPiece(dashboardMyPositions, linkToMyPositions);
     });
 };
 
@@ -136,8 +139,8 @@ if (headerMobMenu) {
 if (whitePaperMobLink) {
     whitePaperMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showDashboardPiece(marketTokensGrid, linkToMarket);
-        hideMainSections();
+        showMainSections(whitePaperSection, whitePaperLink);
+        hideDashboardPiece();
         hidePersonalSections();
     });
 };
@@ -145,7 +148,7 @@ if (whitePaperMobLink) {
 if (stakeMobLink) {
     stakeMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showDashboardPiece(marketStakeForm, linkToStake);
+        showDashboardPiece(dashboardStakeForm, linkToStake);
         hideMainSections();
         hidePersonalSections();
     });
@@ -154,27 +157,27 @@ if (stakeMobLink) {
 if (myPositionsMobLink) {
     myPositionsMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showDashboardPiece(marketMyPositions, linkToMyPositions);
+        showDashboardPiece(dashboardMyPositions, linkToMyPositions);
         hideMainSections();
         hidePersonalSections();
     });
 };
 
-const warningVisible = "uniswap-message__warning-visible";
-const errorValidateVisible = "uniswap-message__error-validate-visible";
-const errorCreateVisible = "uniswap-message__error-create-visible";
-const successVisible = "uniswap-message__success-visible";
+const warningVisible = "uniswap-message-warning-visible";
+const errorValidateVisible = "uniswap-message-error-validate-visible";
+const errorCreateVisible = "uniswap-message-error-create-visible";
+const successVisible = "uniswap-message-success-visible";
 
-if (marketTokensListItemWarning) {
-    marketTokensListItemWarning.forEach(itemWarning => {
+if (TokensListItemWarning) {
+    TokensListItemWarning.forEach(itemWarning => {
         itemWarning.addEventListener("click", () => {
             toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
         });
     });
 };
 
-if (marketTokensListItemMobWarning) {
-    marketTokensListItemMobWarning.forEach(itemMobWarning => {
+if (TokensListItemMobWarning) {
+    TokensListItemMobWarning.forEach(itemMobWarning => {
         itemMobWarning.addEventListener("click", () => {
             toggleUniswapMessage(uniswapBackdropWarning, uniswapMessageWarning, warningVisible);
         });
@@ -216,6 +219,6 @@ if (uniswapMessageBtnErrorCreate) {
 if (uniswapMessageBtnSuccess) {
     uniswapMessageBtnSuccess.addEventListener("click", () => {
         toggleUniswapMessage(uniswapBackdropSuccess, uniswapMessageSuccess, successVisible);
-        marketStakeForm.reset();
+        dashboardStakeForm.reset();
     });
 };

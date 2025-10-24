@@ -1,0 +1,86 @@
+<form class="dashboard__stake-form" style="display: none;">
+    <label for="stake-form-select-pair" class="stake-form__label">
+        <div class="stake-form__pair-wrap is_hidden">
+            <ul class="stake-form__pair-list">
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text current">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+                <li class="stake-form__pair-item">
+                    <img src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="stake-form__pair-icon">
+                    <p class="stake-form__pair-text">ADA-USDT</p>
+                </li>
+            </ul>
+        </div>
+        Pair
+    </label>
+    <input id="stake-form-select-pair" name="stake-form-select-pair" placeholder="Select pair" class="stake-form__select"/>
+    <div class="stake-form__checkbox-wrap">
+        <input type="checkbox"
+            name="dashboard-checkbox" 
+            id="dashboard-checkbox" 
+            class="stake-form__checkbox visually_hidden">
+        <label for="dashboard-checkbox" class="stake-form__label label-checkbox">
+            Use Referral Balance
+        </label>
+    </div>
+    <label for="stake-form-amount" class="stake-form__label">Amount</label>
+    <input type="text" id="stake-form-amount" name="stake-form-amount" class="stake-form__input"/>
+    <label for="stake-form-lock-period" class="stake-form__label">
+        <div class="stake-form__lock-period-wrap is_hidden">
+            <ul class="stake-form__lock-period-list">
+                <li class="stake-form__lock-period-item">
+                    <span class="stake-form__lock-period-text current">1 month</span>
+                </li>
+                <li class="stake-form__lock-period-item">
+                    <span class="stake-form__lock-period-text">3 month</span>
+                </li>
+                <li class="stake-form__lock-period-item">
+                    <span class="stake-form__lock-period-text">6 month</span>
+                </li>
+                <li class="stake-form__lock-period-item">
+                    <span class="stake-form__lock-period-text">12 month</span>
+                </li>
+            </ul>
+        </div>
+        Lock period
+    </label>
+    <input id="stake-form-lock-period" name="stake-form-lock-period" placeholder="1 month" class="stake-form__select"/>
+    <div class="uniswap-dashboard__btn-wrap uniswap-dashboard__btn-wrap-stake">
+        <button type="button" class="uniswap-dashboard__btn uniswap-dashboard__btn-create-stake">Create Stake</button>
+    </div>
+</form>

@@ -43,23 +43,23 @@
     }
 }
 
-.mob-menu__cash-list {
+.mob-menu__cash-list-mob {
     display: flex;
     margin-bottom: 10px;
 }
 
-.cash-list__item + .cash-list__item {
+.cash-list__item-mob + .cash-list__item-mob {
     margin-left: 26px;
 }
 
-.cash-list__link {
+.cash-list__link-mob {
     font-weight: 400;
     font-size: 8.88px;
     color: var(--uniswap-grey);
     text-align: center;
 }
 
-.cash-list__number {
+.cash-list__number-mob {
     display: block;
     font-weight: 400;
     font-size: 11.88px;

@@ -1,80 +1,103 @@
-<section class="dashboard" style="display: none;">
+<section class="dashboard">
     <div class="dashboard__container">
-        <div class="dashboard-nav">
-            <p class="dashboard-nav__title dashboard-nav__title-active">Overview</p>
-            <p class="dashboard-nav__title">Analytics</p>
-            <p class="dashboard-nav__title">Reports</p>
-            <p class="dashboard-nav__title">Notifications</p>
-        </div>
-        <ul class="statistic__list">
-            <li class="statistic__item">
-                <p class="total-users-title">Total Users</p>
-                <span class="statistic__general-value">12,345</span>
-                <span class="statistic__percentage-value">+12.5% <span class="statistic__value-text">from last month</span></span>
+        <ul class="tokens-list">
+            <li class="tokens-list__item tokens-active">
+                <img
+                    src="./images/usdc_icon.png"
+                    alt="USDC icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">USDC</p>
             </li>
-            <li class="statistic__item">
-                <p class="active-sessions-title">Active Sessions</p>
-                <span class="statistic__general-value">3,456</span>
-                <span class="statistic__percentage-value">+8.2% <span class="statistic__value-text">from last month</span></span>
+            <li class="tokens-list__item tokens-list__item-warning">
+                <img
+                    src="./images/usdt_icon.png"
+                    alt="USDT icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">USDT</p>
             </li>
-            <li class="statistic__item">
-                <p class="revenue-title">Revenue</p>
-                <span class="statistic__general-value">$45,678</span>
-                <span class="statistic__percentage-value">+23.1% <span class="statistic__value-text">from last month</span></span>
-            </li>
-            <li class="statistic__item">
-                <p class="growth-title">Growth</p>
-                <span class="statistic__general-value">89.2%</span>
-                <span class="statistic__percentage-value">+4.3% <span class="statistic__value-text">from last month</span></span>
+            <li class="tokens-list__item tokens-list__item-warning">
+                <img
+                    src="./images/dai_icon.png"
+                    alt="DAI icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">DAI</p>
             </li>
         </ul>
-        <div class="recent-activity__wrap">
-            <p class="recent-activity__title">Recent Activity</p>
-            <p class="recent-activity__after-title">Your latest updates and changes</p>
-            <ul class="recent-activity__list">
-                <li class="recent-activity__item">
-                    <p class="recent-activity__position">Activity item 1
-                        <span class="recent-activity__time">1 hours ago</span>
-                    </p>
+        <div class="general-list__wrap">
+            <ul class="general-list">
+                <li class="general-list__item">
+                    <p class="general-list__name current link-to-market">Market</p>
                 </li>
-                <li class="recent-activity__item">
-                    <p class="recent-activity__position">Activity item 2
-                        <span class="recent-activity__time">2 hours ago</span>
-                    </p>
+                <li class="general-list__item">
+                    <p class="general-list__name link-to-stake">Stake</p>
                 </li>
-                <li class="recent-activity__item">
-                    <p class="recent-activity__position">Activity item 3
-                        <span class="recent-activity__time">3 hours ago</span>
-                    </p>
-                </li>
-                <li class="recent-activity__item">
-                    <p class="recent-activity__position">Activity item 4
-                        <span class="recent-activity__time">4 hours ago</span>
-                    </p>
+                <li class="general-list__item">
+                    <p class="general-list__name link-to-my-positions">My Positions</p>
                 </li>
             </ul>
+            <ul class="tokens-list-mob">
+                <li class="tokens-list__item-mob tokens-active">
+                    <img
+                        src="./images/usdc_icon.png"
+                        alt="USDC icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">USDC</p>
+                </li>
+                <li class="tokens-list__item-mob tokens-list__item-mob-warning">
+                    <img
+                        src="./images/usdt_icon.png"
+                        alt="USDT icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">USDT</p>
+                </li>
+                <li class="tokens-list__item-mob tokens-list__item-mob-warning">
+                    <img
+                        src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">DAI</p>
+                </li>
+            </ul>
+            <include src="./partials/dashboard__tokens-grid.html"></include>
+            <include src="./partials/dashboard__stake-form.html"></include>
+            <include src="./partials/dashboard__my-positions.html"></include>
         </div>
-        <div class="quick-stats__wrap">
-            <p class="quick-stats__title">Quick Stats</p>
-            <p class="quick-stats__after-title">Performance metrics at a glance</p>
-            <ul class="quick-stats__list">
-                <li class="quick-stats__item">
-                    <p class="quick-stats__position">Conversion Rate</p>
-                    <span class="quick-stats__value">3.24%</span>
-                </li>
-                <li class="quick-stats__item">
-                    <p class="quick-stats__position">Avg. Session Duration</p>
-                    <span class="quick-stats__value">4m 32s</span>
-                </li>
-                <li class="quick-stats__item">
-                    <p class="quick-stats__position">Bounce Rate</p>
-                    <span class="quick-stats__value">42.3%</span>
-                </li>
-                <li class="quick-stats__item">
-                    <p class="quick-stats__position">Pages per Session</p>
-                    <span class="quick-stats__value">5.6</span>
-                </li>
-            </ul>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-warning is_hidden">
+        <div class="uniswap-message uniswap-message-warning">
+            <p class="uniswap-message-title uniswap-message-title-pink">Warning</p>
+            <p class="uniswap-message-after-title">This pools are unavailable for your country!</p>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-warning">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-error-validate is_hidden">
+        <div class="uniswap-message uniswap-message-error-validate">
+            <p class="uniswap-message-title uniswap-message-title-pink">Error</p>
+            <p class="uniswap-message-after-title">Validation Error</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-pink">
+                <span class="uniswap-message-text uniswap-message-text-pink">Please select a trading pair from the dropdown.</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-error-validate">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-error-create is_hidden">
+        <div class="uniswap-message uniswap-message-error-create">
+            <p class="uniswap-message-title uniswap-message-title-pink">Error</p>
+            <p class="uniswap-message-after-title">Failed to Create Stake</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-pink">
+                <span class="uniswap-message-text uniswap-message-text-pink">Insufficient balance</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-error-create">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-success is_hidden">
+        <div class="uniswap-message uniswap-message-success">
+            <p class="uniswap-message-title uniswap-message-title-green">Success</p>
+            <p class="uniswap-message-after-title">Stake Created Successfully!</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-green">
+                <span class="uniswap-message-text uniswap-message-text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-green uniswap-message-btn-success">OK</button>
         </div>
     </div>
 </section>

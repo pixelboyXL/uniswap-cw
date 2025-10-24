@@ -15,20 +15,20 @@
     }
 }
 
-.footer-main-wrap,
-.footer-social-wrap,
-.footer-link-wrap {
+.footer__main-wrap,
+.footer__social-wrap,
+.footer__link-wrap {
     @include desk {
         display: flex;
     }
 }
 
-.footer-link-wrap {
+.footer__link-wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer-main-wrap {
+.footer__main-wrap {
     padding-bottom: 18.7px;
     border-bottom: 1px solid var(--uniswap-rgba-mob-border);
     @include desk {
@@ -38,22 +38,22 @@
     }
 }
 
-.footer-social-list {
+.footer__social-list {
     display: flex;
 }
 
-.footer-social-list__item {
+.social-list__item {
     &:not(:first-child) {
         margin-left: 24px;
     }
     @include scale_with_pointer;
 }
 
-.footer-social-icon {
+.social-list__icon {
     width: 32px;
 }
 
-.footer-link-wrap {
+.footer__link-wrap {
     width: 310px;
     margin-bottom: 32px;
     @include desk {
@@ -64,14 +64,14 @@
     }
 }
 
-.footer-link-wrap-smalls {
+.footer__link-wrap-smalls {
     width: 147px;
     @include desk {
         width: auto;
     }
 }
 
-.wrap-smalls-mb {
+.wrap-smalls-mob {
     margin-bottom: 16px;
     @include desk {
         margin-bottom: 0;
@@ -85,23 +85,23 @@
     }
 }
 
-.footer-link__item + .footer-link__item {
+.link-list__item + .link-list__item {
     margin-top: 7px;
 }
 
-.footer-link-title {
+.footer__link-title {
     font-size: 14.88px;
     line-height: calc(20 / 14.88);
     margin-bottom: 10px;
 }
 
-.footer-link__text {
+.link-list__text {
     font-size: 15.13px;
     line-height: calc(20 / 15.13);
     @include change_to_grey_with_pointer;
 }
 
-.footer-copyright-wrap {
+.footer__copyright-wrap {
     padding-top: 24px;
     @include desk {
         display: flex;
@@ -109,21 +109,21 @@
     }
 }
 
-.footer-copyright {
+.footer__copyright {
     max-width: 146px;
     font-size: 12.8px;
     line-height: calc(18 / 12.8);
 }
 
-.footer-policy-list {
+.footer__policy-list {
     display: flex;
 }
 
-.footer-policy-list__item + .footer-policy-list__item {
+.policy-list__item + .policy-list__item {
     margin-left: 16px;
 }
 
-.footer-policy-name {
+.policy-list__name {
     font-size: 12.7px;
     line-height: calc(18 / 12.7);
     color: var(--uniswap-footer-policy);

@@ -1,6 +1,6 @@
 <header class="header">
     <nav class="nav">
-        <div class="nav-site-wrap">
+        <div class="nav__wrap">
             <a href="" class="logo primary-font">
                 <svg width="20" height="22" class="logo-image">
                     <use href="./images/uniswap_logo.svg"></use>
@@ -8,82 +8,82 @@
                 Uniswap
             </a>
             <button type="button" class="header__mob-menu"></button>
-            <ul class="nav-site-list">
-                <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__dashboard-link link-active">Dashboard</p>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <p class="nav__link nav__list-dashboard-link link-active">Dashboard</p>
                 </li>
-                <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__white-paper-link">White Paper</p>
+                <li class="nav__item">
+                    <p class="nav__link nav__list-white-paper-link">White Paper</p>
                 </li>
-                <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__roadmap-link link-small">Roadmap</p>
+                <li class="nav__item">
+                    <p class="nav__link nav__list-roadmap-link link-small">Roadmap</p>
                 </li>
-                <li class="nav-site-list__item">
-                    <p class="nav-site-list__link nav-site-list__faq-link link-bigger">FAQ</p>
+                <li class="nav__item">
+                    <p class="nav__link nav__list-faq-link link-bigger">FAQ</p>
                 </li>
             </ul>
         </div>
-        <div class="nav-user-wrap">
-            <ul class="nav-cash-list">
-                <li class="nav-cash-list__item">
-                    <p class="nav-cash-list__link">Available</p>
-                    <span class="nav-cash-list__number">20399.80</span>
+        <div class="nav__user-wrap">
+            <ul class="nav__cash-list">
+                <li class="cash-list__item">
+                    <p class="cash-list__link">Available</p>
+                    <span class="cash-list__number">20399.80</span>
                 </li>
-                <li class="nav-cash-list__item">
-                    <p class="nav-cash-list__link">Locked</p>
-                    <span class="nav-cash-list__number">58099.98</span>
-                </li>
-            </ul>
-            <ul class="nav-sum-list">
-                <li class="nav-sum-list__item">
-                    <p class="nav-sum-list__link link-small">Deposit</p>
-                </li>
-                <li class="nav-sum-list__item">
-                    <p class="nav-sum-list__link">Withdraw</p>
+                <li class="cash-list__item">
+                    <p class="cash-list__link">Locked</p>
+                    <span class="cash-list__number">58099.98</span>
                 </li>
             </ul>
-            <button type="button" class="nav-user-icon-wrap">
-                <img
-                    src="./images/icon_user.png"
-                    alt="User icon">
+            <ul class="nav__sum-list">
+                <li class="sum-list__item">
+                    <p class="sum-list__link link-small">Deposit</p>
+                </li>
+                <li class="sum-list__item">
+                    <p class="sum-list__link">Withdraw</p>
+                </li>
+            </ul>
+            <button type="button" class="nav__user-icon">
+                <svg width="21" height="21">
+                    <use href="./images/icon_user.svg"></use>
+                </svg>
             </button>
-            <div class="nav-user-sections is_hidden">
+            <div class="nav__user-sections is_hidden">
                 <ul>
-                    <li class="nav-user-sections-item">
+                    <li class="user-sections__item">
                         <svg width="15" height="15">
                             <use href="./images/icon_my_profile.svg"></use>
                         </svg>
-                        <p class="nav-user-sections-title" id="my-profile-link">My profile</p>
+                        <p class="user-sections__title" id="my-profile-link">My profile</p>
                     </li>
-                    <li class="nav-user-sections-item">
+                    <li class="user-sections__item">
                         <svg width="15" height="15">
                             <use href="./images/icon_referral_program.svg"></use>
                         </svg>
-                        <p class="nav-user-sections-title" id="referral-program-link">Referral Program</p>
+                        <p class="user-sections__title" id="referral-program-link">Referral Program</p>
                     </li>
-                    <li class="nav-user-sections-item">
+                    <li class="user-sections__item">
                         <svg width="15" height="15">
                             <use href="./images/icon_support.svg"></use>
                         </svg>
-                        <p class="nav-user-sections-title" id="support-link">Support</p>
+                        <p class="user-sections__title" id="support-link">Support</p>
                     </li>
-                    <li class="nav-user-sections-item">
+                    <li class="user-sections__item">
                         <svg width="15" height="15">
                             <use href="./images/icon_logout.svg"></use>
                         </svg>
-                        <p class="nav-user-sections-title nav-user-sections-title-pink" id="logout-link">Logout</p>
+                        <p class="user-sections__title user-sections__title-pink" id="logout-link">Logout</p>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="uniswap-backdrop uniswap-backdrop-header is_hidden">
-        <div class="uniswap-message uniswap-message__logout">
-            <p class="uniswap-message__title uniswap-message__title-pink">Logout</p>
-            <p class="uniswap-message__after-title">Are you sure ?</p>
-            <div class="uniswap-message__btn-wrap">
-                <button type="button" class="uniswap-message__btn uniswap-message__btn-logout">Yes</button>
-                <button type="button" class="uniswap-message__btn uniswap-message__btn-logout-pink">No</button>
+        <div class="uniswap-message uniswap-message-logout">
+            <p class="uniswap-message-title uniswap-message-title-pink">Logout</p>
+            <p class="uniswap-message-after-title">Are you sure ?</p>
+            <div class="uniswap-message-btn-wrap">
+                <button type="button" class="uniswap-message-btn uniswap-message-btn-logout">Yes</button>
+                <button type="button" class="uniswap-message-btn uniswap-message-btn-logout-pink">No</button>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ import { toggleVisuallyHidden,
     showSection, 
     hideSection, 
     toggleCustomClass } from './simple';
-import { showDashboardPiece, hideDashboardPiece } from './market';
+import { showDashboardPiece, hideDashboardPiece } from './dashboard';
 import { hideMainSections, hidePersonalSections } from './switching';
 
 if (authorizationTextPink) {
@@ -98,7 +98,7 @@ export function toggleUniswapMessage (uniswapBackdrop, uniswapMessage, uniswapMe
     toggleCustomClass(uniswapMessage, uniswapMessageVisible);
 };
 
-const logoutVisible = "uniswap-message__logout-visible";
+const logoutVisible = "uniswap-message-logout-visible";
 
 if (logoutLink) {
     logoutLink.addEventListener("click", () => {
