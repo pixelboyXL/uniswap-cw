@@ -1,18 +1,18 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.8f7df6e6.css><script type=module src=/uniswap-cw/uniswap-cw.2299e5eb.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.6fb42b27.css><script type=module src=/uniswap-cw/uniswap-cw.563f6ae1.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
-            <a class="logo primary-font">
+            <a class=logo>
                 <svg width=20 height=22 class=logo-image><use href=/uniswap-cw/uniswap_logo.58ee31a1.svg /></svg>
                 Uniswap
             </a>
             <button type=button class=header__mob-menu></button>
             <ul class=nav__list>
                 <li class=nav__item>
-                    <p class="link-active nav__link nav__list-dashboard-link">Dashboard</p>
+                    <p class="nav__link nav__list-dashboard-link" style=display:none>Dashboard</p>
                 </li>
                 <li class=nav__item>
-                    <p class="nav__link nav__list-white-paper-link">White Paper</p>
+                    <p class="link-active nav__link nav__list-white-paper-link">White Paper</p>
                 </li>
                 <li class=nav__item>
                     <p class="link-small nav__link nav__list-roadmap-link">Roadmap</p>
@@ -119,7 +119,7 @@
 </header>
         <section class=authorization style=display:none>
     <div class=authorization__container>
-        <a class="logo logo-auth primary-font">
+        <a class="logo logo-auth">
             <svg width=20 height=22 class=logo-image><use href=/uniswap-cw/uniswap_logo.58ee31a1.svg /></svg>
             Uniswap
         </a>
@@ -165,8 +165,8 @@
     </div>
 </section>
         <main class=container>
-            <section class=dashboard>
-    <div class=dashboard__container>
+            <section class=market>
+    <div class=market__container>
         <ul class=tokens-list>
             <li class="tokens-active tokens-list__item">
                 <img src=/uniswap-cw/usdc_icon.9ea4aee1.png alt="USDC icon" class=tokens-list__icon>
@@ -207,7 +207,7 @@
                     <p class=tokens-list__name>DAI</p>
                 </li>
             </ul>
-            <div class=dashboard__tokens-grid>
+            <div class=market__tokens-grid>
     <div class="tokens-grid__header tokens-grid__row">
         <div class=tokens-grid__name>PAIR</div>
         <div class=tokens-grid__name>PI</div>
@@ -546,7 +546,7 @@
         <div class=tokens-grid__position>1.09</div>
     </div>
 </div>
-            <form class=dashboard__stake-form style=display:none>
+            <form class=market__stake-form style=display:none>
     <label for=stake-form-select-pair class=stake-form__label>
         <div class="is_hidden stake-form__pair-wrap">
             <ul class=stake-form__pair-list>
@@ -584,8 +584,8 @@
     </label>
     <input id=stake-form-select-pair name=stake-form-select-pair placeholder="Select pair" class=stake-form__select>
     <div class=stake-form__checkbox-wrap>
-        <input type=checkbox name=dashboard-checkbox id=dashboard-checkbox class="stake-form__checkbox visually_hidden">
-        <label for=dashboard-checkbox class="label-checkbox stake-form__label">
+        <input type=checkbox name=market-checkbox id=market-checkbox class="stake-form__checkbox visually_hidden">
+        <label for=market-checkbox class="label-checkbox stake-form__label">
             Use Referral Balance
         </label>
     </div>
@@ -611,11 +611,11 @@
         Lock period
     </label>
     <input id=stake-form-lock-period name=stake-form-lock-period placeholder="1 month" class=stake-form__select>
-    <div class="uniswap-dashboard__btn-wrap uniswap-dashboard__btn-wrap-stake">
-        <button type=button class="uniswap-dashboard__btn uniswap-dashboard__btn-create-stake">Create Stake</button>
+    <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-stake">
+        <button type=button class="uniswap-market__btn uniswap-market__btn-create-stake">Create Stake</button>
     </div>
 </form>
-            <div class=dashboard__my-positions style=display:none>
+            <div class=market__my-positions style=display:none>
     <ul class=my-positions__list>
         <li class=my-positions__item>
             <div class=my-positions__main-tokens-wrap>
@@ -802,12 +802,12 @@
             </div>
         </li>
     </ul>
-    <div class="uniswap-dashboard__btn-wrap uniswap-dashboard__btn-wrap-my-positions">
-        <button type=button class=uniswap-dashboard__btn>Claim all</button>
-        <button type=button class=uniswap-dashboard__exmark>
+    <div class="uniswap-market__btn-wrap uniswap-market__btn-wrap-my-positions">
+        <button type=button class=uniswap-market__btn>Claim all</button>
+        <button type=button class=uniswap-market__exmark>
             !
-            <div class="is_hidden uniswap-dashboard__info-wrap">
-                <p class=uniswap-dashboard__info>Every stake is available to claim from 10$ income</p>
+            <div class="is_hidden uniswap-market__info-wrap">
+                <p class=uniswap-market__info>Every stake is available to claim from 10$ income</p>
             </div>
         </button>
     </div>
@@ -852,13 +852,13 @@
         </div>
     </div>
 </section>
-            <section class=white-paper style=display:none>
-    <div class=white-paper__container>
-        <div class=white-paper__nav>
-            <p class="white-paper__nav-title white-paper__nav-title-active">Overview</p>
-            <p class=white-paper__nav-title>Analytics</p>
-            <p class=white-paper__nav-title>Reports</p>
-            <p class=white-paper__nav-title>Notifications</p>
+            <section class=dashboard style=display:none>
+    <div class=dashboard__container>
+        <div class=dashboard__nav>
+            <p class="dashboard__nav-title dashboard__nav-title-active">Overview</p>
+            <p class=dashboard__nav-title>Analytics</p>
+            <p class=dashboard__nav-title>Reports</p>
+            <p class=dashboard__nav-title>Notifications</p>
         </div>
         <ul class=statistic__list>
             <li class=statistic__item>
@@ -1213,8 +1213,13 @@
         <ul class=progress__list>
             <li class=progress__item>
                 <div class=progress__lvl-wrap>
-                    <p class=progress__lvl>Level 1</p>
-                    <span class=progress__lvl-value>25%</span>
+                    <p class=progress__lvl>Level 1
+                        <svg width=16 height=16 class=progress__lvl-icon-first><use href=/uniswap-cw/icon_faq.06182677.svg /></svg>
+                        <div class="hint-first is_hidden">
+                            <p class=uniswap-market__info>Every stake is available to claim from 10$ income</p>
+                        </div>
+                    <p></p>
+                    <span class="progress__lvl-value progress__lvl-value-green">25%</span>
                 </div>
                 <div class=progress__text-value-wrap>
                     <p class=progress__text-value>Progress</p>
@@ -1223,17 +1228,22 @@
                 <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
                 <div class=progress__text-value-wrap>
                     <span class="progress__text-value text-value-white">274&nbsp;916,11</span>
-                    <span class=progress__text-value>15&nbsp;000</span>
+                    <span class="progress__text-value text-value-bold">15&nbsp;000</span>
                 </div>
-                <div class=progress__main-value-wrap>
+                <div class="better-value progress__main-value-wrap">
                     <p class=progress__text-value>EARNING</p>
                     <span class=progress__main-value>68&nbsp;729,03<span class="progress__text-value text-value-usdt">USDT</span></span>
                 </div>
             </li>
             <li class=progress__item>
                 <div class=progress__lvl-wrap>
-                    <p class=progress__lvl>Level 2</p>
-                    <span class=progress__lvl-value>10%</span>
+                    <p class=progress__lvl>Level 2
+                        <svg width=16 height=16 class=progress__lvl-icon-second><use href=/uniswap-cw/icon_faq.06182677.svg /></svg>
+                        <div class="hint-second is_hidden">
+                            <p class=uniswap-market__info>Every stake is available to claim from 10$ income</p>
+                        </div>
+                    <p></p>
+                    <span class="progress__lvl-value progress__lvl-value-green">10%</span>
                 </div>
                 <div class=progress__text-value-wrap>
                     <p class=progress__text-value>Progress</p>
@@ -1242,9 +1252,9 @@
                 <img src=/uniswap-cw/icon_progress_bar.9f94e8ef.png alt="Progress bar line" class=progress__bar>
                 <div class=progress__text-value-wrap>
                     <span class="progress__text-value text-value-white">580&nbsp;385,1</span>
-                    <span class=progress__text-value> 35&nbsp;000</span>
+                    <span class="progress__text-value text-value-bold"> 35&nbsp;000</span>
                 </div>
-                <div class=progress__main-value-wrap>
+                <div class="better-value progress__main-value-wrap">
                     <p class=progress__text-value>EARNING</p>
                     <span class=progress__main-value>58&nbsp;038,51<span class="progress__text-value text-value-usdt">USDT</span></span>
                 </div>
@@ -1316,7 +1326,16 @@
                 <p class=support__title>My Tickets</p>
                 <p class=support__after-title>All your support requests</p>
             </div>
-            <button type=button class=support__btn>New Ticket</button>
+            <div class=support__btn-wrap>
+                <button type=button class="support__btn support__btn-archive">
+                    <svg width=13 height=13><use href=/uniswap-cw/icon_support_archive.7a136acb.svg /></svg>
+                    <span class="support__btn-text support__btn-text-archive">Аrchive</span>
+                </button>
+                <button type=button class="support__btn support__btn-new-ticket">
+                    <svg width=16 height=16><use href=/uniswap-cw/icon_support_plus.04919f6d.svg /></svg>
+                    <span class="support__btn-text support__btn-text-new-ticket">New Ticket</span>
+                </button>
+            </div>
         </div>
         <ul class=ticket-list>
             <li class=ticket-list__item>
@@ -1344,12 +1363,47 @@
             <li class=ticket-list__item>
                 <div class=ticket-list__title-wrap>
                     <p class=ticket-list__title>Confirmation Email Not Received</p>
-                    <p class="label-closed ticket-list__label">Closed</p>
+                    <p class=ticket-list__label>Open</p>
                 </div>
                 <p class=ticket-list__last-message>Great, thanks!</p>
                 <div class=ticket-list__time-wrap>
                     <span class=ticket-list__message-number>3</span>
                     <span class=ticket-list__time>5d ago</span>
+                </div>
+            </li>
+        </ul>
+        <ul class="archive-list visually_hidden">
+            <li class=archive-list__item>
+                <div class=archive-list__title-wrap>
+                    <p class=archive-list__title>Payment Issue</p>
+                    <p class="archive-list__label label-closed">Closed</p>
+                </div>
+                <p class=archive-list__last-message>Thanks, we will check and get back to you</p>
+                <div class=archive-list__time-wrap>
+                    <span class=archive-list__message-number>4</span>
+                    <span class=archive-list__time>3d ago</span>
+                </div>
+            </li>
+            <li class=archive-list__item>
+                <div class=archive-list__title-wrap>
+                    <p class=archive-list__title>Question About Functionality</p>
+                    <p class="archive-list__label label-closed">Closed</p>
+                </div>
+                <p class=archive-list__last-message>How can I export data to Excel?</p>
+                <div class=archive-list__time-wrap>
+                    <span class=archive-list__message-number>1</span>
+                    <span class=archive-list__time>Yesterday</span>
+                </div>
+            </li>
+            <li class=archive-list__item>
+                <div class=archive-list__title-wrap>
+                    <p class=archive-list__title>Confirmation Email Not Received</p>
+                    <p class="archive-list__label label-closed">Closed</p>
+                </div>
+                <p class=archive-list__last-message>Great, thanks!</p>
+                <div class=archive-list__time-wrap>
+                    <span class=archive-list__message-number>3</span>
+                    <span class=archive-list__time>5d ago</span>
                 </div>
             </li>
         </ul>
