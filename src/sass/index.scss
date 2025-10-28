@@ -2,11 +2,11 @@
 @import "./utils/mixin";
 @import "./layout/authoriazation";
 @import "./layout/header";
+@import "./layout/market";
+@import "./layout/market__tokens-grid";
+@import "./layout/market__stake-form";
+@import "./layout/market__my-positions";
 @import "./layout/dashboard";
-@import "./layout/dashboard__tokens-grid";
-@import "./layout/dashboard__stake-form";
-@import "./layout/dashboard__my-positions";
-@import "./layout/white-paper";
 @import "./layout/roadmap";
 @import "./layout/faq";
 @import "./layout/user-profile";

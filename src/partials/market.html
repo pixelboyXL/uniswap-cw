@@ -1,0 +1,103 @@
+<section class="market">
+    <div class="market__container">
+        <ul class="tokens-list">
+            <li class="tokens-list__item tokens-active">
+                <img
+                    src="./images/usdc_icon.png"
+                    alt="USDC icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">USDC</p>
+            </li>
+            <li class="tokens-list__item tokens-list__item-warning">
+                <img
+                    src="./images/usdt_icon.png"
+                    alt="USDT icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">USDT</p>
+            </li>
+            <li class="tokens-list__item tokens-list__item-warning">
+                <img
+                    src="./images/dai_icon.png"
+                    alt="DAI icon"
+                    class="tokens-list__icon">
+                <p class="tokens-list__name">DAI</p>
+            </li>
+        </ul>
+        <div class="general-list__wrap">
+            <ul class="general-list">
+                <li class="general-list__item">
+                    <p class="general-list__name current link-to-market">Market</p>
+                </li>
+                <li class="general-list__item">
+                    <p class="general-list__name link-to-stake">Stake</p>
+                </li>
+                <li class="general-list__item">
+                    <p class="general-list__name link-to-my-positions">My Positions</p>
+                </li>
+            </ul>
+            <ul class="tokens-list-mob">
+                <li class="tokens-list__item-mob tokens-active">
+                    <img
+                        src="./images/usdc_icon.png"
+                        alt="USDC icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">USDC</p>
+                </li>
+                <li class="tokens-list__item-mob tokens-list__item-mob-warning">
+                    <img
+                        src="./images/usdt_icon.png"
+                        alt="USDT icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">USDT</p>
+                </li>
+                <li class="tokens-list__item-mob tokens-list__item-mob-warning">
+                    <img
+                        src="./images/dai_icon.png"
+                        alt="DAI icon"
+                        class="tokens-list__icon">
+                    <p class="tokens-list__name">DAI</p>
+                </li>
+            </ul>
+            <include src="./partials/market__tokens-grid.html"></include>
+            <include src="./partials/market__stake-form.html"></include>
+            <include src="./partials/market__my-positions.html"></include>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-warning is_hidden">
+        <div class="uniswap-message uniswap-message-warning">
+            <p class="uniswap-message-title uniswap-message-title-pink">Warning</p>
+            <p class="uniswap-message-after-title">This pools are unavailable for your country!</p>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-warning">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-error-validate is_hidden">
+        <div class="uniswap-message uniswap-message-error-validate">
+            <p class="uniswap-message-title uniswap-message-title-pink">Error</p>
+            <p class="uniswap-message-after-title">Validation Error</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-pink">
+                <span class="uniswap-message-text uniswap-message-text-pink">Please select a trading pair from the dropdown.</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-error-validate">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-error-create is_hidden">
+        <div class="uniswap-message uniswap-message-error-create">
+            <p class="uniswap-message-title uniswap-message-title-pink">Error</p>
+            <p class="uniswap-message-after-title">Failed to Create Stake</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-pink">
+                <span class="uniswap-message-text uniswap-message-text-pink">Insufficient balance</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-pink uniswap-message-btn-error-create">OK</button>
+        </div>
+    </div>
+    <div class="uniswap-backdrop uniswap-backdrop-success is_hidden">
+        <div class="uniswap-message uniswap-message-success">
+            <p class="uniswap-message-title uniswap-message-title-green">Success</p>
+            <p class="uniswap-message-after-title">Stake Created Successfully!</p>
+            <div class="uniswap-message-text-wrap uniswap-message-text-wrap-green">
+                <span class="uniswap-message-text uniswap-message-text-green">Your 1000.000 stake in ADA-USDT has been created and will start earning income immediately.</span>
+            </div>
+            <button type="button" class="uniswap-message-btn uniswap-message-btn-green uniswap-message-btn-success">OK</button>
+        </div>
+    </div>
+</section>

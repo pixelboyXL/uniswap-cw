@@ -21,6 +21,7 @@
     font-weight: 400;
     font-size: 15.4px;
     line-height: calc(24 / 15.4);
+    color: var(--uniswap-my-profile-white);
     margin-bottom: 24px;
 }
 
@@ -107,23 +108,50 @@
 
 .progress__item {
     max-width: 400px;
-    padding-left: 17px;
-    padding-top: 17px;
-    padding-right: 17px;
-    padding-bottom: 29px;
-    @include scale_with_pointer;
-}
-
-.progress__lvl {
-    font-weight: 400;
-    font-size: 15.1px;
-    line-height: calc(24 / 15.1);
+    padding: 17px;
 }
 
 .progress__lvl-wrap {
     @include flex_align;
     justify-content: space-between;
     margin-bottom: 12px;
+    position: relative;
+}
+
+.progress__lvl {
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: calc(24 / 15.1);
+    color: var(--uniswap-my-profile-white);
+    @include flex_align;
+}
+
+.progress__lvl-icon-first,
+.progress__lvl-icon-second {
+    margin-left: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.hint-first,
+.hint-second {
+	width: 192px;
+	padding: 15px 17px;
+	border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+	border: 1px solid var(--uniswap-my-profile-border);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translate(35%, -45%);
+	background-color: var(--uniswap-light-dark);
+	@include transition_with_cubic;
+	// @include desk {
+	// 	border: 1px solid var(--uniswap-market-border);
+	// 	background-color: transparent;
+	// }
 }
 
 .progress__lvl-value {
@@ -131,6 +159,13 @@
     font-size: 14px;
     line-height: calc(20 / 14);
     color: var(--uniswap-pink);
+    &-green {
+        font-weight: 900;
+        color: var(--uniswap-my-profile-green);
+        padding: 5px 6px;
+        border-radius: 5px;
+        background-color: var(--uniswap-my-profile-rgba-green);
+    }
 }
 
 .progress__text-value-wrap {
@@ -146,7 +181,11 @@
 }
 
 .text-value-white {
-    color: var(--clearly-white);
+    color: var(--uniswap-my-profile-white);
+}
+
+.text-value-bold {
+    font-weight: 700;
 }
 
 .progress__bar {
@@ -157,7 +196,19 @@
 
 .progress__main-value-wrap {
     padding-left: 12px;
+    padding-bottom: 12px;
     margin-top: 24px;
+}
+
+.better-value {
+    text-align: center;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background-color: var(--uniswap-my-profile-rgba-green);
+    & .progress__main-value {
+        display: block;
+    }
 }
 
 .progress__main-value {

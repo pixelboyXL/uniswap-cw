@@ -230,7 +230,7 @@
     @include hover_focus_background_dark_pink;
 }
 
-.uniswap-dashboard__btn-wrap {
+.uniswap-market__btn-wrap {
     text-align: right;
 	&-stake {
 		margin-top: 22px;
@@ -248,7 +248,7 @@
 	}
 }
 
-.uniswap-dashboard__btn {
+.uniswap-market__btn {
     font-size: 14.84px;
     line-height: calc(24 / 14.84);
     width: 262px;
@@ -257,7 +257,7 @@
 	@include focus_scale_with_pointer;
 }
 
-.uniswap-dashboard__exmark {
+.uniswap-market__exmark {
 	width: 40px;
 	height: 40px;
 	padding: 8px 16.5px;
@@ -266,8 +266,8 @@
 	position: relative;
 }
 
-.uniswap-dashboard__btn,
-.uniswap-dashboard__exmark {
+.uniswap-market__btn,
+.uniswap-market__exmark {
 	background-color: var(--uniswap-dark-pink);
     @include transition_with_cubic;
     &:hover,
@@ -276,7 +276,7 @@
     }
 }
 
-.uniswap-dashboard__info-wrap {
+.uniswap-market__info-wrap {
 	width: 192px;
 	padding: 15px 17px;
 	border-radius: 8px;
@@ -293,7 +293,7 @@
 	}
 }
 
-.uniswap-dashboard__info {
+.uniswap-market__info {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 100%;

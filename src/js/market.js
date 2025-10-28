@@ -14,8 +14,8 @@ import { uniswapMarketBtnCreateStake,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
-    dashboardTokensGrid,
-    dashboardStakeForm,
+    marketTokensGrid,
+    marketStakeForm,
     stakeFormSelectPair,
     stakeFormPairWrap,
     stakeFormPairText,
@@ -23,21 +23,21 @@ import { uniswapMarketBtnCreateStake,
     stakeFormLockPeriod,
     stakeFormLockPeriodWrap,
     stakeFormLockPeriodText,
-    dashboardMyPositions,
-    dashboardSection,
+    marketMyPositions,
+    marketSection,
     TokensListItemWarning,
     TokensListItemMobWarning,
-    dashboardLink,
+    // dashboardLink,
     uniswapMarketExmark,
     uniswapMarketInfoWrap,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
-    dashboardTokensGrid,
-    dashboardStakeForm,
-    dashboardMyPositions,
+    marketTokensGrid,
+    marketStakeForm,
+    marketMyPositions,
     whitePaperMobLink,
-    whitePaperSection,
+    // whitePaperSection,
     whitePaperLink,
     stakeMobLink,
     myPositionsMobLink,
@@ -55,36 +55,38 @@ import { toggleIsHidden,
 import { showMainSections, hideMainSections, hidePersonalSections } from './switching';
 import { toggleUniswapMessage } from './authorization';
 
-export function showDashboardPiece (pieceToShow = dashboardTokensGrid, linkToCurrent = linkToMarket) {
-    hideDashboardPiece();
+export function showMarketPiece (pieceToShow = marketTokensGrid, linkToCurrent = linkToMarket) {
+    hideMarketPiece();
 
-    addLinkActive(dashboardLink);
-    showSection(dashboardSection);
+    addLinkActive(whitePaperLink);
+    // addLinkActive(dashboardLink);
+    showSection(marketSection);
     addCurrentClass(linkToCurrent);
     showSection(pieceToShow);
 };
 
-export function hideDashboardPiece () {
-    removeLinkActive(dashboardLink);
-    hideSection(dashboardSection);
+export function hideMarketPiece () {
+    removeLinkActive(whitePaperLink);
+    // removeLinkActive(dashboardLink);
+    hideSection(marketSection);
     removeCurrentClass(linkToMarket);
-    hideSection(dashboardTokensGrid);
+    hideSection(marketTokensGrid);
     removeCurrentClass(linkToStake);
-    hideSection(dashboardStakeForm);
-    dashboardStakeForm.reset();
+    hideSection(marketStakeForm);
+    marketStakeForm.reset();
     removeCurrentClass(linkToMyPositions);
-    hideSection(dashboardMyPositions);
+    hideSection(marketMyPositions);
 };
 
 if (linkToMarket) {
     linkToMarket.addEventListener("click", () => {
-        showDashboardPiece();
+        showMarketPiece();
     });
 };
 
 if (linkToStake) {
     linkToStake.addEventListener("click", () => {
-        showDashboardPiece(dashboardStakeForm, linkToStake);
+        showMarketPiece(marketStakeForm, linkToStake);
     });
 };
 
@@ -113,7 +115,7 @@ if (stakeFormLockPeriod) {
 
 if (linkToMyPositions) {
     linkToMyPositions.addEventListener("click", () => {
-        showDashboardPiece(dashboardMyPositions, linkToMyPositions);
+        showMarketPiece(marketMyPositions, linkToMyPositions);
     });
 };
 
@@ -139,8 +141,10 @@ if (headerMobMenu) {
 if (whitePaperMobLink) {
     whitePaperMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showMainSections(whitePaperSection, whitePaperLink);
-        hideDashboardPiece();
+        showMarketPiece();
+        hideMainSections();
+        // showMainSections(whitePaperSection, whitePaperLink);
+        // hideMarketPiece();
         hidePersonalSections();
     });
 };
@@ -148,7 +152,7 @@ if (whitePaperMobLink) {
 if (stakeMobLink) {
     stakeMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showDashboardPiece(dashboardStakeForm, linkToStake);
+        showMarketPiece(marketStakeForm, linkToStake);
         hideMainSections();
         hidePersonalSections();
     });
@@ -157,7 +161,7 @@ if (stakeMobLink) {
 if (myPositionsMobLink) {
     myPositionsMobLink.addEventListener("click", () => {        
         toggleMobMenu();
-        showDashboardPiece(dashboardMyPositions, linkToMyPositions);
+        showMarketPiece(marketMyPositions, linkToMyPositions);
         hideMainSections();
         hidePersonalSections();
     });
@@ -219,6 +223,6 @@ if (uniswapMessageBtnErrorCreate) {
 if (uniswapMessageBtnSuccess) {
     uniswapMessageBtnSuccess.addEventListener("click", () => {
         toggleUniswapMessage(uniswapBackdropSuccess, uniswapMessageSuccess, successVisible);
-        dashboardStakeForm.reset();
+        marketStakeForm.reset();
     });
 };

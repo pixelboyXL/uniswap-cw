@@ -21,7 +21,7 @@ import { toggleVisuallyHidden,
     showSection, 
     hideSection, 
     toggleCustomClass } from './simple';
-import { showDashboardPiece, hideDashboardPiece } from './dashboard';
+import { showMarketPiece, hideMarketPiece } from './market';
 import { hideMainSections, hidePersonalSections } from './switching';
 
 if (authorizationTextPink) {
@@ -88,7 +88,7 @@ if (authorizationButton) {
             hideSection(authorizationSection);
             showSection(headerSection);
             showSection(footerSection);
-            showDashboardPiece();
+            showMarketPiece();
         };
     });
 };
@@ -110,7 +110,7 @@ if (logoutLink) {
 if (uniswapMessageBtnLogout) {
     uniswapMessageBtnLogout.addEventListener("click", () => { 
         toggleUniswapMessage(uniswapBackdropHeader, uniswapMessageLogout, logoutVisible);
-        hideDashboardPiece();
+        hideMarketPiece();
         hideMainSections();
         hidePersonalSections();
         hideSection(headerSection);

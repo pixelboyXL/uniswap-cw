@@ -35,28 +35,45 @@
     color: var(--uniswap-my-profile-grey);
 }
 
+.support__btn-wrap {
+    display: flex;
+}
+
 .support__btn {
-    font-weight: 500;
-    font-size: 13.6px;
-    line-height: calc(20 / 13.6);
-    color: var(--clearly-white);
     padding: 10px 12px;
     border-radius: 8px;
-    background-color: var(--uniswap-pink);
     @include flex_align;
     @include focus_scale_with_pointer;
     @include hover_focus_background_dark_pink;
-    &::before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 16px;
-        margin-right: 8px;
-        background-image: url(../images/icon_support_plus.svg);
+    &-archive {
+        margin-right: 10px;
+        border: 1px solid var(--uniswap-rgba-pink-border);
+        background-color: var(--uniswap-light-dark);
+    }
+    &-new-ticket {
+        background-color: var(--uniswap-pink);
     }
 }
 
-.ticket-list__item {
+.support__btn-text {
+    display: none;
+    @include desk {
+        display: block;
+        font-weight: 500;
+        font-size: 13.6px;
+        line-height: calc(20 / 13.6);
+        margin-left: 8px;
+        &-archive {
+            color: var(--uniswap-pink);
+        }
+        &-new-ticket {
+            color: var(--clearly-white);
+        }
+    }
+}
+
+.ticket-list__item,
+.archive-list__item {
     padding: 17px;
     border-radius: 14px;
     border: 1px solid var(--uniswap-my-profile-border);
@@ -64,23 +81,27 @@
     @include scale_with_pointer;
 }
 
-.ticket-list__item + .ticket-list__item {
+.ticket-list__item + .ticket-list__item,
+.archive-list__item + .archive-list__item {
     margin-top: 12px;
 }
 
-.ticket-list__title-wrap {
+.ticket-list__title-wrap,
+.archive-list__title-wrap {
     @include flex_align;
     margin-bottom: 8px;
 }
 
-.ticket-list__title {
+.ticket-list__title,
+.archive-list__title {
     font-weight: 400;
     font-size: 15.1px;
     line-height: calc(24 / 15.1);
     color: var(--uniswap-my-profile-white);
 }
 
-.ticket-list__label {
+.ticket-list__label,
+.archive-list__label {
     font-size: 12px;
     line-height: calc(16 / 12);
     color: var(--clearly-white);
@@ -96,7 +117,8 @@
     background-color: transparent;
 }
 
-.ticket-list__last-message {
+.ticket-list__last-message,
+.archive-list__last-message {
     font-weight: 400;
     font-size: 15.1px;
     line-height: calc(24 / 15.1);
@@ -104,11 +126,13 @@
     margin-bottom: 8px;
 }
 
-.ticket-list__time-wrap {
+.ticket-list__time-wrap,
+.archive-list__time-wrap {
     @include flex_align;
 }
 
-.ticket-list__message-number {
+.ticket-list__message-number,
+.archive-list__message-number {
     font-weight: 400;
     font-size: 16px;
     line-height: calc(24 / 16);
@@ -124,7 +148,8 @@
     }
 }
 
-.ticket-list__time {
+.ticket-list__time,
+.archive-list__time {
     font-weight: 400;
     font-size: 15.3px;
     line-height: calc(24 / 15.3);

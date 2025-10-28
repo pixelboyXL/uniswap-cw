@@ -1,23 +1,27 @@
 import { navUserSections,
     supportLink,
     supportSection,
-    supportBtn,
+    supportBtnArchive,
+    supportBtnNewTicket,
+    archiveList,
+    ticketList,
     ticketSection,
     createTicketCloseBtn,
     createTicketBackdrop,
     createTicket,
     ticketItem,
     ticketArrow } from "./refs";
-import { toggleIsHidden, 
+import { toggleVisuallyHidden,
+    toggleIsHidden, 
     showSection, 
     hideSection, 
     toggleCustomClass } from './simple';
-import { hideDashboardPiece } from './dashboard';
+import { hideMarketPiece } from './market';
 import { hideMainSections, showPersonalSections } from './switching';
 
 if (supportLink) {
     supportLink.addEventListener("click", () => {
-        hideDashboardPiece();
+        hideMarketPiece();
         hideMainSections();
         showPersonalSections(supportSection);
         toggleIsHidden(navUserSections);
@@ -30,8 +34,8 @@ function toggleCreateTicket () {
     toggleCustomClass(createTicket, createTicketVisible);
 };
 
-if (supportBtn) {
-    supportBtn.addEventListener("click", toggleCreateTicket);
+if (supportBtnNewTicket) {
+    supportBtnNewTicket.addEventListener("click", toggleCreateTicket);
 };
 
 if (createTicketCloseBtn) {
@@ -49,5 +53,11 @@ if (ticketArrow) {
     ticketArrow.addEventListener("click", () => {
         showSection(supportSection);
         hideSection(ticketSection);
+    });
+};
+
+if (supportBtnArchive) {
+    supportBtnArchive.addEventListener("click", () => {
+        toggleVisuallyHidden(archiveList, ticketList);
     });
 };

@@ -2,10 +2,10 @@ import { navUserIcon,
     navUserSections,
     userProfileSection,
     referralProgramSection,
-    dashboardSection,
-    whitePaperSection,
+    // marketSection,
+    // whitePaperSection,
     roadmapSection,
-    dashboardLink,
+    // dashboardLink,
     whitePaperLink,
     roadmapLink,
     faqLink,
@@ -19,7 +19,7 @@ import { toggleIsHidden,
     hideSection,
     addLinkActive,
     removeLinkActive } from './simple';
-import { showDashboardPiece, hideDashboardPiece } from './dashboard';
+import { showMarketPiece, hideMarketPiece } from './market';
 
 if (navUserIcon) {
     navUserIcon.addEventListener("click", () => {
@@ -35,26 +35,27 @@ export function showMainSections (sectionToShow, linkToActive) {
 };
 
 export function hideMainSections () {
-    removeLinkActive(whitePaperLink);
-    hideSection(whitePaperSection);
+    // removeLinkActive(whitePaperLink);
+    // hideSection(whitePaperSection);
     removeLinkActive(roadmapLink);
     hideSection(roadmapSection);
     removeLinkActive(faqLink);
     hideSection(faqSection);
 };
 
-if (dashboardLink) {
-    dashboardLink.addEventListener("click", () => {
-        showDashboardPiece();
-        hideMainSections();
-        hidePersonalSections();
-    });
-};
+// if (dashboardLink) {
+//     dashboardLink.addEventListener("click", () => {
+//         hideMarketPiece();
+//         hideMainSections();
+//         hidePersonalSections();
+//     });
+// };
 
 if (whitePaperLink) {
     whitePaperLink.addEventListener("click", () => {
-        showMainSections(whitePaperSection, whitePaperLink);
-        hideDashboardPiece();
+        // showMainSections(whitePaperSection, whitePaperLink);
+        showMarketPiece();
+        hideMainSections();
         hidePersonalSections();
     });
 };
@@ -62,7 +63,7 @@ if (whitePaperLink) {
 if (roadmapLink) {
     roadmapLink.addEventListener("click", () => {
         showMainSections(roadmapSection, roadmapLink);
-        hideDashboardPiece();
+        hideMarketPiece();
         hidePersonalSections();
     });
 };
@@ -70,7 +71,7 @@ if (roadmapLink) {
 if (faqLink) {
     faqLink.addEventListener("click", () => {
         showMainSections(faqSection, faqLink);
-        hideDashboardPiece();
+        hideMarketPiece();
         hidePersonalSections();
     });
 };
@@ -90,7 +91,7 @@ export function hidePersonalSections () {
 
 if (myProfileLink) {
     myProfileLink.addEventListener("click", () => {
-        hideDashboardPiece();
+        hideMarketPiece();
         hideMainSections();
         showPersonalSections(userProfileSection);
         toggleIsHidden(navUserSections);
@@ -99,7 +100,7 @@ if (myProfileLink) {
 
 if (referralProgramLink) {
     referralProgramLink.addEventListener("click", () => {
-        hideDashboardPiece();
+        hideMarketPiece();
         hideMainSections();
         showPersonalSections(referralProgramSection);
         toggleIsHidden(navUserSections);
