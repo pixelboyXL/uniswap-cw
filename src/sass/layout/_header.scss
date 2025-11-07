@@ -70,11 +70,9 @@
     margin-left: 25px;
 }
 
-.cash-list__item,
-.sum-list__item {
-    &:not(:first-child) {
-        margin-left: 25px;
-    }
+.cash-list__item + .cash-list__item,
+.sum-list__item + .sum-list__item {
+    margin-left: 25px;
 }
 
 .nav__link {
@@ -209,10 +207,9 @@
 .user-sections__item {
     @include flex_align;
     @include scale_with_pointer;
-}
-
-.user-sections__item + .user-sections__item {
-    margin-top: 15px;
+    & + & {
+        margin-top: 15px;
+    }
 }
 
 .user-sections__title {

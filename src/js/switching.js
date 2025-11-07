@@ -1,25 +1,25 @@
-import { navUserIcon,
-    navUserSections,
-    userProfileSection,
-    referralProgramSection,
-    // marketSection,
-    // whitePaperSection,
-    roadmapSection,
-    // dashboardLink,
+import { // dashboardLink,
     whitePaperLink,
     roadmapLink,
     faqLink,
     myProfileLink,
     referralProgramLink,
+    navUserIcon,
+    navUserSections,
+    // whitePaperSection,
+    roadmapSection,
+    userProfileSection,
+    referralProgramSection,
+    // marketSection,
     supportSection,
     ticketSection,
-    faqSection } from './refs';
+    faqSection, } from './refs.js';
 import { toggleIsHidden, 
     showSection, 
     hideSection,
     addLinkActive,
-    removeLinkActive } from './simple';
-import { showMarketPiece, hideMarketPiece } from './market';
+    removeLinkActive } from './simple.js';
+import { showMarketPiece, hideMarketPiece } from './market.js';
 
 if (navUserIcon) {
     navUserIcon.addEventListener("click", () => {

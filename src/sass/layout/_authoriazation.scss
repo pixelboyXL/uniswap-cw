@@ -121,10 +121,6 @@
     }
 }
 
-.authorization-box__btn_scale {
-    transform: scale(0.95);
-}
-
 .authorization-box__text-wrap {
     display: flex;
     justify-content: center;
@@ -142,6 +138,6 @@
     font-size: 17px;
     font-weight: 700;
     color: var(--uniswap-light-pink);
-    @include scale_with_pointer;
     padding-left: 5px;
+    @include scale_with_pointer;
 }

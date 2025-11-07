@@ -33,7 +33,7 @@
 .referral-balance__wrap,
 .progress__item {
     border-radius: 12px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
 }
 
@@ -141,17 +141,13 @@
 	border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-	border: 1px solid var(--uniswap-my-profile-border);
+	border: 1px solid var(--uniswap-my-profile-dark);
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	transform: translate(35%, -45%);
 	background-color: var(--uniswap-light-dark);
 	@include transition_with_cubic;
-	// @include desk {
-	// 	border: 1px solid var(--uniswap-market-border);
-	// 	background-color: transparent;
-	// }
 }
 
 .progress__lvl-value {

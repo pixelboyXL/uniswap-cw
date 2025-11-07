@@ -22,7 +22,7 @@
     max-width: 337px;
     padding: 8px 12px;
     border-radius: 14px;
-    background-color: var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-my-profile-dark);
     margin-bottom: 16px;
     @include desk {
         display: none;
@@ -59,18 +59,18 @@
     max-width: 358px;
     padding: 24px;
     border-radius: 14px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
-    &:not(:first-child) {
+    @include desk {
+        max-width: 100%;
+        width: 426px;
+    }
+    & + & {
         margin-top: 16px;
         @include desk {
             margin-top: 0;
         }
     }
-    @include desk {
-        max-width: 100%;
-        width: 426px;
-    } 
 }
 
 .total-users-title,
@@ -134,7 +134,7 @@
     padding: 24px;
     margin-bottom: 16px;
     border-radius: 14px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
     @include desk {
         max-width: 869px;
@@ -167,11 +167,9 @@
         margin-right: 16px;
         background-image: url(../images/icon_recent_activity_dot.svg);
     }
-}
-
-
-.recent-activity__item + .recent-activity__item{
-    margin-top: 16px;
+    & + & {
+        margin-top: 16px;
+    }
 }
 
 .recent-activity__position {
@@ -194,7 +192,7 @@
     max-width: 358px;
     padding: 24px;
     border-radius: 14px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
     @include desk {
         max-width: 869px;
@@ -218,11 +216,10 @@
 
 .quick-stats__item {
     @include flex_align;
-}
-
-.quick-stats__item + .quick-stats__item {
-    margin-top: 16px;
-}
+    & + & {
+        margin-top: 16px;
+    }
+} 
 
 .quick-stats__position {
     font-weight: 400;

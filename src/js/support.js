@@ -1,23 +1,23 @@
-import { navUserSections,
-    supportLink,
+import { supportLink,
+    navUserSections,
     supportSection,
     supportBtnArchive,
     supportBtnNewTicket,
     archiveList,
     ticketList,
-    ticketSection,
     createTicketCloseBtn,
     createTicketBackdrop,
     createTicket,
+    ticketSection,
     ticketItem,
-    ticketArrow } from "./refs";
+    ticketArrow, } from "./refs.js";
 import { toggleVisuallyHidden,
     toggleIsHidden, 
     showSection, 
     hideSection, 
-    toggleCustomClass } from './simple';
-import { hideMarketPiece } from './market';
-import { hideMainSections, showPersonalSections } from './switching';
+    toggleCustomClass } from './simple.js';
+import { hideMarketPiece } from './market.js';
+import { hideMainSections, showPersonalSections } from './switching.js';
 
 if (supportLink) {
     supportLink.addEventListener("click", () => {

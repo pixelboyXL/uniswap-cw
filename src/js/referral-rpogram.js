@@ -1,8 +1,8 @@
 import { progressLvlIconFirst,
     hintFirst,
     progressLvlIconSecond,
-    hintSecond, } from './refs';
-import { toggleIsHidden } from './simple';
+    hintSecond, } from './refs.js';
+import { toggleIsHidden } from './simple.js';
 
 if (progressLvlIconFirst) {
     progressLvlIconFirst.addEventListener ("click", () => {

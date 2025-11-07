@@ -46,6 +46,10 @@ export function toggleCustomClass (elem, customClass) {
     elem.classList.toggle(customClass);
 };
 
+export function removeCustomClass (elem, customClass) {
+    elem.classList.remove(customClass);
+};
+
 export function addLinkActive (elem) {
     elem.classList.add(linkActive);
 };

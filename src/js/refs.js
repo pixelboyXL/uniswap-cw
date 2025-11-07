@@ -89,8 +89,8 @@ const refs = {
     ticketItem: document.querySelector('.ticket-list__item'),
     ticketArrow: document.querySelector('.ticket__arrow'),
     faqSection: document.querySelector('.faq'),
-    faqItem: document.querySelector('.faq__item'),
-    faqArrow: document.querySelector('.faq__item-arrow'),
+    faqItems: document.querySelectorAll('.faq__item'),
+    faqArrows: document.querySelectorAll('.faq__item-arrow'),
 };
 
 export const {
@@ -184,6 +184,6 @@ export const {
     ticketItem,
     ticketArrow,
     faqSection,
-    faqItem,
-    faqArrow,
+    faqItems,
+    faqArrows,
 } = refs;

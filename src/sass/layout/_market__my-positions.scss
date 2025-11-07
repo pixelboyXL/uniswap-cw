@@ -31,12 +31,11 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-}
-
-.my-positions__item + .my-positions__item {
-    margin-top: 22px;
-    @include desk {
-        margin-top: 0px;
+    & + & {
+        margin-top: 22px;
+        @include desk {
+            margin-top: 0px;
+        }
     }
 }
 

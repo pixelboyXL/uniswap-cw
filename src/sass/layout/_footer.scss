@@ -43,10 +43,10 @@
 }
 
 .social-list__item {
-    &:not(:first-child) {
+    @include scale_with_pointer;
+    & + & {
         margin-left: 24px;
     }
-    @include scale_with_pointer;
 }
 
 .social-list__icon {

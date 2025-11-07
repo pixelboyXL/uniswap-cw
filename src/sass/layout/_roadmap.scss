@@ -25,7 +25,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background-color: var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-my-profile-dark);
     border-radius: 2px;
     @include desk {
         right: 29.7%;
@@ -47,6 +47,12 @@
     border: 1px solid var(--uniswap-rgba-another-border);
     background-color: var(--uniswap-light-dark);
     position: relative;
+    & + & {
+        margin-top: 96px;
+        @include desk {
+            margin-top: 48;
+        }
+    }
     &::after {
         content: "";
         position: absolute;
@@ -80,14 +86,14 @@
     
     @include mob-only {
         & .roadmap__plan-list {
-                .roadmap__plan-item::before {
-                    content: "";
-                    display: block;
-                    width: 6px;
-                    height: 6px;
-                    margin-right: 8px;
-                }
+            .roadmap__plan-item::before {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                margin-right: 8px;
             }
+        }
         &:nth-child(-n+3) {
             .roadmap__plan-list {
                 .roadmap__plan-item::before {
@@ -152,13 +158,6 @@
     }
 }
 
-.roadmap__item + .roadmap__item {
-    margin-top: 96px;
-    @include desk {
-        margin-top: 48;
-    }
-}
-
 .roadmap__quarter {
     font-weight: 400;
     font-size: 13.8px;
@@ -190,10 +189,9 @@
 
 .roadmap__plan-item {
     @include flex_align;
-}
-
-.roadmap__plan-item + .roadmap__plan-item{
-    margin-top: 8px;
+    & + & {
+        margin-top: 8px;
+    }
 }
 
 .plan-item__title {

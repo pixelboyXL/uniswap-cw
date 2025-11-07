@@ -53,22 +53,20 @@
 }
 
 .faq__item {
-    max-height: 54px;
     overflow: hidden;
     padding: 16px 25px;
     border-radius: 10px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-rgba-dark);
     @include transition_with_cubic($time:750ms);
+    & + & {
+        margin-top: 16px;
+    }
 }
 
-.item-open {
-    height: auto;
-    max-height: 210px;
-}
-
-.faq__item + .faq__item {
-    margin-top: 16px;
+.item-open .faq__item-text {
+    max-height: 999px;
+    padding-top: 15px;
 }
 
 .faq__item-title-wrap {
@@ -81,11 +79,14 @@
     font-size: 13.8px;
     line-height: calc(20 / 13.8);
     color: var(--clearly-white);
+    @include desk {
+        max-width: 100%;
+    }
 }
 
 .faq__item-arrow {
     cursor: pointer;
-    @include transition_with_cubic;
+    @include transition_with_cubic(500ms);
 }
 
 .arrow-up {
@@ -98,7 +99,10 @@
     line-height: calc(20 / 14);
     color: var(--uniswap-my-profile-grey);
     max-width: 318px;
-    margin-top: 16px;
+    max-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
     @include desk {
         font-size: 13.6px;
         line-height: calc(20 / 13.6);
@@ -110,7 +114,7 @@
     padding: 25px 40px;
     margin-top: 48px;
     border-radius: 10px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-rgba-dark);
     @include desk {
         padding: 25px;

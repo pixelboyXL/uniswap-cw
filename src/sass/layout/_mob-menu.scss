@@ -7,8 +7,8 @@
     max-width: 391px;
 	height: 100vh;
     transform: translate(-50%, -50%);
-	@include transition_with_cubic;
 	background-color: var(--uniswap-rgba-mob-background);
+	@include transition_with_cubic;
 }
 
 .mob-menu {
@@ -63,7 +63,7 @@
     display: block;
     font-weight: 400;
     font-size: 11.88px;
-    line-height: 13px;
+    line-height: calc(13 / 11.88);
 }
 
 .mob-menu__title {
@@ -93,9 +93,7 @@
 .balance-list__item {
     @include flex_align;
     @include scale_with_pointer;
-}
-
-.pages-list__item + .pages-list__item,
-.balance-list__item + .balance-list__item {
-    margin-top: 9.55px;
+    & + & {
+        margin-top: 9.55px;
+    }
 }

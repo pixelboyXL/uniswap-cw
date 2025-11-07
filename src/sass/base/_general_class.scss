@@ -53,7 +53,7 @@
 
 .uniswap-message {
     border-radius: 20px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-market-background);
 	&-warning {
 		width: 304px;
@@ -125,8 +125,8 @@
 	width: 100%;
 	height: 100vh;
     transform: translate(-50%, -50%);
-	@include transition_with_cubic;
 	background-color: var(--uniswap-rgba-create-ticket-background);
+	@include transition_with_cubic;
 }
 
 .uniswap-message-title {
@@ -179,8 +179,6 @@
     letter-spacing: -0.12px;
 	display: block;
     text-align: center;
-	@include desk {
-	}
 	&-pink {
 		color: var(--uniswap-error);
 	}

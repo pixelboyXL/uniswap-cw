@@ -1,28 +1,30 @@
 import { authorizationSection,
     authorizationBoxWrap,
     authorizationBoxRegisterWrap,
-    uniswapMessageTextWrap,
     authorizationLogInForm,
     authorizationLogInEmailInput,
     authorizationLogInPasswordInput,
     authorizationButton,
     authorizationTextPink,
-    authorizationRegisterTextPink, 
-    headerSection,
-    navUserSections,
-    footerSection,
-    logoutLink,
+    authorizationRegisterTextPink,
+    uniswapMessageTextWrap,
     uniswapBackdropHeader,
     uniswapMessageLogout,
     uniswapMessageBtnLogout,
-    uniswapMessageBtnNoLogout, } from './refs';
+    uniswapMessageBtnNoLogout,
+    logoutLink,
+    navUserSections,
+    headerSection,
+    footerSection,
+    // whitePaperSection,
+    } from './refs.js';
 import { toggleVisuallyHidden, 
     toggleIsHidden, 
     showSection, 
     hideSection, 
-    toggleCustomClass } from './simple';
-import { showMarketPiece, hideMarketPiece } from './market';
-import { hideMainSections, hidePersonalSections } from './switching';
+    toggleCustomClass } from './simple.js';
+import { showMarketPiece, hideMarketPiece } from './market.js';
+import { hideMainSections, hidePersonalSections } from './switching.js';
 
 if (authorizationTextPink) {
     authorizationTextPink.addEventListener("click", () => {

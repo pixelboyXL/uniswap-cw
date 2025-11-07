@@ -1,4 +1,6 @@
 import { uniswapMarketBtnCreateStake,
+    uniswapMarketExmark,
+    uniswapMarketInfoWrap,
     uniswapBackdropWarning,
     uniswapMessageWarning,
     uniswapMessageBtnWarning,
@@ -14,6 +16,15 @@ import { uniswapMarketBtnCreateStake,
     linkToMarket,
     linkToStake,
     linkToMyPositions,
+    whitePaperMobLink,
+    stakeMobLink,
+    myPositionsMobLink,
+    // dashboardLink,
+    whitePaperLink,
+    // whitePaperSection,
+    marketSection,
+    TokensListItemWarning,
+    TokensListItemMobWarning,
     marketTokensGrid,
     marketStakeForm,
     stakeFormSelectPair,
@@ -24,26 +35,9 @@ import { uniswapMarketBtnCreateStake,
     stakeFormLockPeriodWrap,
     stakeFormLockPeriodText,
     marketMyPositions,
-    marketSection,
-    TokensListItemWarning,
-    TokensListItemMobWarning,
-    // dashboardLink,
-    uniswapMarketExmark,
-    uniswapMarketInfoWrap,
-    linkToMarket,
-    linkToStake,
-    linkToMyPositions,
-    marketTokensGrid,
-    marketStakeForm,
-    marketMyPositions,
-    whitePaperMobLink,
-    // whitePaperSection,
-    whitePaperLink,
-    stakeMobLink,
-    myPositionsMobLink,
     headerMobMenu,
     mobMenuBackdrop,
-    mobMenu, } from './refs';
+    mobMenu, } from './refs.js';
 import { toggleIsHidden, 
     showSection, 
     hideSection, 
@@ -51,9 +45,9 @@ import { toggleIsHidden,
     addCurrentClass, 
     removeCurrentClass,
     addLinkActive,
-    removeLinkActive } from './simple';
-import { showMainSections, hideMainSections, hidePersonalSections } from './switching';
-import { toggleUniswapMessage } from './authorization';
+    removeLinkActive } from './simple.js';
+import { showMainSections, hideMainSections, hidePersonalSections } from './switching.js';
+import { toggleUniswapMessage } from './authorization.js';
 
 export function showMarketPiece (pieceToShow = marketTokensGrid, linkToCurrent = linkToMarket) {
     hideMarketPiece();

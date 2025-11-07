@@ -22,7 +22,7 @@
     padding: 24px;
     margin-bottom: 25px;
     border-radius: 10px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
     @include desk {
         max-width: 864px;
@@ -43,7 +43,7 @@
     font-size: 16px;
     line-height: calc(24 / 16);
     text-align: center;
-    color: var(--uniswap-my-profile-dark);
+    color: var(--uniswap-my-profile-another-dark);
 }
 
 .user-profile__label {
@@ -52,7 +52,7 @@
     padding: 3px 9px;
     border-radius: 8px;
     color: var(--uniswap-my-profile-white);
-    background-color: var(--uniswap-my-profile-border);
+    background-color: var(--uniswap-my-profile-dark);
 }
 
 .label-user {
@@ -83,7 +83,7 @@
     max-width: 358px;
     padding: 24px;
     border-radius: 14px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
     &:not(:first-child) {
         margin-top: 16px;
@@ -184,7 +184,7 @@
     padding: 15px 17px;
     margin-bottom: 16px;
     border-radius: 10px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     @include desk {
         @include flex_align;
     }
@@ -218,7 +218,7 @@
     background-color: var(--uniswap-my-profile-white);
     font-size: 13.8px;
     line-height: calc(20 / 13.8);
-    color: var(--uniswap-my-profile-dark);
+    color: var(--uniswap-my-profile-another-dark);
     @include focus_scale_with_pointer;
     &:hover,
     &:focus {
@@ -237,7 +237,7 @@
 .verification-lvl__main-wrap {
     padding: 24px;
     border-radius: 14px;
-    border: 1px solid var(--uniswap-my-profile-border);
+    border: 1px solid var(--uniswap-my-profile-dark);
     background-color: var(--uniswap-light-dark);
 }
 
@@ -342,7 +342,7 @@
 
 .verification-lvl__btn-wrap {
     padding-top: 9px;
-    border-top: 1px solid var(--uniswap-my-profile-border);
+    border-top: 1px solid var(--uniswap-my-profile-dark);
 }
 
 .verification-lvl__btn-title {

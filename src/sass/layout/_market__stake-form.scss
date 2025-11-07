@@ -103,8 +103,8 @@
     }
     &:hover {
         font-weight: 700;
-        color: var(--uniswap-pair-option);
         cursor: pointer;
+        color: var(--uniswap-pair-option);
         &::after {
             content: "";
             width: 100%;
