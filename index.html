@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.1febb7bd.css><script type=module src=/uniswap-cw/uniswap-cw.69049a3c.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.9d408fbd.css><script type=module src=/uniswap-cw/uniswap-cw.032ebbc7.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
@@ -165,7 +165,7 @@
     </div>
 </section>
         <main class=container>
-            <section class=market>
+            <section class=market style=display:none>
     <div class=market__container>
         <ul class=tokens-list>
             <li class="tokens-active tokens-list__item">
@@ -1479,6 +1479,89 @@
                 </button>
             </form>
             <span class=write-message__description>Press Enter to send, Shift+Enter for new line</span>
+        </div>
+    </div>
+</section>
+            
+<section class=deposit>
+    <div class=deposit__container>
+        <h1 class=deposit__title>Withdraw Funds</h1>
+        <p class=deposit__after-title>Select network and enter withdrawal details</p>
+        <div class=available-withdraw__wrap>
+            <p class=available-withdraw__text>Available for Withdrawal</p>
+            <span class=available-withdraw__value>$0.00</span>
+        </div>
+        <div class=deposit-form__main-wrap>
+            <form id=depositForm>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Network</label>
+                    <div class=select-wrapper>
+                        <div class=custom-select id=networkSelect>
+                            <div class=select-display>
+                                <span class=select-placeholder>Select Network</span>
+                            </div>
+                            <img src=/uniswap-cw/market_select_arrow.754d12c8.png alt=market_select_arrow class=select-arrow>
+                        </div>
+                        <div class=dropdown-menu id=networkDropdown></div>
+                    </div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Coin</label>
+                    <div class=select-wrapper>
+                        <div class="custom-select disabled" id=coinSelect>
+                            <div class=select-display>
+                                <span class=select-placeholder>Select Network First</span>
+                            </div>
+                            <img src=/uniswap-cw/market_select_arrow.754d12c8.png alt=market_select_arrow class=select-arrow>
+                        </div>
+                        <div class=dropdown-menu id=coinDropdown></div>
+                    </div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Withdrawal Address</label>
+                    <div class=select-wrapper>
+                        <div class=custom-select id=networkSelect>
+                            <div class=select-display>
+                                <span class=select-placeholder>Enter wallet address</span>
+                            </div>
+                        </div>
+                        <div class=dropdown-menu id=networkDropdown></div>
+                    </div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Amount</label>
+                    <div class=amount-input-wrapper>
+                        <input type=number class=amount-input id=amountInput placeholder=0.00 min=10 step=0.01>
+                        <span class=currency-label>USD</span>
+                    </div>
+                    <div class=error-message id=amountError>Amount must be at least $10</div>
+                </div>
+                <div class=total-deduction>
+                    <div class=total-deduction__small-wrap>
+                        <p class=total-deduction__text>Withdrawal Amount:</p>
+                        <span class=total-deduction__value>$0.00</span>
+                    </div>
+                    <div class=total-deduction__small-wrap>
+                        <p class=total-deduction__text>Network Fee:</p>
+                        <span class=total-deduction__value>~$2.50</span>
+                    </div>
+                    <div class="small-bordered-wrap total-deduction__small-wrap">
+                        <p class="font-weight-700 total-deduction__text">Total Deduction:</p>
+                        <span class="font-weight-700 total-deduction__value">$0.00</span>
+                    </div>
+                </div>
+                <div class=info-box>
+                    <div class=info-box-content>
+                        • Double-check the withdrawal address<br>
+                        • Incorrect address may result in permanent loss<br>
+                        • Minimum withdrawal: $10 USD<br>
+                        • Processing time: 15-60 minutes
+                    </div>
+                </div>
+                <button class=submit-btn id=submitBtn>
+                    Create Withdrawal Request
+                </button>
+            </form>
         </div>
     </div>
 </section>
