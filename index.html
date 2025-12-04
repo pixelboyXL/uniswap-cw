@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.9d408fbd.css><script type=module src=/uniswap-cw/uniswap-cw.032ebbc7.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.884bf326.css><script type=module src=/uniswap-cw/uniswap-cw.277eaa17.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
@@ -1482,19 +1482,18 @@
         </div>
     </div>
 </section>
-            
-<section class=deposit>
-    <div class=deposit__container>
-        <h1 class=deposit__title>Withdraw Funds</h1>
-        <p class=deposit__after-title>Select network and enter withdrawal details</p>
+            <section class=withdraw style=display:none>
+    <div class=withdraw__container>
+        <h1 class=withdraw__title>Withdraw Funds</h1>
+        <p class=withdraw__after-title>Select network and enter withdrawal details</p>
         <div class=available-withdraw__wrap>
             <p class=available-withdraw__text>Available for Withdrawal</p>
-            <span class=available-withdraw__value>$0.00</span>
+            <span class=available-withdraw__value id=withdrawableBalance>$0.00</span>
         </div>
-        <div class=deposit-form__main-wrap>
-            <form id=depositForm>
-                <div class=deposit-form__small-wrap>
-                    <label class=deposit-form__label>Network</label>
+        <div class=withdraw-form__main-wrap>
+            <form id=withdrawForm>
+                <div class=withdraw-form__small-wrap>
+                    <label class=withdraw-form__label>Network</label>
                     <div class=select-wrapper>
                         <div class=custom-select id=networkSelect>
                             <div class=select-display>
@@ -1505,8 +1504,8 @@
                         <div class=dropdown-menu id=networkDropdown></div>
                     </div>
                 </div>
-                <div class=deposit-form__small-wrap>
-                    <label class=deposit-form__label>Coin</label>
+                <div class=withdraw-form__small-wrap>
+                    <label class=withdraw-form__label>Coin</label>
                     <div class=select-wrapper>
                         <div class="custom-select disabled" id=coinSelect>
                             <div class=select-display>
@@ -1517,19 +1516,13 @@
                         <div class=dropdown-menu id=coinDropdown></div>
                     </div>
                 </div>
-                <div class=deposit-form__small-wrap>
-                    <label class=deposit-form__label>Withdrawal Address</label>
-                    <div class=select-wrapper>
-                        <div class=custom-select id=networkSelect>
-                            <div class=select-display>
-                                <span class=select-placeholder>Enter wallet address</span>
-                            </div>
-                        </div>
-                        <div class=dropdown-menu id=networkDropdown></div>
-                    </div>
+                <div class=withdraw-form__small-wrap>
+                    <label class=withdraw-form__label>Withdrawal Address</label>
+                    <input class="address-input disabled" id=addressInput placeholder="Enter wallet address" disabled>
+                    <div class=error-message id=addressError>Please enter a valid address</div>
                 </div>
-                <div class=deposit-form__small-wrap>
-                    <label class=deposit-form__label>Amount</label>
+                <div class=withdraw-form__small-wrap>
+                    <label class=withdraw-form__label>Amount</label>
                     <div class=amount-input-wrapper>
                         <input type=number class=amount-input id=amountInput placeholder=0.00 min=10 step=0.01>
                         <span class=currency-label>USD</span>
@@ -1539,15 +1532,15 @@
                 <div class=total-deduction>
                     <div class=total-deduction__small-wrap>
                         <p class=total-deduction__text>Withdrawal Amount:</p>
-                        <span class=total-deduction__value>$0.00</span>
+                        <span class=total-deduction__value id=withdrawAmount>$0.00</span>
                     </div>
                     <div class=total-deduction__small-wrap>
                         <p class=total-deduction__text>Network Fee:</p>
-                        <span class=total-deduction__value>~$2.50</span>
+                        <span class=total-deduction__value id=networkFee>~$2.50</span>
                     </div>
                     <div class="small-bordered-wrap total-deduction__small-wrap">
                         <p class="font-weight-700 total-deduction__text">Total Deduction:</p>
-                        <span class="font-weight-700 total-deduction__value">$0.00</span>
+                        <span class="font-weight-700 total-deduction__value" id=totalDeduction>$0.00</span>
                     </div>
                 </div>
                 <div class=info-box>
@@ -1562,6 +1555,82 @@
                     Create Withdrawal Request
                 </button>
             </form>
+        </div>
+    </div>
+</section>
+            <div id=modalOverlay class=modal-overlay style=display:none>
+    <div class=modal>
+        <h2 class=modal-title id=modalTitle>Confirm Action</h2>
+        <p class=modal-text id=modalText>Are you sure?</p>
+        <div class=modal-actions id=modalActions>
+            <button class="btn btn-cancel" id=modalCancelBtn>Cancel</button>
+            <button class="btn btn-confirm" id=modalConfirmBtn>Confirm</button>
+        </div>
+        <div class=modal-actions id=modalOkOnly style=display:none>
+            <button class="btn btn-confirm" id=modalOkBtn>OK</button>
+        </div>
+    </div>
+</div>
+<section class=withdraw-request>
+    <div class=withdraw-request__container>
+        <div class=status-bar style=display:none>
+            <div class=status-dot id=statusDot></div>
+            <span class=status-text id=statusText>Loading...</span>
+        </div>
+        <h1 class=withdraw-request__title>Withdrawal Request</h1>
+        <div class=info-card>
+            <div class=info-grid>
+                <div class=info-row>
+                    <span class=info-label>Amount</span>
+                    <span class="amount info-value" id=withdrawAmount>$0.00</span>
+                </div>
+                <div class=info-row>
+                    <span class=info-label>Network</span>
+                    <span class=info-value id=networkName>Loading...</span>
+                </div>
+                <div class=info-row>
+                    <span class=info-label>Destination Address</span>
+                    <span class="address info-value" id=destinationAddress>Loading...</span>
+                </div>
+                <div class=info-row>
+                    <span class=info-label>Transaction ID</span>
+                    <span class="info-value transaction" style=font-family:monospace;font-size:12px id=transactionId>Loading...</span>
+                </div>
+                <div class=info-row>
+                    <span class=info-label>Created</span>
+                    <span class=info-value id=createdTime>Loading...</span>
+                </div>
+            </div>
+            <div class=timeline-section>
+                <div class=timeline-title>Transaction Status</div>
+                <div class=timeline>
+                    <div class=timeline-item id=step1>
+                        <div class=timeline-status>Request Created</div>
+                        <div class=timeline-time id=step1Time>--</div>
+                    </div>
+                    <div class=timeline-item id=step2>
+                        <div class=timeline-status>Awaiting Approval</div>
+                        <div class=timeline-time id=step2Time>--</div>
+                    </div>
+                    <div class=timeline-item id=step3>
+                        <div class=timeline-status>Processing</div>
+                        <div class=timeline-time id=step3Time>--</div>
+                    </div>
+                    <div class=timeline-item id=step4>
+                        <div class=timeline-status>Completed</div>
+                        <div class=timeline-time id=step4Time>--</div>
+                    </div>
+                </div>
+            </div>
+            <div id=messageBox></div>
+            <div class=action-buttons id=actionButtons>
+                <button class="btn btn-approve" id=approveBtn onclick=approveWithdraw()>
+                    Confirm Withdrawal
+                </button>
+                <button class="btn btn-cancel" id=cancelBtn onclick=cancelWithdraw()>
+                    Cancel Request
+                </button>
+            </div>
         </div>
     </div>
 </section>
