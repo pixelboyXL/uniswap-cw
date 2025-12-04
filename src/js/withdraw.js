@@ -5,14 +5,23 @@ const networks = {
     "SOL": ["SOL", "USDT SOL"],
     "DOGE": ["DOGE"]
 };
+// Network fees (example values)
+const networkFees = {
+    "ETH": 2.50,
+    "TRX": 1.00,
+    "SOL": 0.50,
+    "DOGE": 0.25
+};
 // State
 let selectedNetwork = null;
 let selectedCoin = null;
 let amount = 0;
+let address = '';
+let availableBalance = 0;
 // Get coin icon path
 function getCoinIcon(coin) {
     const coinName = coin.split(' ')[0].toLowerCase();
-    return `./images/${coinName}_icon.png`;
+    return `/static/images/coins/small/${coinName}.png`;
 }
 // Get network icon
 function getNetworkIcon(network) {
@@ -21,8 +30,8 @@ function getNetworkIcon(network) {
         'TRX': 'trx',
         'SOL': 'sol',
         'DOGE': 'doge'
-    };   
-    return `./images/${iconMap[network] || 'generic'}_icon.png`;
+    };
+    return `/static/images/coins/small/${iconMap[network] || 'generic'}.png`;
 }
 // Initialize dropdowns
 function initializeDropdowns() {
@@ -54,7 +63,7 @@ function selectNetwork(network) {
         <img src="${getNetworkIcon(network)}"
             alt="${network}"
             class="network-icon"
-            onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';"
+            onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';">
         <span>${network}</span>
     `;
     // Close dropdown
@@ -67,10 +76,12 @@ function selectNetwork(network) {
     // Reset coin display
     const coinDisplay = coinSelect.querySelector('.select-display');
     coinDisplay.innerHTML = '<span class="select-placeholder">Select Coin</span>';
+    // Update fee display
+    updateFeeDisplay();
     // Check if form is complete
     checkFormCompletion();
 }
-// Populate coin dropdown based on selected network
+// Populate coin dropdown
 function populateCoinDropdown(network) {
     const coinDropdown = document.getElementById('coinDropdown');
     coinDropdown.innerHTML = '';
@@ -82,7 +93,7 @@ function populateCoinDropdown(network) {
             <img src="${getCoinIcon(coin)}"
                 alt="${coin}"
                 class="coin-icon"
-            onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';"
+                onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';">
             <span>${coin}</span>
         `;
         option.addEventListener('click', () => selectCoin(coin));
@@ -99,11 +110,15 @@ function selectCoin(coin) {
         <img src="${getCoinIcon(coin)}"
             alt="${coin}"
             class="coin-icon"
-            onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';"
+            onerror="if (!this.src.includes('generic.png')) this.src='/static/images/coins/small/generic.png';">
         <span>${coin}</span>
     `;
     // Close dropdown
     closeDropdown('coin');
+    // Enable address input
+    const addressInput = document.getElementById('addressInput');
+    addressInput.classList.remove('disabled');
+    addressInput.disabled = false;
     // Check if form is complete
     checkFormCompletion();
 }
@@ -135,24 +150,63 @@ function closeDropdown(type) {
 function closeAllDropdowns() {
     ['network', 'coin'].forEach(type => closeDropdown(type));
 }
+// Update fee display
+function updateFeeDisplay() {
+    const withdrawAmount = document.getElementById('withdrawAmount');
+    const networkFeeEl = document.getElementById('networkFee');
+    const totalDeduction = document.getElementById('totalDeduction');
+    const fee = selectedNetwork ? networkFees[selectedNetwork] : 0;
+    const total = amount + fee;
+    withdrawAmount.textContent = `$${amount.toFixed(2)}`;
+    networkFeeEl.textContent = `~$${fee.toFixed(2)}`;
+    totalDeduction.textContent = `$${total.toFixed(2)}`;
+}
+// Validate address
+function validateAddress(addr) {
+    // Basic validation - check if not empty and reasonable length
+    return addr && addr.length >= 20 && addr.length <= 100;
+}
 // Check form completion
 function checkFormCompletion() {
     const submitBtn = document.getElementById('submitBtn');
     const amountInput = document.getElementById('amountInput');
+    const addressInput = document.getElementById('addressInput');
     amount = parseFloat(amountInput.value) || 0;
-    if (selectedNetwork && selectedCoin && amount >= 10) {
+    address = addressInput.value.trim();
+    const fee = selectedNetwork ? networkFees[selectedNetwork] : 0;
+    const totalRequired = amount + fee;
+    if (selectedNetwork && selectedCoin && validateAddress(address) &&
+        amount >= 10 && totalRequired <= availableBalance) {
         submitBtn.classList.add('active');
         submitBtn.disabled = false;
     } else {
         submitBtn.classList.remove('active');
         submitBtn.disabled = true;
     }
+    updateFeeDisplay();
 }
 // Handle amount input
 document.getElementById('amountInput').addEventListener('input', (e) => {
     amount = parseFloat(e.target.value) || 0;
     const errorMsg = document.getElementById('amountError');
-    if (amount > 0 && amount < 10) {
+    const fee = selectedNetwork ? networkFees[selectedNetwork] : 0;
+    const totalRequired = amount + fee;
+    if (amount > 0 && totalRequired > availableBalance) {
+        errorMsg.textContent = `Insufficient balance (need $${totalRequired.toFixed(2)} including fees)`;
+        errorMsg.classList.add('show');
+    } else if (amount > 0 && amount < 10) {
+        errorMsg.textContent = 'Minimum withdrawal is $10';
+        errorMsg.classList.add('show');
+    } else {
+        errorMsg.classList.remove('show');
+    }
+    checkFormCompletion();
+});
+// Handle address input
+document.getElementById('addressInput').addEventListener('input', (e) => {
+    address = e.target.value.trim();
+    const errorMsg = document.getElementById('addressError');
+    if (address && !validateAddress(address)) {
         errorMsg.classList.add('show');
     } else {
         errorMsg.classList.remove('show');
@@ -169,9 +223,9 @@ document.addEventListener('click', (e) => {
     }
 });
 // Handle form submission
-document.getElementById('depositForm').addEventListener('submit', async (e) => {
+document.getElementById('withdrawForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (!selectedNetwork || !selectedCoin || amount < 10) {
+    if (!selectedNetwork || !selectedCoin || !validateAddress(address) || amount < 10) {
         return;
     }
     const submitBtn = document.getElementById('submitBtn');
@@ -179,31 +233,32 @@ document.getElementById('depositForm').addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Creating Request...';
     submitBtn.disabled = true;
     try {
-        const response = await fetch('/api/deposit/create', {
+        const response = await fetch('/api/withdraw/create', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
             body: JSON.stringify({
                 network: selectedNetwork,
                 coin: selectedCoin,
-                amount: amount
+                amount: amount,
+                address: address
             })
         });
         if (response.ok) {
             const result = await response.json();
-            // Redirect to deposit request page with transaction ID
-            window.location.href = `/deposit/request/${result.transaction_id}`;
+            // Redirect to withdraw request page
+            window.location.href = `/withdraw/request/${result.withdraw_data.transaction_id}`;
         } else {
             const error = await response.json();
-            alert(`Error: ${error.detail || 'Failed to create deposit request'}`);
+            alert(`Error: ${error.detail || 'Failed to create withdrawal request'}`);
             submitBtn.classList.remove('loading');
-            submitBtn.textContent = 'Create Deposit Request';
+            submitBtn.textContent = 'Create Withdrawal Request';
             checkFormCompletion();
         }
     } catch (error) {
         alert('Connection error. Please try again.');
         submitBtn.classList.remove('loading');
-        submitBtn.textContent = 'Create Deposit Request';
+        submitBtn.textContent = 'Create Withdrawal Request';
         checkFormCompletion();
     }
 });
@@ -213,8 +268,10 @@ async function loadWalletInfo() {
         const response = await fetch('/api/wallet', { credentials: 'include' });
         if (response.ok) {
             const data = await response.json();
-            document.getElementById('availableBalance').textContent = data.available_balance.toFixed(2);
+            availableBalance = data.available_balance;
+            document.getElementById('availableBalance').textContent = availableBalance.toFixed(2);
             document.getElementById('referralBalance').textContent = data.available_referral_balance.toFixed(2);
+            document.getElementById('withdrawableBalance').textContent = `$${availableBalance.toFixed(2)}`;
         }
     } catch (error) {
         console.error('Error loading wallet info:', error);
@@ -225,53 +282,6 @@ function toggleProfileMenu() {
     const dropdown = document.getElementById('profileDropdown');
     dropdown.classList.toggle('active');
 }
-// Handle navigation
-document.querySelectorAll('.profile-menu-item').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = this.dataset.target;
-        if (target) {
-            window.location.href = target;
-        }
-    });
-});
-// Handle deposit
-function handleDeposit() {
-    window.location.href = '/deposit';
-}
-// Handle withdraw
-function handleWithdraw() {
-    window.location.href = '/withdraw';
-}
-// Handle logout
-async function handleLogout(event) {
-    event.preventDefault();
-    document.getElementById('profileDropdown').classList.remove('active');
-    const logoutEndpoint = '/api/auth/logout';
-    try {
-        const response = await fetch(logoutEndpoint, {
-            method: 'POST',
-            credentials: 'include'
-        });
-        if (response.ok) {
-            window.location.href = '/login';
-        } else {
-            console.error('Logout failed on the server side.');
-            alert('Logout failed. Please try again.');
-        }
-    } catch (error) {
-        console.error('Network error during logout:', error);
-        alert('A network error occurred. Check your connection.');
-    }
-}
-// Close profile menu when clicking outside
-document.addEventListener('click', function(event) {
-    const profileBtn = document.querySelector('.profile-btn');
-    const dropdown = document.getElementById('profileDropdown');
-    // if (!profileBtn.contains(event.target) && !dropdown.contains(event.target)) {
-    //     dropdown.classList.remove('active');
-    // }
-});
 // Initialize
 window.addEventListener('load', () => {
     initializeDropdowns();
