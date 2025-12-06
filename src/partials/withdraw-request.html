@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<section class="withdraw-request">
+<section class="withdraw-request" style="display: none;">
     <div class="withdraw-request__container">
         <div class="status-bar" style="display: none;">
             <div class="status-dot" id="statusDot"></div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="info-row">
                     <span class="info-label">Transaction ID</span>
-                    <span class="info-value transaction" style="font-size: 12px; font-family: monospace;" id="transactionId">Loading...</span>
+                    <span class="info-value transaction" id="transactionId">Loading...</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Created</span>
@@ -44,13 +44,13 @@
             <div class="timeline-section">
                 <div class="timeline-title">Transaction Status</div>
                 <div class="timeline">
-                    <div class="timeline-item" id="step1">
+                    <div class="timeline-item completed" id="step1">
                         <div class="timeline-status">Request Created</div>
-                        <div class="timeline-time" id="step1Time">--</div>
+                        <div class="timeline-time" id="step1Time">Completed</div>
                     </div>
-                    <div class="timeline-item" id="step2">
+                    <div class="timeline-item active" id="step2">
                         <div class="timeline-status">Awaiting Approval</div>
-                        <div class="timeline-time" id="step2Time">--</div>
+                        <div class="timeline-time" id="step2Time">Current</div>
                     </div>
                     <div class="timeline-item" id="step3">
                         <div class="timeline-status">Processing</div>

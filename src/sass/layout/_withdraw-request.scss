@@ -1,5 +1,9 @@
 .withdraw-request {
-    padding: 60px 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    @include desk {
+        padding: 60px 0;
+    }
 }
 
 .withdraw-request__container {
@@ -120,10 +124,10 @@
 }
 
 .timeline-title {
+    font-weight: 700;
     font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--clearly-white);
+    margin-bottom: 21px;
 }
 
 .timeline {
@@ -153,71 +157,73 @@
     top: 6px;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    background: #2a2a2a;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background-color: var(--uniswap-my-profile-dark);
 }
 
 .timeline-item.active::before {
-    background: #38bdf8;
-    border-color: #38bdf8;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    border-color: var(--uniswap-withdraw-blue);
+    background-color: var(--uniswap-withdraw-blue);
 }
 
 .timeline-item.completed::before {
-    background: #10b981;
-    border-color: #10b981;
+    border-color: var(--uniswap-withdraw-another-green);
+    background-color: var(--uniswap-withdraw-another-green);
 }
 
 .timeline-status {
+    font-weight: 700;
     font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
+    color: var(--clearly-white);
     margin-bottom: 4px;
 }
 
 .timeline-time {
+    font-weight: 400;
     font-size: 12px;
-    color: #6b7280;
+    color: var(--uniswap-withdraw-dark-grey);
 }
 
 .action-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    margin-top: 32px;
+    margin-top: 16px;
+    @include desk {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .btn {
-    padding: 14px 24px;
-    border-radius: 12px;
+    font-weight: 700;
     font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
+    border-radius: 12px;
     text-align: center;
+    @include transition_with_cubic;
 }
 
 .btn-approve {
-    background: linear-gradient(135deg, #10b981, #22d3ee);
-    color: white;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    color: var(--clearly-white);
+    background-color: var(--uniswap-success);
 }
 
 .btn-approve:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    background-color: var(--uniswap-withdraw-rgba-green);
 }
 
 .btn-cancel {
-    background: transparent;
-    color: #ef4444;
-    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 17px 0;
+    background-color: var(--uniswap-background-error);
+    color: var(--uniswap-error);
+    border: 1px solid var(--uniswap-error);
 }
 
 .btn-cancel:hover:not(:disabled) {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: #ef4444;
+    background-color: var(--uniswap-rgba-pink-border);
 }
 
 .btn:disabled {
