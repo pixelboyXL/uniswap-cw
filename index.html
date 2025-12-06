@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.884bf326.css><script type=module src=/uniswap-cw/uniswap-cw.277eaa17.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.41eacf17.css><script type=module src=/uniswap-cw/uniswap-cw.65c8d0b0.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
@@ -1571,7 +1571,7 @@
         </div>
     </div>
 </div>
-<section class=withdraw-request>
+<section class=withdraw-request style=display:none>
     <div class=withdraw-request__container>
         <div class=status-bar style=display:none>
             <div class=status-dot id=statusDot></div>
@@ -1594,7 +1594,7 @@
                 </div>
                 <div class=info-row>
                     <span class=info-label>Transaction ID</span>
-                    <span class="info-value transaction" style=font-family:monospace;font-size:12px id=transactionId>Loading...</span>
+                    <span class="info-value transaction" id=transactionId>Loading...</span>
                 </div>
                 <div class=info-row>
                     <span class=info-label>Created</span>
@@ -1604,13 +1604,13 @@
             <div class=timeline-section>
                 <div class=timeline-title>Transaction Status</div>
                 <div class=timeline>
-                    <div class=timeline-item id=step1>
+                    <div class="completed timeline-item" id=step1>
                         <div class=timeline-status>Request Created</div>
-                        <div class=timeline-time id=step1Time>--</div>
+                        <div class=timeline-time id=step1Time>Completed</div>
                     </div>
-                    <div class=timeline-item id=step2>
+                    <div class="active timeline-item" id=step2>
                         <div class=timeline-status>Awaiting Approval</div>
-                        <div class=timeline-time id=step2Time>--</div>
+                        <div class=timeline-time id=step2Time>Current</div>
                     </div>
                     <div class=timeline-item id=step3>
                         <div class=timeline-status>Processing</div>
@@ -1630,6 +1630,127 @@
                 <button class="btn btn-cancel" id=cancelBtn onclick=cancelWithdraw()>
                     Cancel Request
                 </button>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class=transaction-history>
+    <div class=transaction-history__container>
+        <div class=transaction-history__title-wrap>
+            <h1 class=transaction-history__title>Transaction History</h1>
+            <p class=transaction-history__after-title>View all your deposits and withdrawals</p>
+        </div>
+        
+        <div class=filters-section>
+            <div class=filter-group>
+                <label class=filter-label>Type</label>
+                <select class=filter-select id=typeFilter onchange=filterTransactions()>
+                    <option value=all>All Transactions</option>
+                    <option value=deposit>Deposits</option>
+                    <option value=withdraw>Withdrawals</option>
+                </select>
+            </div>
+            <div class=filter-group>
+                <label class=filter-label>Status</label>
+                <select class=filter-select id=statusFilter onchange=filterTransactions()>
+                    <option value=all>All Status</option>
+                    <option value=pending>Pending</option>
+                    <option value=approved>Approved</option>
+                    <option value=completed>Completed</option>
+                    <option value=rejected>Rejected</option>
+                    <option value=expired>Expired</option>
+                </select>
+            </div>
+            <div class=filter-group>
+                <label class=filter-label>Network</label>
+                <select class=filter-select id=networkFilter onchange=filterTransactions()>
+                    <option value=all>All Networks</option>
+                    <option value=TRON>TRON</option>
+                    <option value=ETH>Ethereum</option>
+                    <option value=BSC>BSC</option>
+                    <option value=POLYGON>Polygon</option>
+                </select>
+            </div>
+            <div class=filter-group>
+                <label class=filter-label>Date Range</label>
+                <select class=filter-select id=dateFilter onchange=filterTransactions()>
+                    <option value=all>All Time</option>
+                    <option value=today>Today</option>
+                    <option value=week>This Week</option>
+                    <option value=month>This Month</option>
+                    <option value=3months>Last 3 Months</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class=transactions-table-wrapper>
+            <table class=transactions-table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Network</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id=transactionsTableBody>
+                    
+                    <tr><td>
+                        <span class="transaction-type type-withdraw">↑ Withdraw</span>
+                    </td>
+                    <td>
+                        <div class=amount-cell>
+                            ${transaction.amount.toFixed(4)} USDT
+                            <span class=amount-usd>≈ $${transaction.amount.toFixed(2)}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class=network-badge>
+                            ${getNetworkIcon(transaction.network)}
+                            ${transaction.network}
+                        </span>
+                    </td>
+                    <td>
+                        <span class=address-cell>
+                            <span class=address-truncated title=${transaction.address}>
+                                ${truncateAddress(transaction.address)}
+                            </span>
+                        </span>
+                    </td>
+                    <td>
+                        <span class=status-badge>
+                            ${getStatusIcon(transaction.status)}
+                            ${transaction.status.charAt(0).toUpperCase() + transaction.status.slice(1)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class=date-cell>
+                            ${formatDate(transaction.created_at)}
+                            <span class=date-time>${formatTime(transaction.created_at)}</span>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
+            
+            <div class=empty-state id=emptyState style=display:none>
+                <div class=empty-icon>📊</div>
+                <h3 class=empty-title>No Transactions Found</h3>
+                <p class=empty-text>You don't have any transactions matching the selected filters</p>
+            </div>
+            
+            <div class=pagination-wrapper id=paginationWrapper style=display:none>
+                <div class=pagination-info>
+                    Showing <span id=startRange>1</span> - <span id=endRange>10</span> of <span id=totalCount>0</span> transactions
+                </div>
+                <div class=pagination-controls>
+                    <button class=pagination-btn id=prevBtn onclick=previousPage() disabled>Previous</button>
+                    <button class="active pagination-btn" id=page1>1</button>
+                    <button class=pagination-btn id=page2>2</button>
+                    <button class=pagination-btn id=page3>3</button>
+                    <button class=pagination-btn id=nextBtn onclick=nextPage()>Next</button>
+                </div>
             </div>
         </div>
     </div>
