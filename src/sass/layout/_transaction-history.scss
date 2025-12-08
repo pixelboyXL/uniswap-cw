@@ -1,29 +1,49 @@
 /* Transaction History Specific Styles */
 .transaction-history {
-    max-width: 1280px;
+    max-width: 362px;
     margin: 0 auto;
+    @include desk {
+        max-width: 1280px;
+    }
 }
 
 .transaction-history__container {
-    padding-top: 42px;
-    padding-bottom: 52px;
+    padding-top: 30px;
+    @include desk {
+        padding-top: 42px;
+        padding-bottom: 52px;
+    }
 }
 
 .transaction-history__title-wrap {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
+    @include desk {
+        margin-bottom: 40px;
+    }
 }
 
 .transaction-history__title {
-    font-weight: 700;
-    font-size: 32px;
-    color: var(--clearly-white);
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    letter-spacing: 0.07px;
     margin-bottom: 9px;
+    color: var(--clearly-white);
+    @include desk {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+    }
 }
 
 .transaction-history__after-title {
     font-weight: 400;
     font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
     color: var(--uniswap-withdraw-dark-grey);
+    @include desk {
+        line-height: 100%;
+    }
 }
 
 /* Filters Section */
@@ -31,35 +51,55 @@
     @include flex_align;
     flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 48px;
+    @include desk {
+        margin-bottom: 16px;
+    }
 }
 
 .filter-group {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 8px;
-    flex: 1;
-    min-width: 150px;
+    min-width: 361px;
+    @include desk {
+        min-width: 307px;
+    }
 }
 
 .filter-label {
+    font-weight: 400;
     font-size: 12px;
-    letter-spacing: 0.5px;
+    line-height: calc(16 / 12);
     text-transform: uppercase;
     color: var(--uniswap-withdraw-grey);
+    @include desk {
+        line-height: 100%;
+        letter-spacing: 0.5px;
+    }
 }
 
 .filter-select {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
     color: var(--clearly-white);
     appearance: none;
     border-radius: 12px;
     border: 1px solid var(--uniswap-market-border);
     background-color: var(--uniswap-transaction-history-dark);
-    padding: 10px 12px;
+    background-image: url(../images/icon_transaction_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding: 11px 16px;
     cursor: pointer;
     @include transition_with_cubic;
+    @include desk {
+        font-size: 14px;
+        line-height: 100%;
+    }
 }
 
 .filter-select:hover {
@@ -75,15 +115,21 @@
 
 /* Transactions Table */
 .transactions-table-wrapper {
-    border-radius: 10px;
-    border: 1px solid var(--uniswap-market-border);
-    background-color: var(--uniswap-transaction-history-dark);;
-    overflow: hidden;
+    @include desk {
+        border-radius: 10px;
+        border: 1px solid var(--uniswap-market-border);
+        background-color: var(--uniswap-transaction-history-dark);
+        overflow: hidden;
+    }
 }
 
 .transactions-table {
-    width: 100%;
-    border-collapse: collapse;
+    display: none;
+    @include desk {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
 }
 
 .transactions-table th {
@@ -143,34 +189,100 @@
 
 /* Transaction Type Badge */
 .transaction-type {
+    @include mob-only {
+        margin-top: 8px;
+    }
     font-weight: 400;
     font-size: 14px;
-    @include flex_align;
+    @include flex_justify_align;
+    max-height: 28px;
     gap: 6px;
     padding: 5px 10px;
     border-radius: 20px;
 }
 
 .type-deposit {
-    color: #22c55e;
-    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid var(--uniswap-withdraw-another-green);
+    color: var(--uniswap-withdraw-another-green);
+    background-color: var(--uniswap-background-success);
 }
 
 .type-withdraw {
-    border: 1px solid #FB2C36;
-    color: #FB2C36;
-    background-color: #FB2C361A;
+    border: 1px solid var(--uniswap-transaction-history-red);
+    color: var(--uniswap-transaction-history-red);
+    background-color: var(--uniswap-transaction-history-rgba-red);
+}
+
+/* Amount Column */
+.amount-cell {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
+    color: var(--clearly-white);
+}
+
+.amount-usd {
+    @include mob-only {
+        text-align: right;
+    }
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    letter-spacing: -0.15px;
+    color: var(--uniswap-transaction-history-dark-grey);
+}
+
+/* Network Badge */
+.network-badge {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
+    color: var(--uniswap-transaction-history-light-grey);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.network-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--uniswap-transaction-history-grey);
+}
+
+.network-icon-comleted {
+    background-color: var(--uniswap-withdraw-dark-blue);
+}
+
+/* Address Cell */
+.address-cell {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
+    color: var(--uniswap-transaction-history-light-grey);
 }
 
 /* Status Badge */
 .status-badge {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
+    color: var(--uniswap-transaction-history-light-grey);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
+    gap: 8px;
+}
+
+.status-icon {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--uniswap-transaction-history-grey);
 }
 
 .status-pending {
@@ -198,65 +310,25 @@
     color: #6b7280;
 }
 
-/* Amount Column */
-.amount-cell {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.amount-usd {
-    display: block;
-    font-size: 12px;
-    color: #6b7280;
-    font-weight: 400;
-    margin-top: 4px;
-}
-
-/* Network Badge */
-.network-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    font-size: 12px;
-}
-
-.network-icon {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-}
-
-/* Address Cell */
-.address-cell {
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    color: #9ca3af;
-}
-
-.address-truncated {
-    display: inline-block;
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-
 /* Date Cell */
 .date-cell {
-    color: #9ca3af;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: -0.31px;
+    color: var(--uniswap-transaction-history-light-grey);
 }
 
 .date-time {
+    @include mob-only {
+        text-align: right;
+    }
     display: block;
-    margin-top: 4px;
-    font-size: 11px;
-    color: #6b7280;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    letter-spacing: -0.15px;
+    color: var(--uniswap-transaction-history-dark-grey);
 }
 
 /* Empty State */
@@ -291,38 +363,64 @@
 
 /* Pagination */
 .pagination-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    @include mob-only {
+        border-radius: 10px;
+        border: 1px solid var(--uniswap-market-border);
+        background-color: var(--uniswap-transaction-history-dark);
+    }
+    border-top: 1px solid var(--uniswap-withdraw-another-dark-blue);
+    overflow: hidden;
+    padding: 16px 24px;
+    @include desk {
+        @include flex_align;
+        justify-content: space-between;
+    } 
 }
 
 .pagination-info {
-    color: #9ca3af;
+    @include mob-only {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    font-weight: 400;
     font-size: 14px;
+    line-height: calc(20 / 14);
+    letter-spacing: -0.15px;
+    color: var(--uniswap-transaction-history-grey);
 }
 
 .pagination-controls {
-    display: flex;
-    gap: 8px;
+    @include mob-only {
+        text-align: center;
+    }
+    @include desk {
+        display: flex;
+        gap: 8px;
+    }
 }
 
 .pagination-btn {
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #d1d5db;
+    font-weight: 400;
     font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    line-height: calc(20 / 14);
+    letter-spacing: -0.15px;
+    text-align: center;
+    color: var(--uniswap-transaction-history-grey);
+    padding: 8px 16px;
+    border-radius: 12px;
+    @include transition_with_cubic;
+    @include desk {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        letter-spacing: -0.31px;
+    }
 }
 
 .pagination-btn:hover:not(:disabled) {
-    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    color: var(--clearly-white);
+    background-color: var(--uniswap-rgba-pink-border);
 }
 
 .pagination-btn:disabled {
@@ -331,9 +429,49 @@
 }
 
 .pagination-btn.active {
-    background: #ec4899;
-    border-color: #ec4899;
-    color: white;
+    background-color: var(--uniswap-pink);
+    color: var(--clearly-white);
+}
+
+/* Transaction List */
+.transaction-history__list {
+    display: block;
+    margin-bottom: 16px;
+    @include desk {
+        display: none;
+    }
+}
+
+.transaction-history__item {
+    max-width: 362px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(--uniswap-transaction-history-dark);
+}
+
+.transaction-history__item + .transaction-history__item {
+    margin-top: 16px;
+}
+
+.transaction-history__type-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-history__type-wrap + .transaction-history__type-wrap{
+    margin-top: 12px;
+}
+
+.transaction-history__type-wrap:last-child {
+    align-items: center;
+}
+
+.transaction-history__mob-type {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    letter-spacing: -0.15px;
+    color: var(--uniswap-transaction-history-grey);
 }
 
 /* Loading State */
@@ -349,40 +487,4 @@
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .wallet-info {
-        display: none;
-    }
-
-    .filters-section {
-        flex-direction: column;
-    }
-
-    .filter-group {
-        width: 100%;
-    }
-
-    .transactions-table-wrapper {
-        overflow-x: auto;
-    }
-
-    .transactions-table {
-        min-width: 700px;
-    }
-
-    .address-truncated {
-        max-width: 100px;
-    }
-
-    .pagination-wrapper {
-        flex-direction: column;
-        gap: 16px;
-    }
 }
