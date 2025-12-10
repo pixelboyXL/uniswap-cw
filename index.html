@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.b9d42e8c.css><script type=module src=/uniswap-cw/uniswap-cw.65c8d0b0.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.338fceaa.css><script type=module src=/uniswap-cw/uniswap-cw.65c8d0b0.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
@@ -1634,7 +1634,7 @@
         </div>
     </div>
 </section>
-            <section class=transaction-history>
+            <section class=transaction-history style=display:none>
     <div class=transaction-history__container>
         <div class=transaction-history__title-wrap>
             <h1 class=transaction-history__title>Transaction History</h1>
@@ -2428,6 +2428,70 @@
                     <button class=pagination-btn id=nextBtn onclick=nextPage()>Next</button>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+            <section class=deposit>
+    <div class=deposit__container>
+        <h1 class=deposit_title>Deposit Funds</h1>
+        <p class=deposit__after-title>Select network and coin to deposit</p>
+        <div class=available-withdraw__wrap>
+            <p class=available-withdraw__text>Available for Withdrawal</p>
+            <span class=available-withdraw__value id=withdrawableBalance>$0.00</span>
+        </div>
+        <div class=deposit-form__main-wrap>
+            <form id=depositForm>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Network</label>
+                    <div class=select-wrapper>
+                        <div class=custom-select id=networkSelect>
+                            <div class=select-display>
+                                <span class=select-placeholder>Select Network</span>
+                            </div>
+                            <img src=/uniswap-cw/market_select_arrow.754d12c8.png alt=market_select_arrow class=select-arrow>
+                        </div>
+                        <div class=dropdown-menu id=networkDropdown></div>
+                    </div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Coin</label>
+                    <div class=select-wrapper>
+                        <div class="custom-select disabled" id=coinSelect>
+                            <div class=select-display>
+                                <span class=select-placeholder>Select Network First</span>
+                            </div>
+                            <img src=/uniswap-cw/market_select_arrow.754d12c8.png alt=market_select_arrow class=select-arrow>
+                        </div>
+                        <div class=dropdown-menu id=coinDropdown></div>
+                    </div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Withdrawal Address</label>
+                    <input class="address-input disabled" id=addressInput placeholder="Enter wallet address" disabled>
+                    <div class=error-message id=addressError>Please enter a valid address</div>
+                </div>
+                <div class=deposit-form__small-wrap>
+                    <label class=deposit-form__label>Amount</label>
+                    <div class=amount-input-wrapper>
+                        <input type=number class=amount-input id=amountInput placeholder=0.00 min=10 step=0.01>
+                        <span class=currency-label>USD</span>
+                    </div>
+                    <div class=min-amount-hint>Minimum deposit: $10</div>
+                    <div class=error-message id=amountError>Amount must be at least $10</div>
+                </div>
+                <div class=deposit__info-box>
+                    <div class=deposit__info-box-title>Important Information</div>
+                    <div class=deposit__info-box-content>
+                        • Deposits are processed within 15 minutes<br>
+                        • Make sure to select the correct network<br>
+                        • Minimum deposit amount is $10 USD<br>
+                        • You will receive the deposit address on the next page
+                    </div>
+                </div>
+                <button class=submit-btn id=submitBtn>
+                    Create Deposit Request
+                </button>
+            </form>
         </div>
     </div>
 </section>
