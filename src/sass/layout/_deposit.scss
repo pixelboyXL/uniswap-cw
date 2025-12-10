@@ -1,8 +1,8 @@
-.withdraw {
+.deposit {
     padding: 60px 0;
 }
 
-.withdraw__container {
+.deposit__container {
     max-width: 342px;
     margin: 0 auto;
     @include desk {
@@ -10,7 +10,7 @@
     }
 }
 
-.withdraw__title {
+.deposit_title {
     font-weight: 500;
     font-size: 46px;
     margin: 0 auto;
@@ -23,7 +23,7 @@
     }
 }
 
-.withdraw__after-title {
+.deposit__after-title {
     font-size: 16px;
     text-align: center;
     margin-bottom: 41px;
@@ -54,7 +54,7 @@
     color: var(--uniswap-withdraw-green);
 }
 
-.withdraw-form__main-wrap {
+.deposit-form__main-wrap {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding-left: 15px;
@@ -68,11 +68,11 @@
     }
 }
 
-.withdraw-form__small-wrap {
+.deposit-form__small-wrap {
     margin-bottom: 21px;
 }
 
-.withdraw-form__label {
+.deposit-form__label {
     display: block;
     font-size: 14px;
     color: var(--uniswap-withdraw-grey);
@@ -221,53 +221,17 @@
     color: var(--uniswap-withdraw-grey);
 }
 
-.total-deduction {
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid var(--uniswap-withdraw-border-orange);
-    background-color: var(--uniswap-withdraw-rgba-orange);
-    margin-bottom: 22px;
-}
-
-.total-deduction__small-wrap {
-    @include flex_align;
-    justify-content: space-between;
-}
-
-.total-deduction__small-wrap + .total-deduction__small-wrap {
-    margin-top: 8px;
-}
-
-.small-bordered-wrap {
-    padding-top: 8px;
-    border-top: 1px solid var(--uniswap-rgba-background);
-}
-
-.total-deduction__text,
-.total-deduction__value {
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--uniswap-withdraw-grey);
-}
-
-.total-deduction__value {
-    color: var(--uniswap-withdraw-orange);
-}
-
-.font-weight-700 {
-    font-weight: 700;
-}
-
-.info-box {
+.deposit__info-box {
     padding: 16px;
     padding-right: 0;
-    margin-bottom: 56px;
+    margin-bottom: 21px;
     border-radius: 12px;
     border: 1px solid var(--uniswap-error);
     background-color: var(--uniswap-background-error);
 }
 
-.info-box-content {
+.deposit__info-box-title,
+.deposit__info-box-content {
     font-weight: 500;
     font-size: 12px;
     line-height: calc(19.5 / 12);
@@ -311,4 +275,10 @@
 
 .error-message.show {
     display: block;
+}
+
+.min-amount-hint {
+    font-size: 14px;
+    color: var(--uniswap-withdraw-grey);
+    margin-top: 8px;
 }
