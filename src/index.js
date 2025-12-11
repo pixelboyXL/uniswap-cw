@@ -10,3 +10,4 @@ import "./js/withdraw.js";
 import "./js/withdraw-request.js";
 import "./js/transaction-history.js";
 // import "./js/deposit.js";
+import "./js/deposit-request.js";

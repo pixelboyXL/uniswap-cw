@@ -1,0 +1,342 @@
+.deposit-request {
+    padding: 13px 0;
+}
+
+.deposit-request__container {
+    max-width: 360px;
+    margin: 0 auto;
+    @include desk {
+        max-width: 1166px;
+    }
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #f59e0b;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-text {
+    font-size: 14px;
+    color: #f59e0b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer-display {
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f59e0b;
+    font-variant-numeric: tabular-nums;
+}
+
+.deposit-request__title {
+    font-weight: 500;
+    font-size: 46px;
+    text-align: center;
+    color: var(--clearly-white);
+    margin-bottom: 47px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    align-items: start;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--clearly-white);
+    margin-bottom: 25px;
+}
+
+.deposit-request__info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--uniswap-my-profile-dark);
+}
+
+.deposit-request__info-row:last-child {
+    border-bottom: none;
+}
+
+.deposit-request__info-label {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--uniswap-withdraw-grey);
+}
+
+.deposit-request__info-value {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--clearly-white);
+}
+
+.deposit-request__amount {
+    font-size: 28px;
+}
+
+.deposit-request__transaction {
+    font-size: 14px;
+}
+
+.address-container {
+    border-radius: 12px;
+    border: 1px solid var(--uniswap-deposit-request-rgba-blue);
+    padding: 20px;
+    margin: 24px 0;
+    background-color: var(--uniswap-deposit-request-dark-blue);
+}
+
+.address-display {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: calc(21 / 13);
+    color: var(--uniswap-deposit-request-blue);
+    margin-top: 11px;
+    margin-bottom: 17px;
+}
+
+.copy-btn {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--clearly-white);
+    border-radius: 8px;
+    background-color: var(--uniswap-deposit-request-blue);
+    width: 100%;
+    padding: 12px;
+    @include transition_with_cubic;
+}
+
+.copy-btn:hover {
+    background-color: var(--uniswap-deposit-request-rgba-blue);
+}
+
+.copy-btn.copied {
+    background-color: var(--uniswap-withdraw-green);
+}
+
+.right-section {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 32px;
+    background-color: var(--uniswap-transaction-history-dark);
+}
+
+.qr-container {
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0;
+    margin-bottom: 24px;
+    background-color: var(--uniswap-dark);
+}
+
+.qr-image {
+    width: 169px;
+}
+
+.warning-box {
+    padding: 20px 16px;
+    padding-right: 0;
+    margin-bottom: 56px;
+    border-radius: 12px;
+    border: 1px solid var(--uniswap-error);
+    background-color: var(--uniswap-deposit-request-rgba-red);
+}
+
+.warning-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--uniswap-error);
+}
+
+.warning-content {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(19.5 / 12);
+    color: var(--uniswap-deposit-request-pink);
+    @include desk {
+        font-size: 13px;
+        line-height: calc(19.5 / 13);
+    }
+}
+
+.warning-content strong {
+    font-weight: 700;
+}
+
+.steps-list {
+    counter-reset: step-counter;
+}
+
+.step-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    counter-increment: step-counter;
+}
+
+.step-item::before {
+    content: counter(step-counter);
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #9ca3af;
+    line-height: 1.6;
+    padding-top: 3px;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.btn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-align: center;
+}
+
+.btn-confirm {
+    background: linear-gradient(135deg, #10b981, #22d3ee);
+    color: white;
+}
+
+.btn-confirm:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btn-cancel:hover:not(:disabled) {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 968px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-container {
+        padding: 16px;
+    }
+
+    .qr-image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal {
+    background: #1e1f23;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.modal-text {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header-container .logo span {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FF37C7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
