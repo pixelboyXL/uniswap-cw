@@ -59,10 +59,7 @@
 }
 
 .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 46px;
-    align-items: start;
+    @include flex_justify_align;
 }
 
 .section-title {
@@ -78,6 +75,10 @@
     align-items: center;
     padding: 25px 0;
     border-bottom: 1px solid var(--uniswap-my-profile-dark);
+}
+
+.deposit-request__info-row + .deposit-request__info-row {
+    margin-top: 24px;
 }
 
 .deposit-request__info-row:last-child {
@@ -159,13 +160,12 @@
 }
 
 .qr-image {
-    width: 169px;
+    width: 169px; 
 }
 
 .warning-box {
     padding: 20px 16px;
     padding-right: 0;
-    margin-bottom: 56px;
     border-radius: 12px;
     border: 1px solid var(--uniswap-error);
     background-color: var(--uniswap-deposit-request-rgba-red);
@@ -193,95 +193,96 @@
 }
 
 .steps-list {
-    counter-reset: step-counter;
+    margin-bottom: 24px;
+}
+
+.step-line {
+    position: relative;
+    padding-left: 29px;
+}
+
+.step-line::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .step-item {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 16px;
-    counter-increment: step-counter;
+    position: relative;
+    margin-bottom: 18px;
 }
 
 .step-item::before {
-    content: counter(step-counter);
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    background: rgba(56, 189, 248, 0.2);
-    color: #38bdf8;
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--uniswap-my-profile-dark);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 600;
+    background-color: var(--uniswap-deposit-request-grey);
+}
+
+.step-item.active::before {
+    background-color: var(--uniswap-withdraw-blue);
+}
+
+.step-item.completed::before {
+    background-color: var(--uniswap-withdraw-another-green);
 }
 
 .step-text {
+    font-weight: 400;
     font-size: 14px;
-    color: #9ca3af;
-    line-height: 1.6;
-    padding-top: 3px;
+    line-height: calc(22 / 14);
+    color: var(--uniswap-withdraw-grey);
 }
 
-.action-buttons {
+.deposit-request__action-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin-top: 24px;
 }
 
-.btn {
-    padding: 14px 24px;
-    border-radius: 12px;
+.deposit-request__btn {
+    font-weight: 700;
     font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
+    border-radius: 12px;
     text-align: center;
+    @include transition_with_cubic;
 }
 
-.btn-confirm {
-    background: linear-gradient(135deg, #10b981, #22d3ee);
-    color: white;
+.deposit-request__btn-confirm {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    color: var(--clearly-white);
+    background-color: var(--uniswap-success);
 }
 
-.btn-confirm:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+.deposit-request__btn-confirm:hover:not(:disabled) {
+    background-color: var(--uniswap-withdraw-rgba-green);
 }
 
-.btn-cancel {
-    background: transparent;
-    color: #ef4444;
-    border: 1px solid rgba(239, 68, 68, 0.3);
+.deposit-request__btn-cancel {
+    padding: 17px 0;
+    background-color: var(--uniswap-background-error);
+    color: var(--uniswap-error);
+    border: 1px solid var(--uniswap-error);
 }
 
-.btn-cancel:hover:not(:disabled) {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: #ef4444;
+.deposit-request__btn-cancel:hover:not(:disabled) {
+    background-color: var(--uniswap-rgba-pink-border);
 }
 
-.btn:disabled {
+.deposit-request__btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-}
-
-@media (max-width: 968px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .qr-container {
-        padding: 16px;
-    }
-
-    .qr-image {
-        width: 160px;
-        height: 160px;
-    }
 }
 
 /* Modal Styles */
@@ -330,13 +331,4 @@
     display: flex;
     justify-content: center;
     gap: 16px;
-}
-
-.header-container .logo span {
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #FF37C7;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }

@@ -60,27 +60,29 @@
                     </div> -->
                 </div>
                 <div class="steps-list">
-                    <div class="step-item">
-                        <div class="step-text">Copy the deposit address or scan the QR code</div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-text">Open your wallet or exchange</div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-text">Send exactly <span id="stepAmount">$0.00</span> to the address</div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-text">Click "I've Sent" button once transaction is initiated</div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-text">Wait for blockchain confirmations</div>
+                    <div class="step-line">
+                        <div class="step-item completed">
+                            <div class="step-text">Copy the deposit address or scan the QR code</div>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-text">Open your wallet or exchange</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-text">Send exactly <span id="stepAmount">$0.00</span> to the address</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-text">Click "I've Sent" button once transaction is initiated</div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-text">Wait for blockchain confirmations</div>
+                        </div>
                     </div>
                 </div>
-                <div class="action-buttons">
-                    <button class="btn btn-confirm" id="confirmBtn" onclick="confirmDeposit()">
+                <div class="deposit-request__action-buttons">
+                    <button class="deposit-request__btn deposit-request__btn-confirm" id="confirmBtn" onclick="confirmDeposit()">
                         I've Sent the Deposit
                     </button>
-                    <button class="btn btn-cancel" id="cancelBtn" onclick="cancelDeposit()">
+                    <button class="deposit-request__btn deposit-request__btn-cancel" id="cancelBtn" onclick="cancelDeposit()">
                         Cancel Request
                     </button>
                 </div>
