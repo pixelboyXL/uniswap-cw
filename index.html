@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.d654a0cc.css><script type=module src=/uniswap-cw/uniswap-cw.bf39b921.js></script><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1.0"><link rel=icon href=/uniswap-cw/uniswap_logo.58ee31a1.svg><title>Uniswap</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel=stylesheet><link rel=stylesheet href=/uniswap-cw/uniswap-cw.b772139b.css><script type=module src=/uniswap-cw/uniswap-cw.bf39b921.js></script><body>
         <header class=header>
     <nav class=nav>
         <div class=nav__wrap>
@@ -2555,27 +2555,29 @@
                     
                 </div>
                 <div class=steps-list>
-                    <div class=step-item>
-                        <div class=step-text>Copy the deposit address or scan the QR code</div>
-                    </div>
-                    <div class=step-item>
-                        <div class=step-text>Open your wallet or exchange</div>
-                    </div>
-                    <div class=step-item>
-                        <div class=step-text>Send exactly <span id=stepAmount>$0.00</span> to the address</div>
-                    </div>
-                    <div class=step-item>
-                        <div class=step-text>Click "I've Sent" button once transaction is initiated</div>
-                    </div>
-                    <div class=step-item>
-                        <div class=step-text>Wait for blockchain confirmations</div>
+                    <div class=step-line>
+                        <div class="completed step-item">
+                            <div class=step-text>Copy the deposit address or scan the QR code</div>
+                        </div>
+                        <div class="active step-item">
+                            <div class=step-text>Open your wallet or exchange</div>
+                        </div>
+                        <div class=step-item>
+                            <div class=step-text>Send exactly <span id=stepAmount>$0.00</span> to the address</div>
+                        </div>
+                        <div class=step-item>
+                            <div class=step-text>Click "I've Sent" button once transaction is initiated</div>
+                        </div>
+                        <div class=step-item>
+                            <div class=step-text>Wait for blockchain confirmations</div>
+                        </div>
                     </div>
                 </div>
-                <div class=action-buttons>
-                    <button class="btn btn-confirm" id=confirmBtn onclick=confirmDeposit()>
+                <div class=deposit-request__action-buttons>
+                    <button class="deposit-request__btn deposit-request__btn-confirm" id=confirmBtn onclick=confirmDeposit()>
                         I've Sent the Deposit
                     </button>
-                    <button class="btn btn-cancel" id=cancelBtn onclick=cancelDeposit()>
+                    <button class="deposit-request__btn deposit-request__btn-cancel" id=cancelBtn onclick=cancelDeposit()>
                         Cancel Request
                     </button>
                 </div>
